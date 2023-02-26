@@ -1,0 +1,93 @@
+.box-01 {
+    background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647);
+    /* background-image: linear-gradient(45deg, #0A2647, #144272, #205295, #2C74B3); */
+    box-sizing: border-box;
+    height: 580px;
+}
+
+.box-02 {
+    background-image: linear-gradient(45deg, #144272, #0A2647);
+    height: 80px;
+    width: 920px;
+    margin: auto;
+}
+
+.box-03 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    height: 100%;
+}
+
+#foto-perfil {
+    height: 460px;
+    width: 460px;
+}
+
+.box-04 {
+    background-color: blue;
+    height: 460px;
+    width: 460px;
+}
+
+.box-05 {
+    background-color: white;
+    height: 460px;
+    width: 460px;
+}
+
+.box-06 {
+    background-image: linear-gradient(white, rgb(233, 233, 233));
+    padding: 20px 0 40px;
+}
+
+.box-06-1 {
+    text-align: center;
+    width: 75%;
+    margin: 30px auto;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+    .box-01 {
+        height: 160vw;
+        max-height: 1955px;
+    }
+
+    .box-02 {
+        height: 80px;
+        width: 100%;
+        margin: auto;
+        border-top: 24px solid white;
+    }
+    
+    .box-03 {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .box-04 {
+        background-color: skyblue;
+        width: 70vw;
+        height: 70vw;
+        max-width: 920px;
+        max-height: 920px;
+    }
+
+    #foto-perfil {
+        width: 70vw;
+        height: 70vw;
+        max-width: 920px;
+        max-height: 920px;
+    }
+    
+    .box-05 {
+        width: 70vw;
+        height: 70vw;
+        max-width: 920px;
+        max-height: 920px;
+    }
+}
