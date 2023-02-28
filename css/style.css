@@ -26,6 +26,11 @@ p {
     margin-right: 0;
 }
 
+.row > * {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
 .font-110-porcent {
     font-size: 110%;
 }
@@ -121,17 +126,25 @@ p {
     text-align: center;
 }
 
-.xp-principal {
-    padding: 0 0 50px;
+.tituo-hola {
+    font-size: 50px;
+    margin-bottom: 50px;
 }
 
 .separacion {
     padding: 0 25% 30px;
-
     /* background-color: red; */
 }
 
-.xp-titulo {
+.xp-principal,
+.ap-principal,
+.for-principal {
+    padding: 0 0 50px;
+}
+
+.xp-titulo,
+.ap-titulo,
+.for-titulo {
     display: grid;
     place-items: center;
     height: 120px;
@@ -140,26 +153,89 @@ p {
     margin-bottom: 50px;
 }
 
-.xp-titulo h3 {
+.pro-principal {
+    /* background-color: #a5a; */
+    background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647);
+}
+
+.pro-descripcion div h3 {
+    margin: 0;
+}
+
+.pro-descripcion div h3 strong {
+    color: white;
+}
+
+.pro-descripcion {
+    /* background-color: lightseagreen; */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.pro-descripcion p {
+    color: white;
+    text-align: center;
+    width: 65%;
+}
+
+.pro-descripcion a {
+    color: white;
+    font-size: 22px;
+}
+
+.pro-descripcion a:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+.xp-titulo h3,
+.ap-titulo h3,
+.for-titulo h3 {
     display: inline;
     font-size: 32px;
     padding: 0;
     margin: 0;
 }
 
-.xp-izqierda {
-    padding-right: 30px;
+.xp-izquierda,
+.ap-izquierda,
+.for-izquierda {
     /* background-color: lightsalmon; */
+    padding-right: 30px;
     justify-content: end;
 }
 
-.xp-izqierda p {
+.xp-izquierda p,
+.ap-izquierda p,
+.for-izquierda p {
     text-align: end;
 }
 
-.xp-derecha {
-    padding-left: 30px;
+.xp-derecha,
+.ap-derecha,
+.for-derecha {
     /* background-color: lightblue; */
+    padding-left: 30px;
+}
+
+#bottom {
+    height: 120px;
+}
+
+#bottom div {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
+
+#bottom div img {
+    height: 40px;
 }
 
 
@@ -220,13 +296,23 @@ p {
         padding: 0 20% 30px;
     }
 
-    .xp-izqierda,
-    .xp-derecha {
+    .xp-izquierda,
+    .xp-derecha,
+    .ap-izquierda,
+    .ap-derecha,
+    .for-izquierda,
+    .for-derecha {
         padding: 0;
     }
 
-    .xp-izqierda p {
+    .xp-izquierda p,
+    .ap-izquierda p,
+    .for-izquierda p {
         text-align: start;
+    }
+
+    .pro-descripcion p {
+        width: 80%;
     }
 
 }
