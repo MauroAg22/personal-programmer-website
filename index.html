@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Modo Oscuro -->
+    <meta id="tema">
+
     <!-- Boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -23,7 +26,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-lg">
             <a class="navbar-brand" href="index.html">Mauro Lucero</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -44,9 +47,6 @@
                     <li class="nav-item espacio">
                         <a class="nav-link" href="#proyectos">Proyectos</a>
                     </li>
-                    <li class="nav-item espacio">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -54,14 +54,11 @@
 
     <div class="box-00">
         <div class="box-01">
-            <!-- Fondo gradiente -->
             <div class="box-03">
                 <div class="foto-perfil">
-                    <!-- Foto de perfil -->
                     <img class="foto-perfil" src="img/perfil-2.jpg" alt="">
                 </div>
                 <div class="box-05">
-                    <!-- Datos principales -->
                     <div>
                         <h4 class="font-170-porcent"><strong>Mauro Agustin Lucero</strong></h4>
                         <h5 class="font-130-porcent"><strong>Estudiante de programación</strong></h5>
@@ -89,15 +86,14 @@
         </div>
 
         <div class="box-02">
-            <!-- Link redes sociales -->
             <div class="box-02-1">
-                <a href="https://www.linkedin.com/in/mauro-ag-lucero" target="_blank"><img class="icono"
+                <a id="linkedin" href="https://www.linkedin.com/in/mauro-ag-lucero" target="_blank"><img class="icono"
                         src="img/icon/in-white.png" alt=""></a>
-                <a href="https://www.facebook.com/mauroluceroo" target="_blank"><img class="icono"
+                <a id="facebook" href="https://www.facebook.com/mauroluceroo" target="_blank"><img class="icono"
                         src="img/icon/f-white.png" alt=""></a>
-                <a href="https://twitter.com/mauroluceroo" target="_blank"><img class="icono"
+                <a id="twitter" href="https://twitter.com/mauroluceroo" target="_blank"><img class="icono"
                         src="img/icon/tw-white.png" alt=""></a>
-                <a href="https://www.instagram.com/mauroluceroo" target="_blank"><img class="icono"
+                <a id="instagram" href="https://www.instagram.com/mauroluceroo" target="_blank"><img class="icono"
                         src="img/icon/insta-white.png" alt=""></a>
             </div>
         </div>
@@ -183,15 +179,6 @@
             </div>
         </div>
 
-        <div class="row separacion">
-            <div class="col-lg-6 for-izquierda">
-                <p><strong>2022</strong></p>
-                <p>EN CURSO</p>
-            </div>
-            <div class="col-lg-6 for-derecha">
-                <p>Curso Argentina Programa 4.0.</p>
-            </div>
-        </div>
 
         <div class="row separacion">
             <div class="col-lg-6 for-izquierda">
@@ -202,6 +189,18 @@
                 <p>Programación Universitaria de Sistemas. Universidad Nacional de Villa Mercedes.</p>
             </div>
         </div>
+
+        <div class="row separacion">
+            <div class="col-lg-6 for-izquierda">
+                <p><strong>2022</strong></p>
+                <p>EN CURSO</p>
+            </div>
+            <div class="col-lg-6 for-derecha">
+                <p>Curso Argentina Programa 4.0.</p>
+            </div>
+        </div>
+
+        
     </div>
 
 
@@ -253,7 +252,7 @@
     <div id="proyectos" class="pro-principal">
         <div class="pro-descripcion"> 
             <div>
-                <h3><strong>P R O Y E C T O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;U N I V E R S I T A R I O</strong></h3>
+                <h3><strong>P R O Y E C T O&nbsp;&nbsp;&nbsp;&nbsp;U N I V E R S I T A R I O</strong></h3>
             </div>
             <p>Proyecto final de la materia Diseño y Gestión de Internet de la carrera Programación Universitaria de Sistemas.</p>
             <p>Es un proyecto sin responsive desing realizado a fines del año 2022 y no está pensado para un dispositivo móvil. Invluye LocalStorage para guardar el puntaje obtenido en el juego</p>
@@ -263,11 +262,12 @@
 
 
 
-    <nav id="bottom" class="navbar navbar-light bg-light">
+    <footer id="bottom" class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <img src="img/icon/night.png" alt="icon dark mode">
+            <img id="btnModoOscuro" src="img/icon/night.png" alt="icon dark mode">
+            <!-- <button id="btnModoOscuro">MODO OSCURO</button> -->
         </div>
-    </nav>
+    </footer>
 
 
 

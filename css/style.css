@@ -1,10 +1,12 @@
 * {
     font-family: 'Heebo', sans-serif;
-    color: #0A2647;
 }
 
 body {
-    height: 300vh;
+    position: relative;
+    padding-bottom: 120px;
+    min-height: 100vh;
+    color: #0A2647;
 }
 
 h1,
@@ -43,9 +45,14 @@ p {
     font-size: 170%;
 }
 
+
+/* background-image: linear-gradient(180deg, #0f0f0f, #1a1a1a 40% 60%, #0f0f0f); */
+
+
+
 .box-01 {
     background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647);
-    /* background-image: linear-gradient(45deg, #0A2647, #144272, #205295, #2C74B3); */
+    /* background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647); */
     box-sizing: border-box;
     height: 610px;
 }
@@ -114,6 +121,7 @@ p {
 
 .contenedor-gradiente {
     background-image: linear-gradient(white, rgb(233, 233, 233));
+    /* linear-gradient(#212529, #282c30) */
 }
 
 .tamanio-caja {
@@ -133,6 +141,11 @@ p {
 
 .separacion {
     padding: 0 25% 30px;
+    /* background-color: red; */
+}
+
+.separacion2 {
+    padding-bottom: 30px;
     /* background-color: red; */
 }
 
@@ -164,6 +177,7 @@ p {
 
 .pro-descripcion div h3 strong {
     color: white;
+    font-size: 33px;
 }
 
 .pro-descripcion {
@@ -226,6 +240,9 @@ p {
 
 #bottom {
     height: 120px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 #bottom div {
@@ -295,6 +312,7 @@ p {
     .separacion {
         padding: 0 20% 30px;
     }
+    
 
     .xp-izquierda,
     .xp-derecha,
@@ -303,6 +321,10 @@ p {
     .for-izquierda,
     .for-derecha {
         padding: 0;
+    }
+
+    .ap-izquierda {
+        padding: 0 0 30px;
     }
 
     .xp-izquierda p,
