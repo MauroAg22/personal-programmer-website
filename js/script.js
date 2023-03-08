@@ -62,8 +62,3 @@ function cambiarModo() {
 }
 
 document.getElementById("btnModoOscuro").addEventListener('click', cambiarModo);
-
-
-
-
-
