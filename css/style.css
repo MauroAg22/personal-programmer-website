@@ -172,7 +172,7 @@ p {
 }
 
 .pro-descripcion {
-    height: 400px;
+    height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -247,6 +247,30 @@ p {
 
 @media only screen and (max-width: 992px) {
 
+    p {
+        margin: 0;
+        font-size: 3vw;
+    }
+
+    .pro-descripcion div h3 strong {
+        font-size: 4.6vw;
+    }
+
+    .pro-descripcion a {
+        font-size: 3vw;
+    }
+    
+    .xp-titulo h3,
+    .ap-titulo h3,
+    .for-titulo h3 {
+        font-size: 5vw;
+    }
+
+    .tituo-hola {
+        font-size: 7vw;
+    }
+
+
     .box-00 {
         background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647);
     }
@@ -270,7 +294,7 @@ p {
     }
 
     .icono {
-        width: 32px;
+        width: 6vw;
     }
 
     .box-03 {
@@ -285,6 +309,7 @@ p {
         max-width: 920px;
         max-height: 920px;
         border-radius: 30px 30px 0 0;
+        margin-top: 30px;
     }
 
     .box-05 {
@@ -322,6 +347,14 @@ p {
 
     .pro-descripcion p {
         width: 80%;
+    }
+
+    #bottom div img {
+        height: 7vw;
+    }
+    
+    #bottom div img:hover {
+        height: 7.3vw;
     }
 
 }
