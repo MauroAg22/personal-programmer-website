@@ -118,7 +118,7 @@ p {
     background-image: linear-gradient(white, rgb(233, 233, 233));
 }
 
-.tamanio-caja {
+.tamanio-caja, .tamanio-caja-2 {
     padding: 100px 0;
 }
 
@@ -252,7 +252,7 @@ p {
         font-size: 4vw;
     }
 
-    .tamanio-caja {
+    .tamanio-caja, .tamanio-caja-2 {
         padding: 15vw 0;
     }
 
