@@ -31,6 +31,14 @@ body {
         #fff;
 }
 
+.custom-font-size-navbar {
+    font-size: 1.16rem;
+}
+
+.custom-navbar-toggler {
+    font-size: 1.16rem;
+}
+
 .main-messagge{
     display: flex;
     align-items: center;
@@ -111,7 +119,7 @@ body {
     min-height: 400px;
 }
 
-.navbar {
+.custom-navbar {
     min-height: 80px;
 }
 
@@ -124,6 +132,14 @@ body {
 
 /** sm */
 @media (width >= 576px) {
+    .custom-font-size-navbar {
+        font-size: var(--bs-navbar-brand-font-size);
+    }
+    
+    .custom-navbar-toggler {
+        font-size: var(--bs-navbar-toggler-font-size);
+    }
+
     .main-messagge{
         gap: 28px;
     }
