@@ -31,6 +31,37 @@ body {
         #fff;
 }
 
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+}
+
+/* Cambiar el color del track (fondo) del scrollbar */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Cambiar el color del thumb (barra deslizante) del scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #f86449;
+}
+
+/* Estilos adicionales para el thumb cuando se desplaza */
+::-webkit-scrollbar-thumb:hover {
+    background: #ff8866;
+}
+
+
+
+
+ul {
+    list-style:none;
+    padding: 0;
+}
+
+.custom-font-color-primary {
+    color: #f86449;
+}
+
 .custom-font-size-navbar {
     font-size: 1.16rem;
 }
@@ -49,7 +80,6 @@ body {
 .main-title {
     margin: 0;
     font-weight: 600;
-    color: #f86449;
     /* background-color: lightblue; */
     font-size: 20vw;
     text-align: center;
@@ -63,8 +93,8 @@ body {
     width: 85%;
 }
 
-.personal-info, .profile-picture {
-    border-radius: 16px;
+.personal-info {
+    border-radius: 12px;
 }
 
 .personal-info {
@@ -113,10 +143,29 @@ body {
     gap: 6vw;
 }
 
-.profile-picture {
+.profile-section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 48px;
+}
+
+.profile-pic {
+    border-radius: 16px;
     border: 2px solid #ddd;
     background-color: #fff;
     min-height: 400px;
+}
+
+.button-cv {
+    border: none;
+    background-color: #f86449;
+    color: #fff;
+    border-radius: 8px;
+    /* min-height: 48px; */
+    padding: 4vw;
+    font-size: 4vw;
 }
 
 .custom-navbar {
@@ -129,6 +178,29 @@ body {
     font-weight: 200;
     font-style: normal;
 }
+
+.habilidades {
+    background-color: #fff;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+}
+
+@media (width <= 576px) {
+    .custom-margin {
+        margin: 0 5vw;
+    }
+
+    .custom-size {
+        height: 20vw;
+        width: 20vw;
+    }
+
+    .label-svg {
+        font-size: 4vw;
+    }
+}
+
+
 
 /** sm */
 @media (width >= 576px) {
@@ -180,6 +252,10 @@ body {
         height: 32px;
     }
 
+    .button-cv {
+        font-size: larger;
+        padding: 16px;
+    }
 }
 
 /** md */
