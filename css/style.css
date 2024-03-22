@@ -114,6 +114,14 @@ ul {
     gap: 1.7vw;
 }
 
+/* .date a {
+    transition: scale 0.5s;
+}
+
+.date a:hover {
+    scale: 1.2;
+} */
+
 .label-date {
     font-weight: 200;
     letter-spacing: 1.3vw;
@@ -158,14 +166,19 @@ ul {
     min-height: 400px;
 }
 
-.button-cv {
-    border: none;
+.a-cv {
     background-color: #f86449;
     color: #fff;
     border-radius: 8px;
-    /* min-height: 48px; */
+    text-decoration: none;
+    text-align: center;
     padding: 4vw;
     font-size: 4vw;
+    transition: scale 0.2s;
+}
+
+.a-cv:hover {
+    scale: 1.02;
 }
 
 .custom-navbar {
@@ -185,14 +198,19 @@ ul {
     border: 2px solid #ddd;
 }
 
+.custom-size-2 {
+    width: 40;
+    height: 40;
+}
+
 @media (width <= 576px) {
     .custom-margin {
         margin: 0 5vw;
     }
 
     .custom-size {
-        height: 20vw;
-        width: 20vw;
+        height: 14vw;
+        width: 14vw;
     }
 
     .label-svg {
@@ -252,7 +270,7 @@ ul {
         height: 32px;
     }
 
-    .button-cv {
+    .a-cv {
         font-size: larger;
         padding: 16px;
     }

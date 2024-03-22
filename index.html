@@ -23,6 +23,7 @@
 
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animation.css">
 
     <title>Mauro Lucero</title>
 </head>
@@ -76,8 +77,12 @@
     </nav>
 
     <header class="main-messagge my-5">
-        <h1 class="main-title custom-font-color-primary">¡ HOLA !</h1>
-        <p class="main-paragraph">Mi nombre es Mauro y te doy la bienvenida a mi portafolio web.</p>
+        <h1 class="animation-title main-title custom-font-color-primary">
+            <span>¡</span>
+            <span>H</span><span>O</span><span>L</span><span>A</span>
+            <span>!</span>
+        </h1>
+        <p class="main-paragraph">Mi nombre es <span style="color: #eb593f;">Mauro</span> y te doy la bienvenida a mi portafolio web.</p>
     </header>
 
     <main class="container">
@@ -87,10 +92,15 @@
                     <section class="profile-pic">
                         <!-- <img src="#" alt="Foto de perfil" srcset=""> -->
                     </section>
-                    <button class="button-cv">
+                    <a class="a-cv gap-3 d-flex justify-content-center align-items-center" href="pdf/mauro-lucero.cv.pdf" download="mauro-lucero.cv.pdf">
+                        <svg class="animate-download" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                        </svg>
+                        <span>Descargar Curriculum Vitae</span>
+                    </a>
 
-                        Descargar Curriculum Vitae
-                    </button>
+                    
                 </div>
             </div>
             <div class="col-lg-5 col-md-9 order-lg-1">
@@ -127,7 +137,7 @@
                     <div>
                         <span class="label-date">PERFILES</span>
                         <div class="date social-icon ms-2">
-                            <a clase="anchor-date" href="https://www.linkedin.com/in/mauro-ag-lucero/" target="_blank"
+                            <a href="https://www.linkedin.com/in/mauro-ag-lucero/" target="_blank"
                                 rel="noopener noreferrer">
                                 <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -135,7 +145,7 @@
                                         d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
                                 </svg>
                             </a>
-                            <a clase="anchor-date" href="https://github.com/MauroAg22/" target="_blank"
+                            <a href="https://github.com/MauroAg22/" target="_blank"
                                 rel="noopener noreferrer">
                                 <svg class="svg-size" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                     class="bi bi-github" viewBox="0 0 16 16">
@@ -177,257 +187,113 @@
             <div class="col-12 col-lg-5 habilidades">
                 <h3 class="text-center mb-3 mt-4">Frontend</h3>
                 <ul class="row row-gap-4 p-4 ">
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-                        <svg class="custom-size" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0 0 48 48">
-                            <path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
-                            <path fill="#FF6D00" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                            <path fill="#FFF"
-                                d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z">
-                            </path>
-                            <path fill="#EEE"
-                                d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z">
-                            </path>
-                        </svg>
+                    <li class="col-6 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/html.svg" alt="ícono html">
                         <span class="label-svg">HTML</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-                        <svg class="custom-size" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0 0 48 48">
-                            <path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5L41,5z"></path>
-                            <path fill="#039BE5" d="M24 8L24 39.9 35.2 36.7 37.7 8z"></path>
-                            <path fill="#FFF"
-                                d="M33.1 13L24 13 24 17 28.9 17 28.6 21 24 21 24 25 28.4 25 28.1 29.5 24 30.9 24 35.1 31.9 32.5 32.6 21 32.6 21z">
-                            </path>
-                            <path fill="#EEE"
-                                d="M24,13v4h-8.9l-0.3-4H24z M19.4,21l0.2,4H24v-4H19.4z M19.8,27h-4l0.3,5.5l7.9,2.6v-4.2l-4.1-1.4L19.8,27z">
-                            </path>
-                        </svg>
+                    <li class="col-6 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/css.svg" alt="ícono css">
                         <span class="label-svg">CSS</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-                        <svg class="custom-size" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0 0 48 48">
-                            <path fill="#ffd600" d="M6,42V6h36v36H6z"></path>
-                            <path fill="#000001"
-                                d="M29.538 32.947c.692 1.124 1.444 2.201 3.037 2.201 1.338 0 2.04-.665 2.04-1.585 0-1.101-.726-1.492-2.198-2.133l-.807-.344c-2.329-.988-3.878-2.226-3.878-4.841 0-2.41 1.845-4.244 4.728-4.244 2.053 0 3.528.711 4.592 2.573l-2.514 1.607c-.553-.988-1.151-1.377-2.078-1.377-.946 0-1.545.597-1.545 1.377 0 .964.6 1.354 1.985 1.951l.807.344C36.452 29.645 38 30.839 38 33.523 38 36.415 35.716 38 32.65 38c-2.999 0-4.702-1.505-5.65-3.368L29.538 32.947zM17.952 33.029c.506.906 1.275 1.603 2.381 1.603 1.058 0 1.667-.418 1.667-2.043V22h3.333v11.101c0 3.367-1.953 4.899-4.805 4.899-2.577 0-4.437-1.746-5.195-3.368L17.952 33.029z">
-                            </path>
-                        </svg>
+                    <li class="col-6 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/js.svg" alt="ícono javascript">
                         <span class="label-svg">JavaScript</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-                        <svg class="custom-size" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
-                            viewBox="0 0 48 48">
-                            <path fill="#6c19ff"
-                                d="M6.391,10.671c-0.085-2.448,1.822-4.706,4.401-4.706h26.42c2.578,0,4.486,2.258,4.401,4.706	c-0.082,2.352,0.024,5.398,0.791,7.882c0.769,2.492,2.066,4.067,4.19,4.269v2.295c-2.124,0.202-3.421,1.777-4.19,4.269	c-0.767,2.484-0.873,5.53-0.791,7.882c0.085,2.448-1.822,4.706-4.401,4.706h-26.42c-2.578,0-4.486-2.258-4.4-4.706	c0.082-2.352-0.025-5.398-0.791-7.882c-0.769-2.492-2.069-4.067-4.194-4.269v-2.295c2.124-0.202,3.425-1.777,4.194-4.269	C6.367,16.07,6.473,13.023,6.391,10.671z">
-                            </path>
-                            <linearGradient id="Is-EGaxKcc0Cic9QMqyzGa_EzPCiQUqWWEa_gr1" x1="17.846" x2="27.078"
-                                y1="-147.541" y2="-163.153" gradientTransform="matrix(1 0 0 -1 0 -132)"
-                                gradientUnits="userSpaceOnUse">
-                                <stop offset="0" stop-color="#fff"></stop>
-                                <stop offset="1" stop-color="#f1e5fc"></stop>
-                            </linearGradient>
-                            <path fill="url(#Is-EGaxKcc0Cic9QMqyzGa_EzPCiQUqWWEa_gr1)"
-                                d="M25.042,34.016c4.366,0,6.997-2.138,6.997-5.664c0-2.665-1.877-4.595-4.665-4.9v-0.111	c2.048-0.333,3.655-2.235,3.655-4.359c0-3.026-2.389-4.997-6.03-4.997h-8.192v20.031H25.042z M19.994,16.525h4.238	c2.304,0,3.612,1.027,3.612,2.887c0,1.985-1.522,3.096-4.281,3.096h-3.57V16.525z M19.994,31.475v-6.594h4.21	c3.015,0,4.579,1.11,4.579,3.276c0,2.165-1.522,3.318-4.394,3.318H19.994z">
-                            </path>
-                        </svg>
+                    <li class="col-6 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/bootstrap.svg" alt="ícono bootstrap">
                         <span class="label-svg">Bootstrap</span>
                     </li>
                 </ul>
+
             </div>
             <div class="col-12 col-lg-5 habilidades">
                 <h3 class="text-center mb-3 mt-4">Backend</h3>
                 <ul class="row row-gap-4 p-4 ">
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-                        <svg class="custom-size" xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 100 50" width="100" height="100">
-                            <path
-                                d="m7.579 10.123 14.204 0c4.169 0.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-0.247 1.873-0.795 3.71-1.643 5.512-0.813 1.802-1.943 3.427-3.392 4.876-1.767 1.837-3.657 3.003-5.671 3.498-2.014 0.495-4.099 0.742-6.254 0.742l-6.36 0-2.014 10.07-7.367 0 7.579-38.001 0 0m6.201 6.042-3.18 15.9c0.212 0.035 0.424 0.053 0.636 0.053 0.247 0 0.495 0 0.742 0 3.392 0.035 6.219-0.3 8.48-1.007 2.261-0.742 3.781-3.321 4.558-7.738 0.636-3.71 0-5.848-1.908-6.413-1.873-0.565-4.222-0.83-7.049-0.795-0.424 0.035-0.83 0.053-1.219 0.053-0.353 0-0.724 0-1.113 0l0.053-0.053" />
-                            <path
-                                d="m41.093 0 7.314 0-2.067 10.123 6.572 0c3.604 0.071 6.289 0.813 8.056 2.226 1.802 1.413 2.332 4.099 1.59 8.056l-3.551 17.649-7.42 0 3.392-16.854c0.353-1.767 0.247-3.021-0.318-3.763-0.565-0.742-1.784-1.113-3.657-1.113l-5.883-0.053-4.346 21.783-7.314 0 7.632-38.054 0 0" />
-                            <path
-                                d="m70.412 10.123 14.204 0c4.169 0.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-0.247 1.873-0.795 3.71-1.643 5.512-0.813 1.802-1.943 3.427-3.392 4.876-1.767 1.837-3.657 3.003-5.671 3.498-2.014 0.495-4.099 0.742-6.254 0.742l-6.36 0-2.014 10.07-7.367 0 7.579-38.001 0 0m6.201 6.042-3.18 15.9c0.212 0.035 0.424 0.053 0.636 0.053 0.247 0 0.495 0 0.742 0 3.392 0.035 6.219-0.3 8.48-1.007 2.261-0.742 3.781-3.321 4.558-7.738 0.636-3.71 0-5.848-1.908-6.413-1.873-0.565-4.222-0.83-7.049-0.795-0.424 0.035-0.83 0.053-1.219 0.053-0.353 0-0.724 0-1.113 0l0.053-0.053" />
-                        </svg>
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/php.svg" alt="ícono php">
                         <span class="label-svg">PHP</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <svg class="custom-size" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 25.6 25.6">
-                            <path
-                                d="M179.076 94.886c-3.568-.1-6.336.268-8.656 1.25-.668.27-1.74.27-1.828 1.116.357.355.4.936.713 1.428.535.893 1.473 2.096 2.32 2.72l2.855 2.053c1.74 1.07 3.703 1.695 5.398 2.766.982.625 1.963 1.428 2.945 2.098.5.357.803.938 1.428 1.16v-.135c-.312-.4-.402-.98-.713-1.428l-1.34-1.293c-1.293-1.74-2.9-3.258-4.64-4.506-1.428-.982-4.55-2.32-5.13-3.97l-.088-.1c.98-.1 2.14-.447 3.078-.715 1.518-.4 2.9-.312 4.46-.713l2.143-.625v-.4c-.803-.803-1.383-1.874-2.23-2.632-2.275-1.963-4.775-3.882-7.363-5.488-1.383-.892-3.168-1.473-4.64-2.23-.537-.268-1.428-.402-1.74-.848-.805-.98-1.25-2.275-1.83-3.436l-3.658-7.763c-.803-1.74-1.295-3.48-2.275-5.086-4.596-7.585-9.594-12.18-17.268-16.687-1.65-.937-3.613-1.34-5.7-1.83l-3.346-.18c-.715-.312-1.428-1.16-2.053-1.562-2.543-1.606-9.102-5.086-10.977-.5-1.205 2.9 1.785 5.755 2.8 7.228.76 1.026 1.74 2.186 2.277 3.346.3.758.4 1.562.713 2.365.713 1.963 1.383 4.15 2.32 5.98.5.937 1.025 1.92 1.65 2.767.357.5.982.714 1.115 1.517-.625.893-.668 2.23-1.025 3.347-1.607 5.042-.982 11.288 1.293 15 .715 1.115 2.4 3.57 4.686 2.632 2.008-.803 1.56-3.346 2.14-5.577.135-.535.045-.892.312-1.25v.1l1.83 3.703c1.383 2.186 3.793 4.462 5.8 5.98 1.07.803 1.918 2.187 3.256 2.677v-.135h-.088c-.268-.4-.67-.58-1.027-.892-.803-.803-1.695-1.785-2.32-2.677-1.873-2.498-3.523-5.265-4.996-8.12-.715-1.383-1.34-2.9-1.918-4.283-.27-.536-.27-1.34-.715-1.606-.67.98-1.65 1.83-2.143 3.034-.848 1.918-.936 4.283-1.248 6.737-.18.045-.1 0-.18.1-1.426-.356-1.918-1.83-2.453-3.078-1.338-3.168-1.562-8.254-.402-11.913.312-.937 1.652-3.882 1.117-4.774-.27-.848-1.16-1.338-1.652-2.008-.58-.848-1.203-1.918-1.605-2.855-1.07-2.5-1.605-5.265-2.766-7.764-.537-1.16-1.473-2.365-2.232-3.435-.848-1.205-1.783-2.053-2.453-3.48-.223-.5-.535-1.294-.178-1.83.088-.357.268-.5.623-.58.58-.5 2.232.134 2.812.4 1.65.67 3.033 1.294 4.416 2.23.625.446 1.295 1.294 2.098 1.518h.938c1.428.312 3.033.1 4.37.5 2.365.76 4.506 1.874 6.426 3.08 5.844 3.703 10.664 8.968 13.92 15.26.535 1.026.758 1.963 1.25 3.034.938 2.187 2.098 4.417 3.033 6.56.938 2.097 1.83 4.24 3.168 5.98.67.937 3.346 1.427 4.55 1.918.893.4 2.275.76 3.08 1.25 1.516.937 3.033 2.008 4.46 3.034.713.534 2.945 1.65 3.078 2.54zm-45.5-38.772a7.09 7.09 0 0 0-1.828.223v.1h.088c.357.714.982 1.205 1.428 1.83l1.027 2.142.088-.1c.625-.446.938-1.16.938-2.23-.268-.312-.312-.625-.535-.937-.268-.446-.848-.67-1.206-1.026z"
-                                transform="matrix(.390229 0 0 .38781 -46.300037 -16.856717)" fill-rule="evenodd"
-                                fill="#00678c" />
-                        </svg>
-                        <span>MySql</span>
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/mysql.svg" alt="ícono MySql">
+                        <span class="label-svg">MySql</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-                        <svg class="custom-size" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="-128 0 512 512" version="1.1" preserveAspectRatio="xMidYMid">
-                            <defs>
-                                <linearGradient x1="16.3628891%" y1="63.9052008%" x2="159.989811%" y2="20.2134672%"
-                                    id="linearGradient-1">
-                                    <stop stop-color="#F69923" offset="0%">
-                                    </stop>
-                                    <stop stop-color="#F79A23" offset="31.23%">
-                                    </stop>
-                                    <stop stop-color="#E97826" offset="83.83%">
-                                    </stop>
-                                </linearGradient>
-                                <linearGradient x1="-217.650978%" y1="394.671992%" x2="74.7430764%" y2="13.846058%"
-                                    id="linearGradient-2">
-                                    <stop stop-color="#9E2064" offset="32.33%">
-                                    </stop>
-                                    <stop stop-color="#C92037" offset="63.02%">
-                                    </stop>
-                                    <stop stop-color="#CD2335" offset="75.14%">
-                                    </stop>
-                                    <stop stop-color="#E97826" offset="100%">
-                                    </stop>
-                                </linearGradient>
-                                <linearGradient x1="-80.0440054%" y1="170.418469%" x2="146.240033%" y2="-44.2993346%"
-                                    id="linearGradient-3">
-                                    <stop stop-color="#9E2064" offset="32.33%">
-                                    </stop>
-                                    <stop stop-color="#C92037" offset="63.02%">
-                                    </stop>
-                                    <stop stop-color="#CD2335" offset="75.14%">
-                                    </stop>
-                                    <stop stop-color="#E97826" offset="100%">
-                                    </stop>
-                                </linearGradient>
-                                <linearGradient x1="-18.3158042%" y1="77.3603602%" x2="165.002%" y2="-41.416466%"
-                                    id="linearGradient-4">
-                                    <stop stop-color="#282662" offset="0%">
-                                    </stop>
-                                    <stop stop-color="#662E8D" offset="9.548389%">
-                                    </stop>
-                                    <stop stop-color="#9F2064" offset="78.82%">
-                                    </stop>
-                                    <stop stop-color="#CD2032" offset="94.87%">
-                                    </stop>
-                                </linearGradient>
-                                <linearGradient x1="-129.782775%" y1="463.714866%" x2="66.4555408%" y2="17.1896681%"
-                                    id="linearGradient-5">
-                                    <stop stop-color="#9E2064" offset="32.33%">
-                                    </stop>
-                                    <stop stop-color="#C92037" offset="63.02%">
-                                    </stop>
-                                    <stop stop-color="#CD2335" offset="75.14%">
-                                    </stop>
-                                    <stop stop-color="#E97826" offset="100%">
-                                    </stop>
-                                </linearGradient>
-                                <linearGradient x1="-34.8804169%" y1="187.706139%" x2="110.598662%" y2="-51.1003524%"
-                                    id="linearGradient-6">
-                                    <stop stop-color="#9E2064" offset="32.33%">
-                                    </stop>
-                                    <stop stop-color="#C92037" offset="63.02%">
-                                    </stop>
-                                    <stop stop-color="#CD2335" offset="75.14%">
-                                    </stop>
-                                    <stop stop-color="#E97826" offset="100%">
-                                    </stop>
-                                </linearGradient>
-                                <linearGradient x1="-20.6189333%" y1="192.563688%" x2="125.259839%" y2="-136.90643%"
-                                    id="linearGradient-7">
-                                    <stop stop-color="#282662" offset="0%">
-                                    </stop>
-                                    <stop stop-color="#662E8D" offset="9.548389%">
-                                    </stop>
-                                    <stop stop-color="#9F2064" offset="78.82%">
-                                    </stop>
-                                    <stop stop-color="#CD2032" offset="94.87%">
-                                    </stop>
-                                </linearGradient>
-                            </defs>
-                            <g>
-                                <path
-                                    d="M218.048249,2.88871595 C210.079377,7.57042802 196.731518,21.0178988 180.793774,40.4420233 L180.793774,41.6373541 L194.7393,67.4365759 L195.436576,67.9346304 C205.696498,53.2918288 216.056031,40.0435798 226.614786,28.7875486 C227.411673,27.8910506 227.810117,27.492607 227.810117,27.492607 C227.411673,27.8910506 227.01323,28.3891051 226.614786,28.7875486 C223.228016,32.5727626 212.868482,44.52607 197.329183,68.4326848 L199.122179,68.8311284 C199.122179,68.8311284 235.480156,65.2451362 253.011673,62.2568093 L254.007782,61.3603113 C259.585992,30.0824903 248.529183,15.7385214 248.529183,15.7385214 C248.529183,15.7385214 234.583658,-6.77354086 218.048249,2.88871595 Z"
-                                    fill="url(#linearGradient-1)">
-                                </path>
-                                <path
-                                    d="M152.404669,139.15642 C156.88716,130.888716 161.36965,122.720623 165.85214,114.851362 C170.533852,106.683268 175.315175,98.7143969 180.196109,91.044358 C180.494942,90.6459144 180.793774,90.1478599 180.992996,89.6498054 C185.774319,82.0793774 190.555642,74.907393 195.436576,67.9346304 L180.793774,40.3424125 C179.698054,41.6373541 178.602335,43.0319066 177.506615,44.4264591 C173.322957,49.7058366 168.940078,55.2840467 164.457588,61.2607004 C159.377432,68.0342412 154.197665,75.2062257 148.918288,82.7766537 C144.037354,89.7494163 139.056809,97.1206226 134.175875,104.59144 C129.992218,111.066148 125.708949,117.640467 121.525292,124.513619 C121.32607,124.812451 121.226459,125.011673 121.027237,125.310506 L121.027237,126.406226 L139.256031,162.564981 L140.052918,162.863813 C144.136965,154.894942 148.221012,146.92607 152.404669,139.15642 Z"
-                                    fill="url(#linearGradient-2)">
-                                </path>
-                                <path
-                                    d="M73.014786,316.164981 C76.3019455,307.598444 79.7883268,298.932296 83.2747082,290.166537 C86.6614786,281.799222 90.048249,273.332296 93.6342412,264.86537 C97.1206226,256.398444 100.806226,247.931518 104.491829,239.364981 C108.277043,230.698833 112.062257,222.032685 115.947082,213.466148 C119.831907,204.999222 123.716732,196.532296 127.701167,188.164981 C129.09572,185.176654 130.589883,182.088716 132.084047,179.100389 C134.574319,173.920623 137.164202,168.740856 139.654475,163.6607 C139.754086,163.361868 139.953307,163.162646 140.052918,162.863813 L121.027237,125.310506 C120.728405,125.80856 120.429572,126.306615 120.130739,126.804669 C115.74786,134.076265 111.26537,141.447471 106.982101,149.017899 C102.599222,156.687938 98.3159533,164.457588 94.1322957,172.326848 C90.5463035,179.000778 87.1595331,185.674708 83.7727626,192.448249 C83.0754864,193.842802 82.477821,195.137743 81.7805447,196.532296 C77.5968872,205.098833 73.911284,213.266926 70.5245136,221.235798 C66.7392996,230.200778 63.3525292,238.767315 60.3642023,246.935409 C58.3719844,252.314397 56.6785992,257.394553 54.985214,262.375097 C53.6902724,266.558755 52.3953307,270.842023 51.2,275.025681 C48.311284,284.98677 45.9206226,294.848249 43.9284047,304.809339 L44.2272374,306.004669 L62.4560311,342.263035 L63.0536965,342.561868 C65.5439689,335.788327 68.1338521,329.014786 70.8233463,322.042023 C71.5206226,320.049805 72.3175097,318.157198 73.014786,316.164981 Z"
-                                    fill="url(#linearGradient-3)">
-                                </path>
-                                <path
-                                    d="M43.7291829,306.10428 C41.3385214,318.157198 39.6451362,330.210117 38.7486381,342.163424 C38.7486381,342.561868 38.6490272,342.960311 38.6490272,343.458366 C32.6723735,333.89572 16.7346304,324.631907 16.7346304,324.631907 C28.1898833,341.167315 36.8560311,357.603113 38.1509728,373.740078 C32.0747082,375.035019 23.707393,373.142412 13.9455253,369.656031 C24.0062257,378.919844 31.5766537,381.509728 34.5649805,382.207004 C25.3011673,382.804669 15.6389105,389.179767 5.8770428,396.451362 C20.1214008,390.67393 31.5766537,388.382879 39.844358,390.175875 C26.7953307,427.131518 13.7463035,467.971984 0.59766537,511.203113 C4.58210117,510.007782 6.97276265,507.318288 8.36731518,503.632685 C10.6583658,495.763424 26.1976654,444.364202 50.4031128,376.728405 C51.1003891,374.835798 51.7976654,372.84358 52.4949416,370.950973 C52.6941634,370.452918 52.8933852,369.855253 53.092607,369.357198 C55.6824903,362.284825 58.2723735,355.01323 61.0614786,347.642023 C61.659144,345.948638 62.3564202,344.255253 62.9540856,342.561868 C62.9540856,342.561868 62.9540856,342.462257 62.9540856,342.462257 L43.9284047,304.809339 C43.9284047,305.307393 43.8287938,305.705837 43.7291829,306.10428 Z"
-                                    fill="url(#linearGradient-4)">
-                                </path>
-                                <path
-                                    d="M197.329183,68.5322957 C193.045914,75.1066148 188.364202,82.5774319 183.284047,91.044358 C182.985214,91.4428016 182.785992,91.940856 182.48716,92.3392996 C178.10428,99.7105058 173.522179,107.679377 168.641245,116.544747 C164.457588,124.115175 160.074708,132.283268 155.492607,141.148638 C151.508171,148.818677 147.424125,156.88716 143.240467,165.553307 L144.136965,165.951751 L190.456031,160.971206 L191.551751,160.174319 C205.596887,153.699611 211.872374,147.822568 217.948638,139.355642 C219.542412,137.064591 221.235798,134.574319 222.829572,132.084047 C227.810117,124.314397 232.691051,115.847471 236.974319,107.380545 C241.157977,99.2124514 244.84358,91.044358 247.732296,83.7727626 C249.525292,79.0910506 251.019455,74.8077821 252.015564,71.0225681 C252.912062,67.6357977 253.609339,64.448249 254.107393,61.4599222 C235.380545,64.7470817 212.370428,67.8350195 197.329183,68.5322957 Z"
-                                    fill="url(#linearGradient-5)">
-                                </path>
-                                <path
-                                    d="M141.447471,169.438132 C139.853696,172.824903 138.160311,176.311284 136.466926,179.797665 C134.67393,183.582879 132.781323,187.567315 130.988327,191.551751 C130.091829,193.543969 129.09572,195.635798 128.199222,197.628016 C125.310506,203.803891 122.521401,210.178988 119.533074,216.753307 C115.947082,224.82179 112.261479,233.288716 108.575875,241.954864 C104.989883,250.322179 101.403891,258.888716 97.8178988,267.853696 C94.3315175,276.320623 90.8451362,285.086381 87.3587549,294.051362 C84.1712062,302.119844 80.9836576,310.287938 77.7961089,318.854475 C77.5968872,319.252918 77.4972763,319.651362 77.2980545,320.049805 C74.1105058,328.516732 71.0015321,337.13001 67.7143726,345.995379 C67.6147617,346.194601 67.4368555,346.713047 67.3372446,346.912269 L68.025231,347.064993 L81.8801556,345.574599 L82.6623298,345.251362 C82.3634971,345.151751 82.1789883,344.753307 81.8801556,344.653696 C100.20856,342.362646 124.61323,328.616342 140.451362,311.68249 C147.722957,303.91284 154.297276,294.649027 160.473152,283.891051 C165.055253,275.822568 169.238911,266.957198 173.322957,257.09572 C176.908949,248.529183 180.29572,239.165759 183.582879,229.105058 C179.399222,231.296498 174.518288,232.989883 169.238911,234.085603 C168.342412,234.284825 167.346304,234.484047 166.350195,234.683268 C165.354086,234.88249 164.357977,234.982101 163.461479,235.181323 C180.594553,228.607004 191.352529,215.856809 199.22179,200.31751 C194.7393,203.405447 187.368093,207.389883 178.602335,209.382101 C177.407004,209.680934 176.211673,209.880156 174.916732,210.079377 C174.617899,210.079377 174.319066,210.178988 174.020233,210.178988 C179.996887,207.688716 184.977432,204.899611 189.360311,201.612451 C190.256809,200.915175 191.153307,200.217899 192.049805,199.421012 C193.344747,198.225681 194.639689,197.03035 195.835019,195.835019 C196.631907,195.038132 197.329183,194.241245 198.12607,193.344747 C199.819455,191.352529 201.41323,189.161089 202.907393,186.770428 C203.405447,186.073152 203.803891,185.276265 204.301946,184.578988 C204.899611,183.483268 205.397665,182.387549 205.89572,181.291829 C208.286381,176.510506 210.178988,172.227237 211.673152,168.442023 C212.470039,166.549416 213.067704,164.856031 213.66537,163.162646 C213.864591,162.564981 214.063813,161.867704 214.362646,161.270039 C214.960311,159.477043 215.458366,157.883268 215.856809,156.389105 C216.454475,154.297276 216.753307,152.603891 216.952529,151.40856 C216.354864,151.906615 215.757198,152.305058 214.960311,152.803113 C209.780545,155.891051 200.915175,158.680156 193.743191,159.975097 L207.887938,158.381323 L193.743191,159.975097 C192.747082,160.174319 192.049805,160.27393 191.252918,160.473152 C191.319326,160.406744 175.343888,162.095858 143.326605,165.540491 C143.127383,165.739713 141.945525,168.242802 141.447471,169.438132 Z"
-                                    fill="url(#linearGradient-6)">
-                                </path>
-                                <path
-                                    d="M65.8428016,350.63035 C63.3525292,357.503502 60.7626459,364.575875 58.2723735,371.74786 C58.2723735,371.847471 58.1727626,371.947082 58.1727626,372.046693 C57.7743191,373.042802 57.4754864,374.038911 57.0770428,375.13463 C55.3836576,380.015564 53.8894942,384.298833 50.5027237,394.259922 C56.0809339,396.849805 60.5634241,403.523735 64.8466926,411.193774 C64.448249,403.324514 61.1610895,395.853696 54.8856031,390.175875 C82.477821,391.371206 106.284825,384.398444 118.536965,364.277043 C119.632685,362.484047 120.628794,360.59144 121.525292,358.599222 C115.947082,365.671595 108.974319,368.659922 96.0249027,367.962646 C96.0249027,367.962646 95.9252918,367.962646 95.9252918,367.962646 C95.9252918,367.962646 96.0249027,367.962646 96.0249027,367.962646 C115.249805,359.396109 124.812451,351.128405 133.378988,337.481712 C135.371206,334.194553 137.363424,330.708171 139.355642,326.823346 C122.521401,344.056031 103.097276,348.936965 82.6770428,345.251362 L67.336965,346.944747 C66.8389105,348.040467 66.340856,349.335409 65.8428016,350.63035 Z"
-                                    fill="url(#linearGradient-7)">
-                                </path>
-                            </g>
-                        </svg>
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/apache.svg" alt="ícono apache">
                         <span class="label-svg">Apache</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="col-12 col-lg-5 habilidades">
-                <h3 class="text-center mb-3 mt-4">Aprendiendo</h3>
-                <ul class="row row-gap-4 p-4 ">
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <span class="label-svg">React</span>
-                    </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <span class="label-svg">Node.js</span>
-                    </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <span class="label-svg">Tailwind</span>
-                    </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <span class="label-svg">Astro</span>
-                    </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <span class="label-svg">TypeScript</span>
-                    </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <span class="label-svg">npm</span>
-                    </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
-                        <span class="label-svg">Docker</span>
                     </li>
                 </ul>
             </div>
             <div class="col-12 col-lg-5 habilidades">
                 <h3 class="text-center mb-3 mt-4">Herramientas</h3>
                 <ul class="row row-gap-4 p-4 ">
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/git.svg" alt="ícono git">
                         <span class="label-svg">Git</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/github.svg" alt="ícono github">
                         <span class="label-svg">GitHub</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/terminal.svg" alt="">
                         <span class="label-svg">Terminal</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/vscode.svg" alt="ícono visual studio code">
                         <span class="label-svg">VSCode</span>
                     </li>
-                    <li class="col-4 d-flex flex-column text-center align-items-center">
-
+                    <li class="col-lg-6 col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/MySQL-Workbench-logo.webp" alt="Ícono MySql Workbench" width="100" height="100">
                         <span class="label-svg">MySql Workbench</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-5 habilidades">
+                <h3 class="text-center mb-3 mt-4">Aprendiendo</h3>
+                <ul class="row row-gap-4 p-4 ">
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/react.svg" alt="ícono react">
+                        <span class="label-svg">React</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/nodejs.svg" alt="ícono node,js">
+                        <span class="label-svg">Node.js</span>
+                    </li>
+                    <!-- <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/tailwindcss.svg" alt="ícono tailwind">
+                        <span class="label-svg">Tailwind</span>
+                    </li> -->
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/expressjs.svg" alt="ícono tailwind">
+                        <span class="label-svg">Express.js</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" class="custom-size" src="icons/typescript.svg" alt="ícono typescript">
+                        <span class="label-svg">TypeScript</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/npm.svg" alt="ícono npm">
+                        <span class="label-svg">npm</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/docker.svg" alt="ícono docker">
+                        <span class="label-svg">Docker</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/mongodb.svg" alt="ícono mongodb">
+                        <span class="label-svg">MongoDB</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/postgresql.svg" alt="ícono postgresql">
+                        <span class="label-svg">PostgreSQL</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/prisma.svg" alt="ícono prisma">
+                        <span class="label-svg">Prisma</span>
+                    </li>
+                    <li class="col-4 d-flex flex-column text-center align-items-center row-gap-3">
+                        <img class="custom-size" src="icons/railway.svg" alt="ícono railway">
+                        <span class="label-svg">Tailway</span>
                     </li>
                 </ul>
             </div>
@@ -445,7 +311,7 @@
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex gap-3">
                 <li>
-                    <a clase="anchor-date" href="https://www.facebook.com/mauroluceroo/" target="_blank"
+                    <a href="https://www.facebook.com/mauroluceroo/" target="_blank"
                         rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#212529bf"
                             class="bi bi-facebook" viewBox="0 0 16 16">
@@ -455,7 +321,7 @@
                     </a>
                 </li>
                 <li>
-                    <a clase="anchor-date" href="https://twitter.com/mauroluceroo/" target="_blank"
+                    <a href="https://twitter.com/mauroluceroo/" target="_blank"
                         rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#212529bf"
                             class="bi bi-twitter-x" viewBox="0 0 16 16">
@@ -465,7 +331,7 @@
                     </a>
                 </li>
                 <li>
-                    <a clase="anchor-date" href="https://www.instagram.com/mauroluceroo/" target="_blank"
+                    <a href="https://www.instagram.com/mauroluceroo/" target="_blank"
                         rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#212529bf"
                             class="bi bi-instagram" viewBox="0 0 16 16">
