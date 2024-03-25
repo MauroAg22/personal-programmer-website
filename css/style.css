@@ -7,7 +7,7 @@ body {
         /* Izquierda arriba */
         radial-gradient(
             circle at 15% -5%,
-            #00f3,
+            #0000ff25,
             #00f0 50%
         ),
         /* Derecha arriba */
@@ -24,8 +24,8 @@ body {
         ),
         /* Derecha abajo */
         radial-gradient(
-            circle at 85% 155%, 
-            #00f3, 
+            circle at 85% 100%, 
+            #0000ff25, 
             #00f0 50%
         ),
         #fff;
@@ -50,14 +50,6 @@ body {
     background: #ff8866;
 }
 
-
-
-
-ul {
-    list-style:none;
-    padding: 0;
-}
-
 .custom-font-color-primary {
     color: #f86449;
 }
@@ -80,13 +72,11 @@ ul {
 .main-title {
     margin: 0;
     font-weight: 600;
-    /* background-color: lightblue; */
     font-size: 20vw;
     text-align: center;
 }
 
 .main-paragraph {
-    /* background-color: lightgreen; */
     margin: 0;
     text-align: center;
     font-size: 5vw;
@@ -114,14 +104,6 @@ ul {
     gap: 1.7vw;
 }
 
-/* .date a {
-    transition: scale 0.5s;
-}
-
-.date a:hover {
-    scale: 1.2;
-} */
-
 .label-date {
     font-weight: 200;
     letter-spacing: 1.3vw;
@@ -141,14 +123,9 @@ ul {
     transform: scale(1.2);
 }
 
-.svg-size {
+.personal-info-svg {
     width: 6.7vw;
     height: 6.7vw;
-}
-
-.social-icon {
-    display: flex;
-    gap: 6vw;
 }
 
 .profile-section {
@@ -192,30 +169,8 @@ ul {
     font-style: normal;
 }
 
-.habilidades {
-    background-color: #fff;
-    border-radius: 12px;
-    border: 2px solid #ddd;
-}
-
-.custom-size-2 {
-    width: 40;
-    height: 40;
-}
-
 @media (width <= 576px) {
-    .custom-margin {
-        margin: 0 5vw;
-    }
-
-    .custom-size {
-        height: 14vw;
-        width: 14vw;
-    }
-
-    .label-svg {
-        font-size: 4vw;
-    }
+    
 }
 
 
@@ -260,12 +215,8 @@ ul {
     .date {
         letter-spacing: 2px;
     }
-    
-    .social-icon {
-        gap: 24px;
-    }
 
-    .svg-size {
+    .personal-info-svg {
         width: 32px;
         height: 32px;
     }
@@ -278,6 +229,7 @@ ul {
 
 /** md */
 @media (width >= 768px) {
+
     .main-messagge{
         gap: 32px;
     }
@@ -294,5 +246,33 @@ ul {
 
 /** lg */
 @media (width >= 992px) {
-    
+    body {
+        background:
+            /* Izquierda arriba */
+            radial-gradient(
+                circle at 15% -5%,
+                #0000ff25,
+                #00f0 50%
+            ),
+            /* Derecha arriba */
+            radial-gradient(
+                circle at 125% 30%,
+                #f003,
+                #f000 50%
+            ),
+            /* Izquierda abajo */
+            radial-gradient(
+                circle at -15% 80%,
+                #f003,
+                #f000 50%
+            ),
+            /* Derecha abajo */
+            radial-gradient(
+                circle at 85% 125%, 
+                #0000ff25, 
+                #00f0 50%
+            ),
+            #fff
+        ;
+    }
 }
