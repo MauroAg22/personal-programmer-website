@@ -1,0 +1,43 @@
+.custom-font-size-navbar {
+    font-size: 1.16rem;
+}
+
+.custom-navbar-toggler {
+    font-size: 1.16rem;
+}
+
+.custom-offcanvas-title {
+    user-select: none;
+}
+
+/** sm */
+@media (width >= 576px) {
+    .custom-font-size-navbar {
+        font-size: var(--bs-navbar-brand-font-size);
+    }
+    
+    .custom-navbar-toggler {
+        font-size: var(--bs-navbar-toggler-font-size);
+    }
+}
+
+.custom-navbar-ul li {
+    padding-left: 16px;
+    display: flex;
+    gap: 8px;
+    border-radius: 5px;
+    transition: 
+    gap .2s,
+    background-color .4s
+    ;
+}
+
+.custom-navbar-ul li:hover {
+    gap: 12px;
+    background-color: #fff3;
+}
+
+.custom-navbar-ul svg {
+    height: auto;
+    scale: 1.2;
+}

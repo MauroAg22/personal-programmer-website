@@ -1,3 +1,15 @@
+<?php
+
+$pagActual = basename($_SERVER['PHP_SELF']);
+
+function active($pagActual, $url)
+{
+    $pagActual = basename($_SERVER['PHP_SELF']);
+    echo ($pagActual == $url) ? "active" : "";
+}
+
+?>
+
 <!doctype html>
 <html lang="es">
 
@@ -25,6 +37,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/habilidades.css">
+    <link rel="stylesheet" href="css/navbar.css">
     
     <title>Mauro Lucero</title>
 </head>
@@ -32,7 +45,7 @@
 <body>
     <nav class="navbar custom-navbar navbar-dark bg-dark outfit-font">
         <div class="container-fluid gap-0">
-            <a class="navbar-brand custom-font-size-navbar" href="#">Mauro Lucero Web Developer</a>
+            <a class="navbar-brand custom-font-size-navbar" href="index.php">Mauro Lucero Web Developer</a>
             <button class="navbar-toggler custom-navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">
@@ -40,20 +53,30 @@
             </button>
             <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
                 aria-labelledby="offcanvasDarkNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                <div class="offcanvas-header pb-0">
+                    <h5 class="offcanvas-title custom-offcanvas-title ps-2" id="offcanvasDarkNavbarLabel">Menú</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
                         aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <ul class="navbar-nav justify-content-end flex-grow-1 custom-navbar-ul">
+                        <li class="nav-item d-flex">
+                            <?php ($pagActual == "index.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?>
+                            <a class="nav-link <?php active($pagActual, "index.php") ?>" aria-current="page" href="index.php">Perfil</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                        <li class="nav-item d-flex">
+                            <?php ($pagActual == "acerca-de-mi.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?>
+                            <a class="nav-link <?php active($pagActual, "acerca-de-mi.php") ?>" href="acerca-de-mi.php">Acerca de mí</a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <li class="nav-item d-flex">
+                            <?php ($pagActual == "contacto.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?>
+                            <a class="nav-link <?php active($pagActual, "contacto.php") ?>" href="contacto.php">Contacto</a>
+                        </li>
+                        <li class="nav-item d-flex">
+                            <?php ($pagActual == "proyectos.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?>
+                            <a class="nav-link <?php active($pagActual, "proyectos.php") ?>" href="proyectos.php">Proyectos</a>
+                        </li>
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
                                 Dropdown
@@ -66,7 +89,7 @@
                                 </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- <form class="d-flex mt-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -77,21 +100,12 @@
         </div>
     </nav>
 
-    <header class="main-messagge my-5">
-        <h1 class="animation-title main-title custom-font-color-primary">
-            <span>¡</span>
-            <span>H</span><span>O</span><span>L</span><span>A</span>
-            <span>!</span>
-        </h1>
-        <p class="main-paragraph">Mi nombre es <span style="color: #eb593f;">Mauro</span> y te doy la bienvenida a mi portafolio web.</p>
-    </header>
-
     <main class="container">
-        <section class="row row-gap-5 justify-content-center">
+    <section class="row row-gap-5 justify-content-center">
             <div class="col-lg-7 col-md-9 order-lg-2">
                 <div class="profile-section">
                     <section class="profile-pic">
-                        <!-- <img src="#" alt="Foto de perfil" srcset=""> -->
+                        <img src="img/perfil.jpg" alt="Foto de perfil" srcset="">
                     </section>
                     <a class="a-cv gap-3 d-flex justify-content-center align-items-center" href="pdf/mauro-lucero.cv.pdf" download="mauro-lucero.cv.pdf">
                         <svg class="animate-download" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
@@ -114,8 +128,8 @@
                     </div>
                     <div>
                         <span class="label-date">ESPECIALIDAD</span>
-                        <span class="date">Desarrollador Web</span>
-                        <span class="date">Programador de Sistemas</span>
+                        <span class="date">Desarrollador Web Freelance</span>
+                        <!-- <span class="date">Programador de Sistemas</span> -->
                     </div>
                     <div>
                         <span class="label-date">CORREO ELECTRÓNICO</span>
@@ -321,10 +335,6 @@
         <div
             class="d-flex flex-wrap justify-content-between align-items-center py-4 mt-5 mb-3 border-top border-secondary">
             <p class="col-md-4 mb-0 text-body-secondary">© 2024 Mauro Agustín Lucero</p>
-
-            <!-- <a>
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            </a> -->
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex gap-3">
                 <li>

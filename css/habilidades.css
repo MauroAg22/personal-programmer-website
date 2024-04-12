@@ -37,9 +37,6 @@
     grid-column: 1 / 2;
 }
 
-
-
-
 .frontend,
 .backend,
 .herramientas,
@@ -130,7 +127,7 @@
     }
 }
 
-/** Animacion */
+/** ---------- ANIMACIÓN ---------- */
 
 @keyframes rotar{
     from{
