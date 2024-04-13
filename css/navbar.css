@@ -21,23 +21,29 @@
     }
 }
 
-.custom-navbar-ul li {
+.custom-navbar-ul {
+    gap: 4px;
+}
+
+.custom-navbar-ul li a {
+    font-size: large;
     padding-left: 16px;
     display: flex;
     gap: 8px;
     border-radius: 5px;
     transition: 
-    gap .2s,
-    background-color .4s
+        gap .2s,
+        background-color .4s
     ;
 }
 
-.custom-navbar-ul li:hover {
+
+.custom-navbar-ul li a:hover {
     gap: 12px;
     background-color: #fff3;
 }
 
 .custom-navbar-ul svg {
     height: auto;
-    scale: 1.2;
+    scale: 1.4;
 }
