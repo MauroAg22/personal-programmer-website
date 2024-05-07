@@ -1,0 +1,78 @@
+.services-header {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    background-image: url("../img/bg-slider-servicios-contrast.webp");
+    background-position: center;
+    background-size: cover;
+
+    border-top: 1px solid #fff;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6vw;
+}
+
+.services-header h1 {
+    color: #f86449;
+    width: 90%;
+    font-size: 10vw;
+    margin: 0;
+    font-weight: 600;
+    text-align: center;
+}
+
+.services-header p {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 5vw;
+    width: 85%;
+}
+
+.services-header p span {
+    color: #f86449;
+}
+
+
+/** sm */
+@media (width >= 576px) {
+    .services-header {
+        gap: 28px;
+    }
+
+    .services-header h1 {
+        font-size: 60px;
+    }
+    
+    .services-header p {
+        font-size: 28px;
+        width: 450px;
+    }
+}
+
+/** md */
+@media (width >= 768px) {
+    .services-header {
+        gap: 32px;
+    }
+
+    .services-header h1 {
+        width: 70%;
+        font-size: 80px;
+    }
+
+    .services-header p {
+        font-size: 32px;
+        width: 540px;
+    }
+}
+
+/** lg */
+@media (width >= 992px) {
+    .services-header h1 {
+        width: 60%;
+        font-size: 80px;
+    }
+}

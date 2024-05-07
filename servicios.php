@@ -24,126 +24,77 @@ function active($pagActual, $url)
     <meta property="og:image" content="img/perfil.jpg">
 
     <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Outfit:wght@100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- Mis estilos -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/habilidades.css">
     <link rel="stylesheet" href="css/navbar.css">
-    
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/services-header.css">
+
     <title>Mauro Lucero</title>
 </head>
 
 <body>
+    <!-- Barra de navegación -->
     <?php include "components/navbar.php" ?>
 
+    <header class="services-header">
+        <h1>
+            SISTEMAS Y DESARROLLOS WEB A MEDIDA
+        </h1>
+        <p>
+            Brindando variedad de soluciones innovadoras para hacer realidad su proyecto, sistema o sitio web.
+        </p>
+    </header>
+
     <main class="container">
-    <section class="row row-gap-5 justify-content-center">
-            <div class="col-lg-7 col-md-9 order-lg-2">
-                <div class="profile-section">
-                    <section class="profile-pic">
-                        <img src="img/perfil.jpg" alt="Foto de perfil" srcset="">
-                    </section>
-                    <a class="a-cv gap-3 d-flex justify-content-center align-items-center" href="pdf/mauro-lucero.cv.pdf" download="mauro-lucero.cv.pdf">
-                        <svg class="animate-download" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-                        </svg>
-                        <span>Descargar Curriculum Vitae</span>
-                    </a>
+
+        <div class="row mt-5 pb-2 border-bottom border-secondary">
+            <div class="col-12 col-md-6 mb-5">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <img src="icons/desing-web.avif" alt="ícono de diseño web y movil">
+                    <h2 class="my-3">Diseño Web y Móvil</h2>
+                    <p class="my-0">Desarrollo tu sitio web con diseño adaptable utilizando CSS y Bootstrap, asegurando una experiencia óptima en todas las plataformas. Esta estrategia garantiza que tu sitio sea accesible para una amplia audiencia, lo que te permite alcanzar a más potenciales clientes en diversos dispositivos.</p>
                 </div>
             </div>
-            <div class="col-lg-5 col-md-9 order-lg-1">
-                <section class="personal-info">
-                    <div>
-                        <span class="label-date">NOMBRE</span>
-                        <span class="date">Mauro Agustín Lucero</span>
-                    </div>
-                    <div>
-                        <span class="label-date">FECHA DE NACIMIENTO</span>
-                        <span class="date">29 - 07 - 1997</span>
-                    </div>
-                    <div>
-                        <span class="label-date">ESPECIALIDAD</span>
-                        <span class="date">Desarrollador Web Freelance</span>
-                        <!-- <span class="date">Programador de Sistemas</span> -->
-                    </div>
-                    <div>
-                        <span class="label-date">CORREO ELECTRÓNICO</span>
-                        <span class="date">
-                            <a href="mailto:mauroaglucero@gmail.com">mauroaglucero@gmail.com</a>
-                        </span>
-                    </div>
-                    <div>
-                        <span class="label-date">CELULAR</span>
-                        <span class="date">
-                            <a href="tel:+5492657709769">+54 9 2657 70-9769</a>
-                        </span>
-                    </div>
-                    <div>
-                        <span class="label-date">LOCALIDAD</span>
-                        <span class="date">Villa Mercedes, San Luis, Argentina</spn>
-                    </div>
-                    <div>
-                        <span class="label-date">PERFILES</span>
-                        <div class="date d-flex gap-4 ms-2">
-                            <a href="https://www.linkedin.com/in/mauro-ag-lucero/" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg class="personal-info-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                    class="bi bi-linkedin" viewBox="0 0 16 16">
-                                    <path
-                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                                </svg>
-                            </a>
-                            <a href="https://github.com/MauroAg22/" target="_blank"
-                                rel="noopener noreferrer">
-                                <svg class="personal-info-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                                    class="bi bi-github" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-        <section class="border-top border-bottom border-secondary mt-5 pt-4 pb-5">
-            <article>
-                <div class="row justify-content-center gap-3">
-                    <div class="col-12">
-                        <h2 class="text-center custom-font-color-primary mb-0">SOBRE MÍ</h2>
-                    </div>
-                    <div class="col-10 col-sm-9">
-                        <p class="text-center fs-5 mb-0">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum sequi minima voluptates
-                            impedit,
-                            consectetur modi odio quasi accusamus vel id numquam aliquid dolor ex facere. In similique
-                            quaerat
-                            debitis vero? Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, aperiam
-                            provident,
-                            beatae, qui sed suscipit molestias maiores quaerat pariatur officia rem at! Consectetur ut
-                            ullam
-                            nisi beatae magni maxime eum.
-                        </p>
-                    </div>
+            <div class="col-12 col-md-6 mb-5">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <img src="icons/programmer.avif" alt="ícono de diseño web y movil">
+                    <h2 class="my-3">Programador Web</h2>
+                    <p class="my-0">Me especializo en la creación de sitios web, utilizando HTML, CSS, y JavaScript para el frontend, y PHP para el backend. Además, integro bases de datos MySQL para garantizar un funcionamiento eficiente y confiable. Código bien estructurado y documentado, lo que asegura la escalabilidad y legibilidad del proyecto.</p>
                 </div>
-            </article>
-        </section>
+            </div>
+            <div class="col-12 col-md-6 mb-5">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <img src="icons/hosting.avif" alt="ícono de diseño web y movil">
+                    <h2 class="my-3">Alojamiento Web</h2>
+                    <p class="my-0">Alojamiento <a class="host-link link-underline link-underline-opacity-0" href="https://www.hostinger.com.ar/" target="_blank" rel="noopener noreferrer">Hostinger</a>. Tu sitio web veloz y seguro alojado en la plataforma líder en hospedaje web. Con servidores de alta velocidad y una robusta infraestructura, garantizamos un rendimiento óptimo para tu sitio. Tus datos protegidos en todo momento. Disfruta de un servicio confiable y escalable que impulsa tu presencia en línea.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-5">
+                <div class="d-flex flex-column align-items-center text-center">
+                    <img src="icons/system-analysis-90.avif" alt="ícono de diseño web y movil">
+                    <h2 class="my-3">Sistemas de Información</h2>
+                    <p class="my-0">
+Desarrollo sistemas personalizados que se ajusten perfectamente a tus requerimientos y objetivos. Desde la concepción inicial hasta la implementación y mantenimiento. Con tecnologías de vanguardia y un enfoque centrado en ti, creo sistemas robustos y escalables que se adaptan a tus necesidades específicas.</p>
+                </div>
+            </div>
+        </div>
 
         <section id="habilidades">
+
             <h2>HABILIDADES</h2>
-            
+
             <!-------------------------------------------------------------------------------------------------------->
-            
+
             <div class="animar-borde">
                 <div class="frontend">
                     <h3>Frontend</h3>
@@ -167,9 +118,9 @@ function active($pagActual, $url)
                     </ul>
                 </div>
             </div>
-            
+
             <!-------------------------------------------------------------------------------------------------------->
-            
+
             <div class="animar-borde">
                 <div class="backend">
                     <h3>Backend</h3>
@@ -191,7 +142,7 @@ function active($pagActual, $url)
             </div>
 
             <!-------------------------------------------------------------------------------------------------------->
-            
+
             <div class="animar-borde">
                 <div class="herramientas">
                     <h3>Herramientas</h3>
@@ -219,13 +170,17 @@ function active($pagActual, $url)
                     </ul>
                 </div>
             </div>
-            
+
             <!-------------------------------------------------------------------------------------------------------->
-            
+
             <div class="animar-borde">
                 <div class="aprendiendo">
                     <h3>Aprendiendo</h3>
                     <ul>
+                        <li>
+                            <img src="icons/laravel.svg" alt="ícono laravel">
+                            <span>Laravel</span>
+                        </li>
                         <li>
                             <img src="icons/react.svg" alt="ícono react">
                             <span>React</span>
@@ -274,19 +229,16 @@ function active($pagActual, $url)
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Pie de pagina -->
     <?php include "components/footer.php" ?>
 
     <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 
 </html>

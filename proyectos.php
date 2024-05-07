@@ -38,11 +38,13 @@ function active($pagActual, $url)
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/habilidades.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     
     <title>Mauro Lucero</title>
 </head>
 
 <body>
+    <!-- Barra de navegación -->
     <?php include "components/navbar.php" ?>
 
     <main class="container">

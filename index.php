@@ -38,14 +38,16 @@ function active($pagActual, $url)
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/habilidades.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     
     <title>Mauro Lucero</title>
 </head>
 
 <body>
+    <!-- Barra de navegación -->
     <?php include "components/navbar.php" ?>
 
-    <header class="main-messagge my-5">
+    <header class="profile-header my-5">
         <h1 class="animation-title main-title custom-font-color-primary">
             <span>¡</span>
             <span>H</span><span>O</span><span>L</span><span>A</span>
@@ -59,7 +61,7 @@ function active($pagActual, $url)
             <div class="col-lg-7 col-md-9 order-lg-2">
                 <div class="profile-section">
                     <img class="profile-pic" src="img/demo-380x280.jpg" alt="Foto de perfil">
-                    <a class="download-cv gap-3 d-flex justify-content-center align-items-center" href="pdf/mauro-lucero.cv.pdf" download="mauro-lucero.cv.pdf">
+                    <a class="download-cv gap-3 d-flex justify-content-center align-items-center" href="pdf/mauro-lucero-cv.pdf" download="mauro-lucero-cv.pdf">
                         <svg class="animate-download" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                             <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
@@ -132,168 +134,27 @@ function active($pagActual, $url)
                     </div>
                     <div class="col-10 col-sm-9">
                         <p class="text-center fs-5">
-                            Culpa, aperiam provident, beatae, qui sed suscipit molestias maiores quaerat pariatur officia rem at! Consectetur ut ullam nisi beatae magni maxime eum.
-                        </p>
-                        <p class="text-center fs-5 mb-0">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum sequi minima voluptates impedit, consectetur modi odio quasi accusamus vel id numquam aliquid dolor ex facere. In similique quaerat debitis vero? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Desarrollador web freelancer y estudiante de Programación Universitaria de Sistemas en la Universidad Nacional
+                            de Villa Mercedes. Con 26 años de edad, soy autodidacta y me encanta explorar continuamente nuevas tecnologías
+                            y recursos para crear sistemas fluidos y escalables. Mi objetivo es ofrecer soluciones innovadoras y de calidad
+                            que satisfagan las necesidades de mis clientes y usuarios.
                         </p>
                     </div>
                 </div>
-            </article>
-        </section>
-
-        <section class="border-top border-bottom border-secondary mt-5 py-5">
-            <article>
-                <div class="row justify-content-center gap-3">
+                <div class="row justify-content-center gap-3 pt-4">
                     <div class="col-12">
                         <h2 class="text-center custom-font-color-primary mb-0">¿QUÉ PUEDO HACER?</h2>
                     </div>
                     <div class="col-10 col-sm-9">
                         <p class="text-center fs-5">
-                            Culpa, aperiam provident, beatae, qui sed suscipit molestias maiores quaerat pariatur officia rem at! Consectetur ut ullam nisi beatae magni maxime eum.
-                        </p>
-                        <p class="text-center fs-5 mb-0">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum sequi minima voluptates impedit, consectetur modi odio quasi accusamus vel id numquam aliquid dolor ex facere. In similique quaerat debitis vero? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Mi experiencia abarca desde el la creación de sistemas de información hasta el desarrollo completo
+                            de aplicaciones web. En cada proyecto, la creación de cada sistemas se adaptan a las necesidades de mis clientes.
+                            Además, me especializo en el diseño web responsivo, garantizando una experiencia óptima tanto en dispositivos
+                            móviles como de escritorio.
                         </p>
                     </div>
                 </div>
             </article>
-        </section>
-
-        <section id="habilidades">
-            <h2>HABILIDADES</h2>
-            
-            <!-------------------------------------------------------------------------------------------------------->
-            
-            <div class="animar-borde">
-                <div class="frontend">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>
-                            <img src="icons/html.svg" alt="ícono html">
-                            <span>HTML</span>
-                        </li>
-                        <li>
-                            <img src="icons/css.svg" alt="ícono css">
-                            <span>CSS</span>
-                        </li>
-                        <li>
-                            <img src="icons/js.svg" alt="ícono javascript">
-                            <span>JavaScript</span>
-                        </li>
-                        <li>
-                            <img src="icons/bootstrap.svg" alt="ícono bootstrap">
-                            <span>Bootstrap</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-------------------------------------------------------------------------------------------------------->
-            
-            <div class="animar-borde">
-                <div class="backend">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>
-                            <img src="icons/php.svg" alt="ícono php">
-                            <span>PHP</span>
-                        </li>
-                        <li>
-                            <img src="icons/mysql.svg" alt="ícono MySql">
-                            <span>MySql</span>
-                        </li>
-                        <li>
-                            <img src="icons/apache.svg" alt="ícono apache">
-                            <span>Apache</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-------------------------------------------------------------------------------------------------------->
-            
-            <div class="animar-borde">
-                <div class="herramientas">
-                    <h3>Herramientas</h3>
-                    <ul>
-                        <li>
-                            <img src="icons/git.svg" alt="ícono git">
-                            <span>Git</span>
-                        </li>
-                        <li>
-                            <img src="icons/github.svg" alt="ícono github">
-                            <span>GitHub</span>
-                        </li>
-                        <li>
-                            <img src="icons/terminal.svg" alt="ícono terminal">
-                            <span>Terminal</span>
-                        </li>
-                        <li>
-                            <img src="icons/vscode.svg" alt="ícono visual studio code">
-                            <span>VSCode</span>
-                        </li>
-                        <li>
-                            <img src="icons/MySQL-Workbench-logo.webp" alt="Ícono MySql Workbench">
-                            <span>MySql Workbench</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-------------------------------------------------------------------------------------------------------->
-            
-            <div class="animar-borde">
-                <div class="aprendiendo">
-                    <h3>Aprendiendo</h3>
-                    <ul>
-                        <li>
-                            <img src="icons/react.svg" alt="ícono react">
-                            <span>React</span>
-                        </li>
-                        <li>
-                            <img src="icons/nodejs.svg" alt="ícono node,js">
-                            <span>Node.js</span>
-                        </li>
-                        <li>
-                            <img src="icons/tailwindcss.svg" alt="ícono tailwind">
-                            <span>Tailwind</span>
-                        </li>
-                        <li>
-                            <img src="icons/expressjs.svg" alt="ícono tailwind">
-                            <span>Express.js</span>
-                        </li>
-                        <li>
-                            <img src="icons/typescript.svg" alt="ícono typescript">
-                            <span>TypeScript</span>
-                        </li>
-                        <li>
-                            <img src="icons/npm.svg" alt="ícono npm">
-                            <span>npm</span>
-                        </li>
-                        <li>
-                            <img src="icons/docker.svg" alt="ícono docker">
-                            <span>Docker</span>
-                        </li>
-                        <li>
-                            <img src="icons/mongodb.svg" alt="ícono mongodb">
-                            <span>MongoDB</span>
-                        </li>
-                        <li>
-                            <img src="icons/postgresql.svg" alt="ícono postgresql">
-                            <span>PostgreSQL</span>
-                        </li>
-                        <li>
-                            <img src="icons/prisma.svg" alt="ícono prisma">
-                            <span>Prisma</span>
-                        </li>
-                        <li>
-                            <img src="icons/railway.svg" alt="ícono railway">
-                            <span>Tailway</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </section>
     </main>
 

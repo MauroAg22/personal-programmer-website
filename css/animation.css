@@ -30,3 +30,14 @@
 }
 
 .animate-download { animation: download 1s infinite; }
+
+
+/* --------------------------------------------------------------------- */
+
+
+@keyframes top {
+    0%, 100% { transform: translateY(10%); }
+    50% { transform: translateY(-10%); }
+}
+
+.animate-anchor { animation: top 1s infinite; }
