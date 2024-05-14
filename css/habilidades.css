@@ -50,7 +50,7 @@
     margin: 0 0 32px;
     padding: 0;
     text-align: center;
-    color: #923d2e;
+    color: #f86449;
     /* text-shadow: 0 0 12px #f86449; */
 }
 
@@ -144,11 +144,12 @@
     overflow: hidden;
     margin: 0;
     padding: 0;
-    background-color: #923d2e;
+    background-color: #fff;
+    border: 4px solid #ccc;
     z-index: -1;
 }
 
-.animar-borde::before {
+/* .animar-borde::before {
     content: "";
     position: absolute;
     top: -150%;
@@ -158,14 +159,14 @@
     z-index: -1;
     background-image: conic-gradient(#ff2600 20deg, transparent 120deg);
     animation: rotar 2s linear infinite;
-}
+} */
 
-.animar-borde:nth-child(2)::before { animation-duration: 1.8s; }
-.animar-borde:nth-child(3)::before { animation-duration: 1.2s; }
-.animar-borde:nth-child(4)::before { animation-duration: 1.5s; }
-.animar-borde:nth-child(5)::before { animation-duration: 2.0s; }
+.animar-borde:nth-child(2)::before { animation-duration: 3.6s; }
+.animar-borde:nth-child(3)::before { animation-duration: 2.4s; }
+.animar-borde:nth-child(4)::before { animation-duration: 3.0s; }
+.animar-borde:nth-child(5)::before { animation-duration: 4.0s; }
 
-.animar-borde::after {
+/* .animar-borde::after {
     content: "";
     position: absolute;
     top: 4px;
@@ -175,5 +176,4 @@
     z-index: -1;
     background-color: #fff;
     border-radius: 16px;
-    /* box-shadow: inset 0 0 24px #55555588; */
-}
+} */

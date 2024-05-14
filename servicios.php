@@ -62,29 +62,28 @@ function active($pagActual, $url)
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/desing-web.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Diseño Web y Móvil</h2>
-                    <p class="my-0">Desarrollo tu sitio web con diseño adaptable utilizando CSS y Bootstrap, asegurando una experiencia óptima en todas las plataformas. Esta estrategia garantiza que tu sitio sea accesible para una amplia audiencia, lo que te permite alcanzar a más potenciales clientes en diversos dispositivos.</p>
+                    <p class="my-0 fs-5">Desarrollo sitios web con diseño adaptable utilizando CSS y Bootstrap, asegurando una experiencia óptima en todas las plataformas. Esta estrategia garantiza que el sitio sea accesible para una amplia audiencia, lo que permite alcanzar a más visitantes en diversos dispositivos.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-5">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/programmer.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Programador Web</h2>
-                    <p class="my-0">Me especializo en la creación de sitios web, utilizando HTML, CSS, y JavaScript para el frontend, y PHP para el backend. Además, integro bases de datos MySQL para garantizar un funcionamiento eficiente y confiable. Código bien estructurado y documentado, lo que asegura la escalabilidad y legibilidad del proyecto.</p>
+                    <p class="my-0 fs-5">Me especializo en la creación de sitios web, utilizando HTML, CSS, y JavaScript para el frontend, y PHP para el backend. Además, integro bases de datos relacionales MySQL para garantizar un funcionamiento eficiente y confiable. Código bien estructurado y documentado, lo que asegura la escalabilidad y legibilidad del proyecto.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-5">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/hosting.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Alojamiento Web</h2>
-                    <p class="my-0">Alojamiento <a class="host-link link-underline link-underline-opacity-0" href="https://www.hostinger.com.ar/" target="_blank" rel="noopener noreferrer">Hostinger</a>. Tu sitio web veloz y seguro alojado en la plataforma líder en hospedaje web. Con servidores de alta velocidad y una robusta infraestructura, garantizamos un rendimiento óptimo para tu sitio. Tus datos protegidos en todo momento. Disfruta de un servicio confiable y escalable que impulsa tu presencia en línea.</p>
+                    <p class="my-0 fs-5">Alojamiento <a class="host-link link-underline link-underline-opacity-0" href="https://www.hostinger.com.ar/" target="_blank" rel="noopener noreferrer">Hostinger</a>. Tu sitio web veloz y seguro alojado en la plataforma líder en hospedaje web. Con servidores de alta velocidad, robusta infraestructura y rendimiento óptimo para tu sitio web. Tus datos protegidos en todo momento. Disfruta de un servicio confiable y escalable que impulsa tu presencia en internet.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-5">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/system-analysis-90.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Sistemas de Información</h2>
-                    <p class="my-0">
-Desarrollo sistemas personalizados que se ajusten perfectamente a tus requerimientos y objetivos. Desde la concepción inicial hasta la implementación y mantenimiento. Con tecnologías de vanguardia y un enfoque centrado en ti, creo sistemas robustos y escalables que se adaptan a tus necesidades específicas.</p>
+                    <p class="my-0 fs-5">Desarrollo sistemas personalizados que se ajustan perfectamente a requerimientos y objetivos específicos de cada proyecto. Desde la concepción inicial hasta la implementación y mantenimiento, con un enfoque centrado en ti, creo sistemas confiables y escalables que se adaptan a cada necesidad específica.</p>
                 </div>
             </div>
         </div>
@@ -178,32 +177,28 @@ Desarrollo sistemas personalizados que se ajusten perfectamente a tus requerimie
                     <h3>Aprendiendo</h3>
                     <ul>
                         <li>
-                            <img src="icons/laravel.svg" alt="ícono laravel">
-                            <span>Laravel</span>
+                            <img src="icons/nodejs.svg" alt="ícono node,js">
+                            <span>Node.js</span>
+                        </li>
+                        <li>
+                            <img src="icons/npm.svg" alt="ícono npm">
+                            <span>npm</span>
                         </li>
                         <li>
                             <img src="icons/react.svg" alt="ícono react">
                             <span>React</span>
                         </li>
                         <li>
-                            <img src="icons/nodejs.svg" alt="ícono node,js">
-                            <span>Node.js</span>
-                        </li>
-                        <li>
-                            <img src="icons/tailwindcss.svg" alt="ícono tailwind">
-                            <span>Tailwind</span>
+                            <img src="icons/typescript.svg" alt="ícono typescript">
+                            <span>TypeScript</span>
                         </li>
                         <li>
                             <img src="icons/expressjs.svg" alt="ícono tailwind">
                             <span>Express.js</span>
                         </li>
                         <li>
-                            <img src="icons/typescript.svg" alt="ícono typescript">
-                            <span>TypeScript</span>
-                        </li>
-                        <li>
-                            <img src="icons/npm.svg" alt="ícono npm">
-                            <span>npm</span>
+                            <img src="icons/laravel.svg" alt="ícono laravel">
+                            <span>Laravel</span>
                         </li>
                         <li>
                             <img src="icons/docker.svg" alt="ícono docker">
@@ -225,6 +220,10 @@ Desarrollo sistemas personalizados que se ajusten perfectamente a tus requerimie
                             <img src="icons/railway.svg" alt="ícono railway">
                             <span>Tailway</span>
                         </li>
+                        <!-- <li>
+                            <img src="icons/tailwindcss.svg" alt="ícono tailwind">
+                            <span>Tailwind</span>
+                        </li> -->
                     </ul>
                 </div>
             </div>
