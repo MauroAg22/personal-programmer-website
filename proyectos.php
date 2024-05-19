@@ -68,17 +68,30 @@ function active($pagActual, $url)
                 </div>
                 <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
                     <div>
-                        <h3>SVGL - A beautiful library with SVG logos</h3>
+                        <h3 class="title-project">Porfolio web - Primera versión</h3>
                         <ul class="ul-projects">
-                            <li class="">Next.js</li>
-                            <li class="">Tailwind CSS</li>
+                            <li class="item-code-project">
+                                <img src="icons/html.svg" alt="HTML ícono">
+                                <span>HTML</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/css.svg" alt="CSS ícono">
+                                <span>CSS</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/js.svg" alt="JavaScript ícono">
+                                <span>JavaScript</span>
+                            </li>
                         </ul>
                     </div>
-                    <p>
-                        Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.
+                    <p class="description-project">
+                        Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. Plan nacional, federal e inclusivo de formación en programación y software. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
                     </p>
                     <footer class="d-flex gap-4">
-                        <a href="#">Code</a>
+                        <a class="link-project" href="#">
+                            <img src="icons/braces.svg" alt="Ícono de llaves">
+                            <span>Código</span>
+                        </a>
                         <a href="#">Preview</a>
                     </footer>
                 </div>
@@ -92,8 +105,8 @@ function active($pagActual, $url)
                     <div>
                         <h3>AdventJS - Retos de programación con JavaScript y TypeScript</h3>
                         <ul class="ul-projects">
-                            <li class="">Next.js</li>
-                            <li class="">Tailwind CSS</li>
+                            <li class="item-code-project">Next.js</li>
+                            <li class="item-code-project">Tailwind CSS</li>
                         </ul>
                     </div>
                     <p>
