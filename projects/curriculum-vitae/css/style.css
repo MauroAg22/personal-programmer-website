@@ -31,7 +31,7 @@ p {
 .row > * {
     padding-right: 0;
     padding-left: 0;
-  }
+}
 
 .font-110-porcent {
     font-size: 110%;
@@ -47,13 +47,13 @@ p {
 
 
 .box-01 {
-    background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647);
+    background-image: var(--gradient-primary);
     box-sizing: border-box;
     height: 550px;
 }
 
 .box-02 {
-    background-image: linear-gradient(45deg, #144272, #0A2647);
+    background-image: var(--gradient-seccondary);
     height: 100px;
     width: 920px;
     margin: auto;
@@ -159,7 +159,7 @@ p {
 }
 
 .pro-principal {
-    background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647);
+    background-image: var(--gradient-primary);
 }
 
 .pro-descripcion div h3 {
@@ -245,6 +245,10 @@ p {
     height: 48px;
 }
 
+.bg-dark {
+    background-color: #222 !important;
+}
+
 @media only screen and (max-width: 992px) {
 
     p {
@@ -289,7 +293,7 @@ p {
     }
 
     .box-00 {
-        background-image: linear-gradient(30deg, #0A2647, #144272, #0A2647);
+        background-image: var(--gradient-primary);
     }
 
     .box-01 {
@@ -333,8 +337,8 @@ p {
         height: 70vw;
         max-width: 920px;
         max-height: 920px;
-        padding: 10% 12%;
-        font-size: 2.2vw;
+        padding: 5% 6%;
+        font-size: 2.8vw;
         border-radius: 0 0 30px 30px;
     }
 

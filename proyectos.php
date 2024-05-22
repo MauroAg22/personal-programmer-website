@@ -92,7 +92,7 @@ function active($pagActual, $url)
                             <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>
-                        <a class="link-project" href="#">
+                        <a class="link-project" href="projects/curriculum-vitae/index.html">
                             <?php include "icons/preview.svg"; ?>
                             <span>Visitar</span>
                         </a>
