@@ -14,7 +14,8 @@
 
 .ul-projects {
     display: flex;
-    gap: 24px;
+    gap: 16px;
+    flex-wrap: wrap;
 
     list-style:none;
     padding: 0;
@@ -22,7 +23,7 @@
 
 .title-project {
     font-weight: 600;
-
+    user-select: none;
 }
 
 .item-code-project {
@@ -37,15 +38,8 @@
     font-weight: 600;
 
     padding: 6px 12px;
-    /* background-color: #f86449; */
     border: 2px solid #f86449;
     border-radius: 16px;
-
-    transition: scale .1s linear;
-}
-
-.item-code-project:hover {
-    scale: 1.05;
 }
 
 .item-code-project img {
@@ -56,14 +50,39 @@
 
 .description-project {
     font-size: large;
+    user-select: none;
 }
 
 .link-project {
     text-decoration: none;
+    font-size: large;
+    color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 12px;
+    border: 2px solid #000;
+    border-radius: 10px;
+
+    transition:
+        border .1s linear, 
+        color .1s linear, 
+        scale .1s linear
+    ;
 }
-.link-project img {
-    width: 16px;
-    height: 16px;
+
+.link-project:hover {
+    color: #f86449;
+    border: 2px solid #f86449;
+    scale: 1.03;
+}
+
+.link-project svg {
+    width: 24px;
+    height: 24px;
     border-radius: 2px;
 }
 
@@ -93,4 +112,11 @@
 /** lg */
 @media (width >= 992px) {
 
+}
+
+@media (width >= 1400px) {
+    .description-project {
+        font-size: 21px;
+        line-height: 1.7;
+    }
 }

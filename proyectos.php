@@ -62,7 +62,7 @@ function active($pagActual, $url)
         <section class="d-flex flex-column row-gap-5 px-3">
             <!-- <h2 class="col-12">Título b</h2> -->
 
-            <div class="projects-font-custom row d-flex justify-content-center gap-4">
+            <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
                 <div class="col-12 col-md-8 col-xl-5 p-0">
                     <img class="rounded-4" width="100%" src="img/projects/svgl.webp" alt="preview">
                 </div>
@@ -85,35 +85,97 @@ function active($pagActual, $url)
                         </ul>
                     </div>
                     <p class="description-project">
-                        Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. Plan nacional, federal e inclusivo de formación en programación y software. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
+                        Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
                     </p>
-                    <footer class="d-flex gap-4">
+                    <footer class="d-flex gap-4 flex-wrap">
                         <a class="link-project" href="#">
-                            <img src="icons/braces.svg" alt="Ícono de llaves">
+                            <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>
-                        <a href="#">Preview</a>
+                        <a class="link-project" href="#">
+                            <?php include "icons/preview.svg"; ?>
+                            <span>Visitar</span>
+                        </a>
+                        <a class="link-project" href="https://api.profesional.ticmas.io/v1/certificates-download/f842fa8b-618f-4c79-9a8d-1d7dc7e52cc6---pdf">
+                            <?php include "icons/box-arrow-up-right.svg"; ?>
+                            <span>Credenciales</span>
+                        </a>
                     </footer>
                 </div>
             </div>
 
-            <div class="projects-font-custom row d-flex justify-content-center gap-4">
+            <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
                 <div class="col-12 col-md-8 col-xl-5 p-0">
                     <img class="rounded-4" width="100%" src="img/projects/adventjs.webp" alt="preview">
                 </div>
                 <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
                     <div>
-                        <h3>AdventJS - Retos de programación con JavaScript y TypeScript</h3>
+                        <h3 class="title-project">Porfolio web - Primera versión</h3>
                         <ul class="ul-projects">
-                            <li class="item-code-project">Next.js</li>
-                            <li class="item-code-project">Tailwind CSS</li>
+                            <li class="item-code-project">
+                                <img src="icons/html.svg" alt="HTML ícono">
+                                <span>HTML</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/css.svg" alt="CSS ícono">
+                                <span>CSS</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/js.svg" alt="JavaScript ícono">
+                                <span>JavaScript</span>
+                            </li>
                         </ul>
                     </div>
-                    <p>
-                        Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.
+                    <p class="description-project">
+                        Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
                     </p>
-                    <footer>
-                        <a href="#">Preview</a>
+                    <footer class="d-flex gap-4 flex-wrap">
+                        <a class="link-project" href="#">
+                            <?php include "icons/github-2.svg"; ?>
+                            <span>Código</span>
+                        </a>
+                        <a class="link-project" href="#">
+                            <?php include "icons/preview.svg"; ?>
+                            <span>Visitar</span>
+                        </a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
+                <div class="col-12 col-md-8 col-xl-5 p-0">
+                    <img class="rounded-4" width="100%" src="img/projects/svgl.webp" alt="preview">
+                </div>
+                <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
+                    <div>
+                        <h3 class="title-project">Porfolio web - Primera versión</h3>
+                        <ul class="ul-projects">
+                            <li class="item-code-project">
+                                <img src="icons/html.svg" alt="HTML ícono">
+                                <span>HTML</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/css.svg" alt="CSS ícono">
+                                <span>CSS</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/js.svg" alt="JavaScript ícono">
+                                <span>JavaScript</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="description-project">
+                        Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
+                    </p>
+                    <footer class="d-flex gap-4">
+                        <a class="link-project" href="#">
+                            <?php include "icons/github-2.svg"; ?>
+                            <span>Código</span>
+                        </a>
+                        <a class="link-project" href="#">
+                            <?php include "icons/preview.svg"; ?>
+                            <span>Visitar</span>
+                        </a>
                     </footer>
                 </div>
             </div>
