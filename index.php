@@ -132,7 +132,7 @@ function active($pagActual, $url)
                     <div class="col-12">
                         <h2 class="text-center custom-font-color-primary mb-0">SOBRE MÍ</h2>
                     </div>
-                    <div class="col-10 col-sm-9">
+                    <div class="col-11 col-sm-9">
                         <p class="text-center fs-5">
                             Desarrollador web freelancer y estudiante de Programación Universitaria de Sistemas en la Universidad Nacional
                             de Villa Mercedes. Con 26 años de edad, soy autodidacta y me encanta explorar continuamente nuevas tecnologías
@@ -145,7 +145,7 @@ function active($pagActual, $url)
                     <div class="col-12">
                         <h2 class="text-center custom-font-color-primary mb-0">¿QUÉ PUEDO HACER?</h2>
                     </div>
-                    <div class="col-10 col-sm-9">
+                    <div class="col-11 col-sm-9">
                         <p class="text-center fs-5">
                             Mi conocimiento y experiencia abarca desde el la creación de sistemas de información hasta el desarrollo completo
                             de aplicaciones web. En cada proyecto, la creación de cada sistemas se adaptan a las necesidades de mis clientes.

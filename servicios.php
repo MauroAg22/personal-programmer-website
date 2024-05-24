@@ -62,28 +62,28 @@ function active($pagActual, $url)
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/desing-web.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Diseño Web y Móvil</h2>
-                    <p class="my-0 fs-5">Desarrollo sitios web con diseño adaptable utilizando CSS y Bootstrap, asegurando una experiencia óptima en todas las plataformas. Esta estrategia garantiza que el sitio sea accesible para una amplia audiencia, lo que permite alcanzar a más visitantes en diversos dispositivos.</p>
+                    <p class="my-0 fs-5 col-11 col-md-12">Desarrollo sitios web con diseño adaptable utilizando CSS y Bootstrap, asegurando una experiencia óptima en todas las plataformas. Esta estrategia garantiza que el sitio sea accesible para una amplia audiencia, lo que permite alcanzar a más visitantes en diversos dispositivos.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-5">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/programmer.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Programador Web</h2>
-                    <p class="my-0 fs-5">Me especializo en la creación de sitios web, utilizando HTML, CSS, y JavaScript para el frontend, y PHP para el backend. Además, integro bases de datos relacionales MySQL para garantizar un funcionamiento eficiente y confiable. Código bien estructurado y documentado, lo que asegura la escalabilidad y legibilidad del proyecto.</p>
+                    <p class="my-0 fs-5 col-11 col-md-12">Me especializo en la creación de sitios web, utilizando HTML, CSS, y JavaScript para el frontend, y PHP para el backend. Además, integro bases de datos relacionales MySQL para garantizar un funcionamiento eficiente y confiable. Código bien estructurado y documentado, lo que asegura la escalabilidad y legibilidad del proyecto.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-5">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/hosting.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Alojamiento Web</h2>
-                    <p class="my-0 fs-5">Alojamiento <a class="host-link link-underline link-underline-opacity-0" href="https://www.hostinger.com.ar/" target="_blank" rel="noopener noreferrer">Hostinger</a>. Tu sitio web veloz y seguro alojado en la plataforma líder en hospedaje web. Con servidores de alta velocidad, robusta infraestructura y rendimiento óptimo para tu sitio web. Tus datos protegidos en todo momento. Disfruta de un servicio confiable y escalable que impulsa tu presencia en internet.</p>
+                    <p class="my-0 fs-5 col-11 col-md-12">Alojamiento <a class="host-link link-underline link-underline-opacity-0" href="https://www.hostinger.com.ar/" target="_blank" rel="noopener noreferrer">Hostinger</a>. Tu sitio web veloz y seguro alojado en la plataforma líder en hospedaje web. Con servidores de alta velocidad, robusta infraestructura y rendimiento óptimo para tu sitio web. Tus datos protegidos en todo momento. Disfruta de un servicio confiable y escalable que impulsa tu presencia en internet.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 mb-5">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="icons/system-analysis-90.avif" alt="ícono de diseño web y movil">
                     <h2 class="my-3">Sistemas de Información</h2>
-                    <p class="my-0 fs-5">Desarrollo sistemas personalizados que se ajustan perfectamente a requerimientos y objetivos específicos de cada proyecto. Desde la concepción inicial hasta la implementación y mantenimiento, con un enfoque centrado en ti, creo sistemas confiables y escalables que se adaptan a cada necesidad específica.</p>
+                    <p class="my-0 fs-5 col-11 col-md-12">Desarrollo sistemas personalizados que se ajustan perfectamente a requerimientos y objetivos específicos de cada proyecto. Desde la concepción inicial hasta la implementación y mantenimiento, con un enfoque centrado en ti, creo sistemas confiables y escalables que se adaptan a cada necesidad específica.</p>
                 </div>
             </div>
         </div>

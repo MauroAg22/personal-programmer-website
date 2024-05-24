@@ -1,3 +1,8 @@
+:root {
+    --gradient-primary: linear-gradient(30deg, #0A2647, #144272, #0A2647);
+    --gradient-seccondary: linear-gradient(45deg, #144272, #0A2647);
+}
+
 * {
     font-family: 'Heebo', sans-serif;
 }
@@ -70,6 +75,7 @@ p {
 
 .icono {
     width: 24px;
+    transition: transform .1s linear;
 }
 
 .icono:hover {
@@ -189,6 +195,7 @@ p {
 .pro-descripcion a {
     color: white;
     font-size: 22px;
+    transition: transform .1s linear;
 }
 
 .pro-descripcion a:hover {
@@ -239,10 +246,11 @@ p {
 #bottom div img {
     height: 40px;
     cursor: pointer;
+    transition: scale .1s linear;
 }
 
 #bottom div img:hover {
-    height: 48px;
+    scale: 1.2;
 }
 
 .bg-dark {
@@ -376,11 +384,6 @@ p {
     #bottom div img {
         height: 7vw;
     }
-    
-    #bottom div img:hover {
-        height: 7.3vw;
-    }
-
 }
 
 @media only screen and (max-width: 1500px) {
