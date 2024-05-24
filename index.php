@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 $pagActual = basename($_SERVER['PHP_SELF']);
@@ -10,18 +12,26 @@ function active($pagActual, $url)
 
 ?>
 
-<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Currículum Vitae - Mauro Agustin Lucero">
-    <meta property="og:type" content="Currículum Vitae">
-    <meta property="og:url" content="https://mauroag22.github.io/curriculum-vitae/index.html">
-    <meta property="og:image" content="img/perfil.jpg">
+    <meta property="og:title" content="Mauro Lucero - Freelance Web Developer">
+    <meta property="og:type" content="profile">
+    <meta property="og:description" content="Soy un apasionado desarrollador web freelance. ¡Visita mi sitio web para conocer más sobre mí y los servicios que ofrezco! Contáctame hoy mismo para llevar tu proyecto al siguiente nivel.">
+    <meta property="og:url" content="https://maurounvime.000webhostapp.com/personal-programmer-website/index.php">
+    <meta property="og:image" content="https://maurounvime.000webhostapp.com/personal-programmer-website/img/demo-380x280.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mauroluceroo">
+    <meta name="twitter:title" content="Mauro Lucero - Freelance Web Developer">
+    <meta name="twitter:description" content="Soy un apasionado desarrollador web freelance. ¡Visita mi sitio web para conocer más sobre mí y los servicios que ofrezco! Contáctame hoy mismo para llevar tu proyecto al siguiente nivel.">
+    <meta name="twitter:image" content="https://maurounvime.000webhostapp.com/img/profile.jpg">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,7 +50,7 @@ function active($pagActual, $url)
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     
-    <title>Mauro Lucero</title>
+    <title>Mauro Lucero - Freelance Web Developer</title>
 </head>
 
 <body>

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 $pagActual = basename($_SERVER['PHP_SELF']);
@@ -10,18 +12,26 @@ function active($pagActual, $url)
 
 ?>
 
-<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Currículum Vitae - Mauro Agustin Lucero">
-    <meta property="og:type" content="Currículum Vitae">
-    <meta property="og:url" content="https://mauroag22.github.io/curriculum-vitae/index.html">
-    <meta property="og:image" content="img/perfil.jpg">
+    <meta property="og:title" content="Portafolio de Proyectos">
+    <meta property="og:type" content="portfolio">
+    <meta property="og:description" content="Explora la selección de mis proyectos de desarrollo web y conoce mis trabajos.">
+    <meta property="og:url" content="https://maurounvime.000webhostapp.com/personal-programmer-website/proyectos.php">
+    <meta property="og:image" content="https://maurounvime.000webhostapp.com/personal-programmer-website/img/demo-380x280.jpg">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mauroluceroo">
+    <meta name="twitter:title" content="Portafolio de Proyectos">
+    <meta name="twitter:description" content="xplora la selección de mis proyectos de desarrollo web y conoce mis trabajos.">
+    <meta name="twitter:image" content="https://maurounvime.000webhostapp.com/img/profile.jpg">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -40,7 +50,7 @@ function active($pagActual, $url)
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/projects.css">
     
-    <title>Mauro Lucero</title>
+    <title>Portafolio de Proyectos</title>
 </head>
 
 <body>
@@ -64,7 +74,7 @@ function active($pagActual, $url)
 
             <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
                 <div class="col-12 col-md-8 col-xl-5 p-0">
-                    <img class="rounded-4" width="100%" src="img/projects/svgl.webp" alt="preview">
+                    <img class="rounded-4 shadow" width="100%" src="img/projects/curriculum-vitae.webp" alt="Imagen ilustrativa del sitio web de mi curriculum vitae">
                 </div>
                 <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
                     <div>
@@ -92,7 +102,7 @@ function active($pagActual, $url)
                             <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>
-                        <a class="link-project" href="projects/curriculum-vitae/index.html">
+                        <a class="link-project" href="projects/curriculum-vitae/" target="_blank" rel="noopener noreferrer">
                             <?php include "icons/preview.svg"; ?>
                             <span>Visitar</span>
                         </a>
@@ -106,11 +116,11 @@ function active($pagActual, $url)
 
             <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
                 <div class="col-12 col-md-8 col-xl-5 p-0">
-                    <img class="rounded-4" width="100%" src="img/projects/adventjs.webp" alt="preview">
+                    <img class="rounded-4 shadow" width="100%" src="img/projects/toke-pop.webp" alt="Imagen ilustrativa de mi video juego web hecho con JavaScript">
                 </div>
                 <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
                     <div>
-                        <h3 class="title-project">Porfolio web - Primera versión</h3>
+                        <h3 class="title-project">Videojuego hecho con JavaScript</h3>
                         <ul class="ul-projects">
                             <li class="item-code-project">
                                 <img src="icons/html.svg" alt="HTML ícono">
@@ -127,52 +137,14 @@ function active($pagActual, $url)
                         </ul>
                     </div>
                     <p class="description-project">
-                        Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
+                        Este fue mi primer proyecto hecho con HTML, CSS y JavaScript. Fue presentado como final para aprobar una materia en la universidad. Mi primer contacto con el desarrollo web. Pensado solamente para ordenadores.
                     </p>
                     <footer class="d-flex gap-4 flex-wrap">
                         <a class="link-project" href="#">
                             <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>
-                        <a class="link-project" href="#">
-                            <?php include "icons/preview.svg"; ?>
-                            <span>Visitar</span>
-                        </a>
-                    </footer>
-                </div>
-            </div>
-
-            <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
-                <div class="col-12 col-md-8 col-xl-5 p-0">
-                    <img class="rounded-4" width="100%" src="img/projects/svgl.webp" alt="preview">
-                </div>
-                <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
-                    <div>
-                        <h3 class="title-project">Porfolio web - Primera versión</h3>
-                        <ul class="ul-projects">
-                            <li class="item-code-project">
-                                <img src="icons/html.svg" alt="HTML ícono">
-                                <span>HTML</span>
-                            </li>
-                            <li class="item-code-project">
-                                <img src="icons/css.svg" alt="CSS ícono">
-                                <span>CSS</span>
-                            </li>
-                            <li class="item-code-project">
-                                <img src="icons/js.svg" alt="JavaScript ícono">
-                                <span>JavaScript</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class="description-project">
-                        Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
-                    </p>
-                    <footer class="d-flex gap-4">
-                        <a class="link-project" href="#">
-                            <?php include "icons/github-2.svg"; ?>
-                            <span>Código</span>
-                        </a>
-                        <a class="link-project" href="#">
+                        <a class="link-project" href="projects/toke-pop/" target="_blank" rel="noopener noreferrer">
                             <?php include "icons/preview.svg"; ?>
                             <span>Visitar</span>
                         </a>

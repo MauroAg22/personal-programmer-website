@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 $pagActual = basename($_SERVER['PHP_SELF']);
@@ -10,18 +12,26 @@ function active($pagActual, $url)
 
 ?>
 
-<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Currículum Vitae - Mauro Agustin Lucero">
-    <meta property="og:type" content="Currículum Vitae">
-    <meta property="og:url" content="https://mauroag22.github.io/curriculum-vitae/index.html">
-    <meta property="og:image" content="img/perfil.jpg">
+    <meta property="og:title" content="Servicios de Desarrollo Web Freelance">
+    <meta property="og:type" content="service">
+    <meta property="og:description" content="Este es mi sitio web personal. Soy desarrollador web freelance y ofresco mi servicio como programador de sistemas de información y sitios web.">
+    <meta property="og:url" content="https://maurounvime.000webhostapp.com/personal-programmer-website/servicios.php">
+    <meta property="og:image" content="https://maurounvime.000webhostapp.com/personal-programmer-website/img/demo-380x280.jpg">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@mauroluceroo">
+    <meta name="twitter:title" content="Servicios de Desarrollo Web Freelance">
+    <meta name="twitter:description" content="Soy desarrollador web freelance y ofresco mi servicio como programador de sistemas web personalizados y sitios web. ¡Contáctame para discutir tu proyecto!">
+    <meta name="twitter:image" content="https://maurounvime.000webhostapp.com/img/profile.jpg">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -39,7 +49,7 @@ function active($pagActual, $url)
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/services-header.css">
 
-    <title>Mauro Lucero</title>
+    <title>Servicios de Desarrollo Web Freelance</title>
 </head>
 
 <body>
