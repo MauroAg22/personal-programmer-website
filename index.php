@@ -166,6 +166,147 @@ function active($pagActual, $url)
                 </div>
             </article>
         </section>
+
+        <section id="habilidades">
+
+            <h2>HABILIDADES</h2>
+
+            <!-------------------------------------------------------------------------------------------------------->
+
+            <div class="animar-borde">
+                <div class="frontend">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>
+                            <img src="icons/html.svg" alt="ícono html">
+                            <span>HTML</span>
+                        </li>
+                        <li>
+                            <img src="icons/css.svg" alt="ícono css">
+                            <span>CSS</span>
+                        </li>
+                        <li>
+                            <img src="icons/js.svg" alt="ícono javascript">
+                            <span>JavaScript</span>
+                        </li>
+                        <li>
+                            <img src="icons/bootstrap.svg" alt="ícono bootstrap">
+                            <span>Bootstrap</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-------------------------------------------------------------------------------------------------------->
+
+            <div class="animar-borde">
+                <div class="backend">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li>
+                            <img src="icons/php.svg" alt="ícono php">
+                            <span>PHP</span>
+                        </li>
+                        <li>
+                            <img src="icons/mysql.svg" alt="ícono MySql">
+                            <span>MySql</span>
+                        </li>
+                        <li>
+                            <img src="icons/apache.svg" alt="ícono apache">
+                            <span>Apache</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-------------------------------------------------------------------------------------------------------->
+
+            <div class="animar-borde">
+                <div class="herramientas">
+                    <h3>Herramientas</h3>
+                    <ul>
+                        <li>
+                            <img src="icons/git.svg" alt="ícono git">
+                            <span>Git</span>
+                        </li>
+                        <li>
+                            <img src="icons/github.svg" alt="ícono github">
+                            <span>GitHub</span>
+                        </li>
+                        <li>
+                            <img src="icons/terminal.svg" alt="ícono terminal">
+                            <span>Terminal</span>
+                        </li>
+                        <li>
+                            <img src="icons/vscode.svg" alt="ícono visual studio code">
+                            <span>VSCode</span>
+                        </li>
+                        <li>
+                            <img src="icons/MySQL-Workbench-logo.webp" alt="Ícono MySql Workbench">
+                            <span>MySql Workbench</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-------------------------------------------------------------------------------------------------------->
+
+            <div class="animar-borde">
+                <div class="aprendiendo">
+                    <h3>Aprendiendo</h3>
+                    <ul>
+                        <li>
+                            <img src="icons/nodejs.svg" alt="ícono node,js">
+                            <span>Node.js</span>
+                        </li>
+                        <li>
+                            <img src="icons/npm.svg" alt="ícono npm">
+                            <span>npm</span>
+                        </li>
+                        <li>
+                            <img src="icons/react.svg" alt="ícono react">
+                            <span>React</span>
+                        </li>
+                        <li>
+                            <img src="icons/typescript.svg" alt="ícono typescript">
+                            <span>TypeScript</span>
+                        </li>
+                        <li>
+                            <img src="icons/expressjs.svg" alt="ícono tailwind">
+                            <span>Express.js</span>
+                        </li>
+                        <li>
+                            <img src="icons/laravel.svg" alt="ícono laravel">
+                            <span>Laravel</span>
+                        </li>
+                        <li>
+                            <img src="icons/docker.svg" alt="ícono docker">
+                            <span>Docker</span>
+                        </li>
+                        <li>
+                            <img src="icons/mongodb.svg" alt="ícono mongodb">
+                            <span>MongoDB</span>
+                        </li>
+                        <li>
+                            <img src="icons/postgresql.svg" alt="ícono postgresql">
+                            <span>PostgreSQL</span>
+                        </li>
+                        <li>
+                            <img src="icons/prisma.svg" alt="ícono prisma">
+                            <span>Prisma</span>
+                        </li>
+                        <li>
+                            <img src="icons/railway.svg" alt="ícono railway">
+                            <span>Tailway</span>
+                        </li>
+                        <!-- <li>
+                            <img src="icons/tailwindcss.svg" alt="ícono tailwind">
+                            <span>Tailwind</span>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Pie de pagina -->
