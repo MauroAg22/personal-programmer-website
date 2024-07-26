@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Me llamo Mauro Lucero y esta es una sección de sitio web personal donde podrás ver mis proyectos como programador y desarrollador web.">
+    <meta name="description" content="Me llamo Mauro Lucero y esta es una sección de sitio web personal donde podrás conocer mis proyectos como programador y desarrollador web.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Portafolio de Proyectos">
@@ -22,7 +22,7 @@
     <meta name="twitter:site" content="@mauroluceroo">
     <meta name="twitter:title" content="Portafolio de Proyectos">
     <meta name="twitter:description" content="Explora la selección de mis proyectos de desarrollo web y conoce mis trabajos.">
-    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/profile.jpg">
+    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/demo-380x280.jpg">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/projects.css">
     
-    <title>Portafolio de Proyectos</title>
+    <title>Mauro Lucero - Portafolio de Proyectos</title>
 </head>
 
 <body>

@@ -7,12 +7,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Me llamo Mauro Lucero y esta es una sección de sitio web personal donde podrás ver los servicios que ofrezco como programador y desarrollador web.">
+    <meta name="description" content="Me llamo Mauro Lucero y esta es una sección de sitio web personal donde podrás conocer los servicios que ofrezco como programador y desarrollador web.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Servicios de Desarrollo Web Freelance">
+    <meta property="og:title" content="Mauro Lucero - Servicios de Programador y Desarrollor Web">
     <meta property="og:type" content="service">
-    <meta property="og:description" content="Me llamo Mauro Lucero y esta es una sección de sitio web personal donde podrás ver los servicios que ofrezco como programador y desarrollador web.">
+    <meta property="og:description" content="Esta es una sección de sitio web personal donde podrás conocer los servicios que ofrezco como programador y desarrollador web.">
     <meta property="og:url" content="https://www.maurolucero.com.ar/servicios.php">
     <meta property="og:image" content="https://www.maurolucero.com.ar/img/demo-380x280.jpg">
     <meta property="og:locale" content="es_ES">
@@ -20,9 +20,9 @@
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@mauroluceroo">
-    <meta name="twitter:title" content="Servicios de Desarrollo Web Freelance">
-    <meta name="twitter:description" content="Me llamo Mauro Lucero y esta es una sección de sitio web personal donde podrás ver los servicios que ofrezco como programador y desarrollador web.">
-    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/profile.jpg">
+    <meta name="twitter:title" content="Mauro Lucero - Servicios de Programador y Desarrollor Web">
+    <meta name="twitter:description" content="Esta es una sección de sitio web personal donde podrás conocer los servicios que ofrezco como programador y desarrollador web.">
+    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/demo-380x280.jpg">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/services-header.css">
 
-    <title>Servicios de Desarrollo Web Freelance</title>
+    <title>Mauro Lucero - Servicios de Programador y Desarrollor Web</title>
 </head>
 
 <body>
