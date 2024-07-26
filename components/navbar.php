@@ -1,6 +1,6 @@
 <nav class="navbar custom-navbar navbar-dark bg-dark outfit-font">
         <div class="container-fluid gap-0">
-            <a class="navbar-brand custom-font-size-navbar" href="index.php">Mauro Lucero Web Developer</a>
+            <a class="navbar-brand custom-font-size-navbar" <?php ariaCurrent("index.php") ?> href="https://www.maurolucero.com.ar/">Mauro Lucero Web Developer</a>
             <button class="navbar-toggler custom-navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
                 aria-label="Toggle navigation">
@@ -16,13 +16,13 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 custom-navbar-ul">
                         <li class="">
-                            <a class="nav-link <?php active($pagActual, "index.php") ?>" aria-current="page" href="index.php"><?php ($pagActual == "index.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?><span>Perfil</span></a>
+                            <a class="nav-link <?php active("index.php") ?>" <?php ariaCurrent("index.php") ?> href="https://www.maurolucero.com.ar/"><?php ($pagActual == "index.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?><span>Perfil</span></a>
                         </li>
                         <li class="">
-                            <a class="nav-link <?php active($pagActual, "servicios.php") ?>" href="servicios.php"><?php ($pagActual == "servicios.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?><span>Servicios</span></a>
+                            <a class="nav-link <?php active("servicios.php") ?>" <?php ariaCurrent("servicios.php") ?> href="servicios.php"><?php ($pagActual == "servicios.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?><span>Servicios</span></a>
                         </li>
                         <li class="">
-                            <a class="nav-link <?php active($pagActual, "proyectos.php") ?>" href="proyectos.php"><?php ($pagActual == "proyectos.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?><span>Proyectos</span></a>
+                            <a class="nav-link <?php active("proyectos.php") ?>" <?php ariaCurrent("proyectos.php") ?> href="proyectos.php"><?php ($pagActual == "proyectos.php") ? include "icons/caret-right-fill.svg" : include "icons/caret-right.svg" ?><span>Proyectos</span></a>
                         </li>
                         <!-- <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"

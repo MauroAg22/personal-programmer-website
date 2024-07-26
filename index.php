@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 
-<?php
-
-$pagActual = basename($_SERVER['PHP_SELF']);
-
-function active($pagActual, $url)
-{
-    $pagActual = basename($_SERVER['PHP_SELF']);
-    echo ($pagActual == $url) ? "active" : "";
-}
-
-?>
+<?php include "lib/functions.php"; ?>
 
 <html lang="es">
 
@@ -48,7 +38,6 @@ function active($pagActual, $url)
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/habilidades.css">
     <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/footer.css">
     
     <title>Mauro Lucero - Freelance Web Developer</title>
 </head>

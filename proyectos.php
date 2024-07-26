@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 
-<?php
-
-$pagActual = basename($_SERVER['PHP_SELF']);
-
-function active($pagActual, $url)
-{
-    $pagActual = basename($_SERVER['PHP_SELF']);
-    echo ($pagActual == $url) ? "active" : "";
-}
-
-?>
+<?php include "lib/functions.php"; ?>
 
 <html lang="es">
 
