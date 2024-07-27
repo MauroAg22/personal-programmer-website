@@ -14,7 +14,7 @@
     <meta property="og:type" content="portfolio">
     <meta property="og:description" content="Explora la selección de mis proyectos de desarrollo web y conoce mis trabajos.">
     <meta property="og:url" content="https://www.maurolucero.com.ar/proyectos.php">
-    <meta property="og:image" content="https://www.maurolucero.com.ar/img/demo-380x280.jpg">
+    <meta property="og:image" content="https://www.maurolucero.com.ar/img/temporal-perfil.webp">
     <meta property="og:locale" content="es_ES">
     
     <!-- Twitter Cards -->
@@ -22,7 +22,7 @@
     <meta name="twitter:site" content="@mauroluceroo">
     <meta name="twitter:title" content="Portafolio de Proyectos">
     <meta name="twitter:description" content="Explora la selección de mis proyectos de desarrollo web y conoce mis trabajos.">
-    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/demo-380x280.jpg">
+    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/temporal-perfil.webp">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
