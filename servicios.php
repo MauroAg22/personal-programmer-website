@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/services-header.css">
 
+    <link rel="icon" type="image/webp" href="img/icon-64.webp">
     <title>Mauro Lucero - Servicios de Programador y Desarrollor Web</title>
 </head>
 

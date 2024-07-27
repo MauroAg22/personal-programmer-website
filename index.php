@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="css/habilidades.css">
     <link rel="stylesheet" href="css/navbar.css">
     
+    <link rel="icon" type="image/webp" href="img/icon-64.webp">
     <title>Mauro Lucero - Programador y Desarrollador Web</title>
 </head>
 

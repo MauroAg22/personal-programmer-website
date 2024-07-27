@@ -41,6 +41,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/projects.css">
     
+    <link rel="icon" type="image/webp" href="img/icon-64.webp">
     <title>Mauro Lucero - Portafolio de Proyectos</title>
 </head>
 
