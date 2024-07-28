@@ -58,6 +58,10 @@
 
     <main class="container">
 
+        <section class="row justify-content-center mt-5 pb-2">
+            <p class="col-12 col-md-10 fs-4 text-center">Marca tu presencia en línea con una página web totalmente personalizada a tu gusto. Hagamos realidad tu sitio web juntos y destaca ante la competencia. ¿Necesitas un sistema para gestionar turnos? ¿Necesitas controlar el stock de tu negocio? ¿Buscas optimizar tus procesos con soluciones a medida? No importa cuál sea tu desafío, estoy aquí para ofrecerte soluciones efectivas y personalizadas. Como programador y desarrollador web, mi objetivo es entender tus necesidades y brindarte herramientas que faciliten tu trabajo y potencien tu éxito. Contáctame y juntos transformaremos tus ideas en realidad, resolviendo tus problemas con soluciones innovadoras y de alta calidad.</p>
+        </section>
+
         <section class="row mt-5 pb-2">
             <div class="col-12 col-md-6 mb-5">
                 <div class="d-flex flex-column align-items-center text-center">
