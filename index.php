@@ -14,7 +14,7 @@
     <meta property="og:type" content="profile">
     <meta property="og:description" content="Visita mi sitio web para conocer más sobre mí, mis proyectos y los servicios que ofrezco como programador y desarrollador web. ¡Contáctame hoy mismo para llevar tu proyecto al siguiente nivel!">
     <meta property="og:url" content="https://www.maurolucero.com.ar/index.php">
-    <meta property="og:image" content="https://www.maurolucero.com.ar/img/temporal-perfil.webp">
+    <meta property="og:image" content="https://www.maurolucero.com.ar/img/banner.webp">
     <meta property="og:locale" content="es_ES">
 
     <!-- Twitter Cards -->
@@ -22,7 +22,7 @@
     <meta name="twitter:site" content="@mauroluceroo">
     <meta name="twitter:title" content="Mauro Lucero - Programador y Desarrollador Web">
     <meta name="twitter:description" content="Visita mi sitio web para conocer más sobre mí, mis proyectos y los servicios que ofrezco como programador y desarrollador web. ¡Contáctame hoy mismo para llevar tu proyecto al siguiente nivel!">
-    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/temporal-perfil.webp">
+    <meta name="twitter:image" content="https://www.maurolucero.com.ar/img/banner.webp">
 
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -59,7 +59,7 @@
         <section class="row row-gap-5 justify-content-center">
             <div class="col-lg-7 col-md-9 order-lg-2">
                 <div class="profile-section">
-                    <img class="profile-pic" src="img/temporal-perfil.webp" alt="Foto de perfil">
+                    <img class="profile-pic" src="img/perfil.webp" alt="Foto de perfil">
                     <a class="download-cv gap-3 d-flex justify-content-center align-items-center" href="pdf/mauro-lucero-cv.pdf" download="mauro-lucero-cv.pdf">
                         <svg class="animate-download" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                             <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
