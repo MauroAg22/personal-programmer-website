@@ -51,9 +51,7 @@
 
     <header class="projects-header d-flex justify-content-center align-content-center gap-2">
         <div class="d-flex align-items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16">
-                <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/>
-            </svg>
+            <?php include "icons/code-slash.svg"; ?>
         </div>
         <h1 class="d-flex justify-content-center align-items-center display-1 m-0">
             PROYECTOS
@@ -62,15 +60,13 @@
 
     <main class="container">
         <section class="d-flex flex-column row-gap-5 px-3">
-            <!-- <h2 class="col-12">Título b</h2> -->
-
             <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
                 <div class="col-12 col-md-8 col-xl-5 p-0">
                     <img class="rounded-4 shadow" width="100%" src="img/projects/curriculum-vitae.webp" alt="Imagen ilustrativa del sitio web de mi curriculum vitae">
                 </div>
                 <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
                     <div>
-                        <h3 class="title-project">Porfolio web - Primera versión</h3>
+                        <h2 class="title-project">Porfolio web - Primera versión</h2>
                         <ul class="ul-projects">
                             <li class="item-code-project">
                                 <img src="icons/html.svg" alt="HTML ícono">
@@ -90,7 +86,7 @@
                         Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
                     </p>
                     <footer class="d-flex gap-4 flex-wrap">
-                        <a class="link-project" href="#">
+                        <a class="link-project" href="https://github.com/MauroAg22/personal-programmer-website/tree/main/projects/curriculum-vitae" target="_blank" rel="noopener noreferrer">
                             <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>
@@ -112,7 +108,7 @@
                 </div>
                 <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
                     <div>
-                        <h3 class="title-project">Videojuego hecho con JavaScript</h3>
+                        <h2 class="title-project">Videojuego hecho con JavaScript</h2>
                         <ul class="ul-projects">
                             <li class="item-code-project">
                                 <img src="icons/html.svg" alt="HTML ícono">
@@ -132,7 +128,7 @@
                         Este fue mi primer proyecto hecho con HTML, CSS y JavaScript. Fue presentado como final para aprobar una materia en la universidad. Mi primer contacto con el desarrollo web. Pensado solamente para ordenadores.
                     </p>
                     <footer class="d-flex gap-4 flex-wrap">
-                        <a class="link-project" href="#">
+                        <a class="link-project" href="https://github.com/MauroAg22/personal-programmer-website/tree/main/projects/toke-pop" target="_blank" rel="noopener noreferrer">
                             <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>

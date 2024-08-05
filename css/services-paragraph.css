@@ -1,0 +1,42 @@
+.services-paragraph {
+    background: rgb(238,238,238);
+    background-image: url("../img/codigo-html-sitio-web.webp");
+    background-position: center;
+    background-size: cover;
+
+    border-bottom: 1px solid #181818;
+    border-top: 1px solid #181818;
+
+    padding: 48px 0;
+
+    display: flex;
+    justify-content: center;
+}
+
+.services-paragraph p {
+    width: 85%;
+    text-align: center;
+    font-size: calc(1.2rem + .3vw) !important;
+}
+
+/** md */
+@media (width >= 768px) {
+    .services-paragraph {
+        padding: 64px 0;
+    }
+
+    .services-paragraph p {
+        width: 70%;
+    }
+}
+
+/** lg */
+@media (width >= 992px) {
+    .services-paragraph {
+        padding: 72px 0;
+    }
+
+    .services-paragraph p {
+        width: 60%;
+    }
+}
