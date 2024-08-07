@@ -86,11 +86,11 @@
                         Proyecto final para finalizar el curso "Primeros pasos del desarrollo frontend" en Argentina Programa 4.0. En este proyecto se plazma mi curriculum vitae en formato de sitio web.
                     </p>
                     <footer class="d-flex gap-4 flex-wrap">
-                        <a class="link-project" href="https://github.com/MauroAg22/personal-programmer-website/tree/main/projects/curriculum-vitae" target="_blank" rel="noopener noreferrer">
+                        <a class="link-project" href="https://github.com/MauroAg22/curriculum-web" target="_blank" rel="noopener noreferrer">
                             <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>
-                        <a class="link-project" href="projects/curriculum-vitae/" target="_blank" rel="noopener noreferrer">
+                        <a class="link-project" href="projects/curriculum-web/" target="_blank" rel="noopener noreferrer">
                             <?php include "icons/preview.svg"; ?>
                             <span>Visitar</span>
                         </a>
@@ -128,7 +128,7 @@
                         Este fue mi primer proyecto hecho con HTML, CSS y JavaScript. Fue presentado como final para aprobar una materia en la universidad. Mi primer contacto con el desarrollo web. Pensado solamente para ordenadores.
                     </p>
                     <footer class="d-flex gap-4 flex-wrap">
-                        <a class="link-project" href="https://github.com/MauroAg22/personal-programmer-website/tree/main/projects/toke-pop" target="_blank" rel="noopener noreferrer">
+                        <a class="link-project" href="https://github.com/MauroAg22/toke-pop" target="_blank" rel="noopener noreferrer">
                             <?php include "icons/github-2.svg"; ?>
                             <span>Código</span>
                         </a>
