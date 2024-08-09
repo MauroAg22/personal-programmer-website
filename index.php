@@ -90,9 +90,9 @@
                         </span>
                     </div>
                     <div>
-                        <span class="label-date">CELULAR</span>
+                        <span class="label-date">WHATSAPP</span>
                         <span class="date">
-                            <a href="tel:+5492657709769">+54 9 2657 70-9769</a>
+                            <a href="https://wa.me/5492657709769" target="_blank" rel="noopener noreferrer">+54 9 2657 70-9769</a>
                         </span>
                     </div>
                     <div>
