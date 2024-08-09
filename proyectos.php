@@ -94,7 +94,7 @@
                             <?php include "icons/preview.svg"; ?>
                             <span>Visitar</span>
                         </a>
-                        <a class="link-project" href="https://api.profesional.ticmas.io/v1/certificates-download/f842fa8b-618f-4c79-9a8d-1d7dc7e52cc6---pdf">
+                        <a class="link-project" href="https://api.profesional.ticmas.io/v1/certificates-download/f842fa8b-618f-4c79-9a8d-1d7dc7e52cc6.pdf">
                             <?php include "icons/box-arrow-up-right.svg"; ?>
                             <span>Credenciales</span>
                         </a>
