@@ -62,6 +62,60 @@
         <section class="d-flex flex-column row-gap-5 px-3">
             <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
                 <div class="col-12 col-md-8 col-xl-5 p-0">
+                    <img class="rounded-4 shadow" width="100%" src="img/projects/clinic-system.webp" alt="Imagen ilustrativa del sitio web de mi curriculum vitae">
+                </div>
+                <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
+                    <div>
+                        <h2 class="title-project">Clinic System</h2>
+                        <ul class="ul-projects">
+                            <li class="item-code-project">
+                                <img src="icons/php.svg" alt="HTML ícono">
+                                <span>PHP</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/mysql.svg" alt="MySQL ícono">
+                                <span>MySQL</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/bootstrap.svg" alt="Bootstrap ícono">
+                                <span>Bootstrap</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/html.svg" alt="HTML ícono">
+                                <span>HTML</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/css.svg" alt="CSS ícono">
+                                <span>CSS</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/js.svg" alt="JavaScript ícono">
+                                <span>JavaScript</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <p class="description-project">
+                        Gestión de clínicas, hospitales y centros médicos; áreas médicas, especialidades de médicos, pacientes y consultas realizadas por los pacientes. Aún se encuentra en desarrollo.
+                    </p>
+                    <footer class="d-flex gap-4 flex-wrap">
+                        <a class="link-project" href="https://github.com/MauroAg22/clinic-system" target="_blank" rel="noopener noreferrer">
+                            <?php include "icons/github-2.svg"; ?>
+                            <span>Código</span>
+                        </a>
+                        <a class="link-project" href="projects/clinic-system/" target="_blank" rel="noopener noreferrer">
+                            <?php include "icons/preview.svg"; ?>
+                            <span>Visitar</span>
+                        </a>
+                        <a class="link-project" href="#">
+                            <?php include "icons/file-earmark-text.svg"; ?>
+                            <span>Documentación</span>
+                        </a>
+                    </footer>
+                </div>
+            </div>
+
+            <div class="projects-font-custom row d-flex justify-content-center column-gap-5 row-gap-4">
+                <div class="col-12 col-md-8 col-xl-5 p-0">
                     <img class="rounded-4 shadow" width="100%" src="img/projects/curriculum-vitae.webp" alt="Imagen ilustrativa del sitio web de mi curriculum vitae">
                 </div>
                 <div class="col-12 col-md-8 col-xl-5 d-flex flex-column justify-content-between p-0">
@@ -79,6 +133,10 @@
                             <li class="item-code-project">
                                 <img src="icons/js.svg" alt="JavaScript ícono">
                                 <span>JavaScript</span>
+                            </li>
+                            <li class="item-code-project">
+                                <img src="icons/bootstrap.svg" alt="Bootstrap ícono">
+                                <span>Bootstrap</span>
                             </li>
                         </ul>
                     </div>
