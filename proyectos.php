@@ -106,7 +106,7 @@
                             <?php include "icons/preview.svg"; ?>
                             <span>Visitar</span>
                         </a>
-                        <a class="link-project" href="#">
+                        <a class="link-project" href="projects/clinic-system/documents/database/clinic-system-documentation.pdf" target="_blank">
                             <?php include "icons/file-earmark-text.svg"; ?>
                             <span>Documentación</span>
                         </a>
