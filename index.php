@@ -138,7 +138,7 @@
                     </div>
                     <div class="col-11 col-sm-9">
                         <p class="text-center fs-5">
-                            Mi conocimiento y experiencia abarca desde el la creación de sistemas de información hasta el desarrollo de aplicaciones web. En cada proyecto, la creación de cada sistemas se adaptan a las necesidades de mis clientes. Además, mis trabajos tienen un diseño responsivo, garantizando una experiencia óptima tanto en dispositivos móviles como de escritorio. Éste sitio web es un claro ejemplo de un diseño web responsivo.
+                            Mi conocimiento y experiencia abarca desde la creación de sistemas de información hasta el desarrollo de aplicaciones web. En cada proyecto, la creación de cada sistemas se adaptan a las necesidades de mis clientes. Además, mis trabajos tienen un diseño responsivo, garantizando una experiencia óptima tanto en dispositivos móviles como de escritorio. Éste sitio web es un claro ejemplo de un diseño web responsivo.
                         </p>
                     </div>
                 </div>
