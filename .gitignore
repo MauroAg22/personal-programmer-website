@@ -1,3 +1,20 @@
 pruebas
 projects
-!img/projects
+!public/img/projects
+
+# Node / Vite
+node_modules
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store

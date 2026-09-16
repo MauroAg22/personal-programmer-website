@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+
+  --brand-primary: #152251;
+  --brand-primary-600: #203075;
+  --brand-primary-500: #26378b;
+  --brand-accent: #f86449;
+
+  --bg: #f4f6fb;
+  --surface: #ffffff;
+  --surface-2: #eaeef8;
+  --text: #0d1530;
+  --text-muted: #4b5570;
+  --text-subtle: #616b87;
+  --border: #dde3f0;
+  --border-strong: #bfc8dd;
+  --accent-text: #b83c25;
+  --grid-line: rgba(21, 34, 81, 0.055);
+  --glow: rgba(38, 55, 139, 0.09);
+  --shadow-sm: 0 1px 2px rgba(13, 21, 48, 0.05), 0 1px 3px rgba(13, 21, 48, 0.04);
+  --shadow-md: 0 2px 4px rgba(13, 21, 48, 0.04), 0 8px 24px rgba(13, 21, 48, 0.07);
+  --shadow-lg: 0 4px 8px rgba(13, 21, 48, 0.05), 0 16px 40px rgba(13, 21, 48, 0.1);
+  --media-edge: rgba(13, 21, 48, 0.16);
+  --shadow-media:
+    0 1px 2px rgba(13, 21, 48, 0.07), 0 6px 12px rgba(13, 21, 48, 0.07),
+    0 18px 36px rgba(13, 21, 48, 0.09);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg: #0b1226;
+    --surface: #121a34;
+    --text: #f4f6fb;
+    --surface-2: #18223f;
+    --text-muted: #a8b0c7;
+    --text-subtle: #7d87a5;
+    --border: #212c51;
+    --border-strong: #2e3b68;
+    --accent-text: #ff8d76;
+    --grid-line: rgba(148, 170, 255, 0.055);
+    --glow: rgba(88, 116, 255, 0.12);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+    --media-edge: rgba(255, 255, 255, 0.11);
+    --shadow-media: 0 2px 6px rgba(0, 0, 0, 0.35), 0 20px 44px rgba(0, 0, 0, 0.45);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #0b1226;
+  --surface: #121a34;
+  --surface-2: #18223f;
+  --text: #f4f6fb;
+  --text-muted: #a8b0c7;
+  --text-subtle: #7d87a5;
+  --border: #212c51;
+  --border-strong: #2e3b68;
+  --accent-text: #ff8d76;
+  --grid-line: rgba(148, 170, 255, 0.055);
+  --glow: rgba(88, 116, 255, 0.12);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
+  --media-edge: rgba(255, 255, 255, 0.11);
+  --shadow-media: 0 2px 6px rgba(0, 0, 0, 0.35), 0 20px 44px rgba(0, 0, 0, 0.45);
+}
+
+@theme inline {
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-primary: var(--brand-primary);
+  --color-primary-600: var(--brand-primary-600);
+  --color-primary-500: var(--brand-primary-500);
+  --color-accent: var(--brand-accent);
+  --color-accent-text: var(--accent-text);
+
+  --color-background: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-subtle: var(--text-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-media-edge: var(--media-edge);
+
+  --shadow-card: var(--shadow-sm);
+  --shadow-panel: var(--shadow-md);
+  --shadow-float: var(--shadow-lg);
+  --shadow-media: var(--shadow-media);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+::selection {
+  background: var(--brand-accent);
+  color: #fff;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: 72px 72px;
+  -webkit-mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 20%, transparent 85%);
+  mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 20%, transparent 85%);
+}
+
+.bg-grid::after {
+  content: "";
+  position: absolute;
+  inset: -20% 0 auto 0;
+  height: 60vh;
+  background: radial-gradient(ellipse 60% 100% at 50% 0%, var(--glow), transparent 70%);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
