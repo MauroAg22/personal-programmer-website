@@ -2,6 +2,8 @@ export const container = "mx-auto w-full max-w-6xl px-6 lg:px-8"
 
 export const section = "scroll-mt-24 border-t border-border py-20 sm:py-24 lg:py-28"
 
+export const sectionBand = `${section} bg-band`
+
 export const btnPrimary =
   "inline-flex items-center justify-center gap-2 rounded-lg bg-text px-5 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
 

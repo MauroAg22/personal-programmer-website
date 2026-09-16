@@ -4,7 +4,11 @@ import { ArrowDown, Download, Github, Linkedin, Mail, MapPin } from "./icons"
 
 function Hero() {
   return (
-    <section id="inicio" className="scroll-mt-24 pt-28 pb-16 sm:pt-36 sm:pb-24">
+    <section
+      id="inicio"
+      className="relative isolate scroll-mt-24 pt-28 pb-16 sm:pt-36 sm:pb-24"
+    >
+      <div className="hero-bg" aria-hidden="true" />
       <div className={container}>
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">

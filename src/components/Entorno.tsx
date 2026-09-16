@@ -1,4 +1,4 @@
-import { container, section } from "../styles"
+import { container, sectionBand } from "../styles"
 import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 
@@ -22,7 +22,7 @@ const UNIDADES = [
 
 function Entorno() {
   return (
-    <section id="entorno" className={section}>
+    <section id="entorno" className={sectionBand}>
       <div className={container}>
         <Reveal>
           <SectionHeader

@@ -6,7 +6,7 @@ import { ArrowUpRight } from "./icons"
 function FirmaCover() {
   return (
     <div className="flex h-full items-center justify-center bg-surface-2 p-6">
-      <div className="w-full max-w-[250px] rounded-lg bg-white p-4 shadow-sm ring-1 ring-black/5">
+      <div className="w-full max-w-[250px] rounded-lg bg-[#fafafa] p-4 shadow-sm ring-1 ring-black/5">
         <div className="flex items-center gap-3">
           <div className="h-10 w-10 shrink-0 rounded-full bg-[#152251]" />
           <div className="flex-1 space-y-1.5">

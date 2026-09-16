@@ -8,24 +8,29 @@
   --brand-primary-500: #26378b;
   --brand-accent: #f86449;
 
-  --bg: #f4f6fb;
-  --surface: #ffffff;
-  --surface-2: #eaeef8;
-  --text: #0d1530;
-  --text-muted: #4b5570;
-  --text-subtle: #616b87;
-  --border: #dde3f0;
-  --border-strong: #bfc8dd;
-  --accent-text: #b83c25;
-  --grid-line: rgba(21, 34, 81, 0.055);
-  --glow: rgba(38, 55, 139, 0.09);
-  --shadow-sm: 0 1px 2px rgba(13, 21, 48, 0.05), 0 1px 3px rgba(13, 21, 48, 0.04);
-  --shadow-md: 0 2px 4px rgba(13, 21, 48, 0.04), 0 8px 24px rgba(13, 21, 48, 0.07);
-  --shadow-lg: 0 4px 8px rgba(13, 21, 48, 0.05), 0 16px 40px rgba(13, 21, 48, 0.1);
-  --media-edge: rgba(13, 21, 48, 0.16);
+  --bg: #f2f2f4;
+  --band: #eaeaed;
+  --surface: #fafafa;
+  --surface-2: #e6e6ea;
+  --text: #1c2130;
+  --text-muted: #525766;
+  --text-subtle: #5c6072;
+  --border: #dfdfe5;
+  --border-strong: #c9c9d1;
+  --accent-text: #a93822;
+
+  --hero-top: #e6e6ea;
+  --hero-bottom: #f2f2f4;
+  --grid-line: rgba(150, 152, 165, 0.13);
+  --glow: rgba(21, 34, 81, 0.035);
+
+  --shadow-sm: 0 1px 2px rgba(24, 24, 36, 0.05), 0 1px 3px rgba(24, 24, 36, 0.04);
+  --shadow-md: 0 2px 4px rgba(24, 24, 36, 0.04), 0 8px 22px rgba(24, 24, 36, 0.065);
+  --shadow-lg: 0 4px 8px rgba(24, 24, 36, 0.05), 0 16px 38px rgba(24, 24, 36, 0.09);
+  --media-edge: rgba(24, 24, 36, 0.15);
   --shadow-media:
-    0 1px 2px rgba(13, 21, 48, 0.07), 0 6px 12px rgba(13, 21, 48, 0.07),
-    0 18px 36px rgba(13, 21, 48, 0.09);
+    0 1px 2px rgba(24, 24, 36, 0.06), 0 6px 12px rgba(24, 24, 36, 0.06),
+    0 18px 36px rgba(24, 24, 36, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,16 +38,21 @@
     color-scheme: dark;
 
     --bg: #0b1226;
+    --band: transparent;
     --surface: #121a34;
-    --text: #f4f6fb;
     --surface-2: #18223f;
+    --text: #f4f6fb;
     --text-muted: #a8b0c7;
     --text-subtle: #7d87a5;
     --border: #212c51;
     --border-strong: #2e3b68;
     --accent-text: #ff8d76;
+
+    --hero-top: #0b1226;
+    --hero-bottom: #0b1226;
     --grid-line: rgba(148, 170, 255, 0.055);
     --glow: rgba(88, 116, 255, 0.12);
+
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
     --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
@@ -55,6 +65,7 @@
   color-scheme: dark;
 
   --bg: #0b1226;
+  --band: transparent;
   --surface: #121a34;
   --surface-2: #18223f;
   --text: #f4f6fb;
@@ -63,8 +74,12 @@
   --border: #212c51;
   --border-strong: #2e3b68;
   --accent-text: #ff8d76;
+
+  --hero-top: #0b1226;
+  --hero-bottom: #0b1226;
   --grid-line: rgba(148, 170, 255, 0.055);
   --glow: rgba(88, 116, 255, 0.12);
+
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
@@ -83,6 +98,7 @@
   --color-accent-text: var(--accent-text);
 
   --color-background: var(--bg);
+  --color-band: var(--band);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-text: var(--text);
@@ -124,24 +140,32 @@ body {
   color: #fff;
 }
 
-.bg-grid {
-  position: fixed;
+.hero-bg {
+  position: absolute;
   inset: 0;
-  z-index: -10;
+  z-index: -1;
+  overflow: hidden;
   pointer-events: none;
+  background: linear-gradient(to bottom, var(--hero-top), var(--hero-bottom));
+}
+
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background-image:
     linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
   background-size: 72px 72px;
-  -webkit-mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 20%, transparent 85%);
-  mask-image: radial-gradient(ellipse 100% 60% at 50% 0%, #000 20%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 25%, transparent 85%);
+  mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 25%, transparent 85%);
 }
 
-.bg-grid::after {
+.hero-bg::after {
   content: "";
   position: absolute;
-  inset: -20% 0 auto 0;
-  height: 60vh;
+  inset: 0 0 auto 0;
+  height: 75%;
   background: radial-gradient(ellipse 60% 100% at 50% 0%, var(--glow), transparent 70%);
 }
 

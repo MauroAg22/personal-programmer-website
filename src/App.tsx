@@ -12,7 +12,6 @@ import Stack from "./components/Stack"
 function App() {
   return (
     <>
-      <div className="bg-grid" aria-hidden="true" />
       <Navbar />
       <main>
         <Hero />

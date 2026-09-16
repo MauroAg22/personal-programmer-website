@@ -1,4 +1,4 @@
-import { chip, container, section } from "../styles"
+import { chip, container, sectionBand } from "../styles"
 import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 
@@ -21,7 +21,7 @@ const TECNOLOGIAS = [
 
 function Experiencia() {
   return (
-    <section id="experiencia" className={section}>
+    <section id="experiencia" className={sectionBand}>
       <div className={container}>
         <Reveal>
           <SectionHeader

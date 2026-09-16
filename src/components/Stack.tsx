@@ -1,4 +1,4 @@
-import { container, section } from "../styles"
+import { container, sectionBand } from "../styles"
 import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 import { Cloud, Server, Shield, Windows } from "./icons"
@@ -67,7 +67,7 @@ function TechChip({ nombre, icono }: Tech) {
   return (
     <span className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-text">
       {icono && (
-        <span className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-white p-0.5 ring-1 ring-black/10">
+        <span className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-[#fafafa] p-0.5 ring-1 ring-black/10">
           <img
             src={icono}
             alt=""
@@ -83,7 +83,7 @@ function TechChip({ nombre, icono }: Tech) {
 
 function Stack() {
   return (
-    <section id="stack" className={section}>
+    <section id="stack" className={sectionBand}>
       <div className={container}>
         <Reveal>
           <SectionHeader

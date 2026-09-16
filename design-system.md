@@ -38,21 +38,35 @@ El botón primario es **tinta invertida** (`bg-text` / `text-background`): negro
 
 ### Neutros — Modo claro
 
-El canvas es una superficie levemente teñida y las tarjetas son blancas y elevadas. Es el patrón de GitHub y Stripe: evita la "pantalla blanca infinita" y da profundidad real sin recurrir a efectos.
+Grises neutros, sin blanco puro en ninguna superficie. El objetivo es comodidad en sesiones largas de lectura: menos luminancia total, contraste de texto alto pero no extremo, y separación por tono en lugar de por blanco.
 
-| Token          | Hex       | Contraste sobre canvas |
-| -------------- | --------- | ---------------------- |
-| `--bg` (canvas)| `#f4f6fb` | —                      |
-| `--surface` (tarjeta elevada) | `#ffffff` | —      |
-| `--surface-2` (relleno hundido) | `#eaeef8` | —    |
-| `--text`       | `#0d1530` | 16.6 ✓                 |
-| `--text-muted` | `#4b5570` | 6.9 ✓                  |
-| `--text-subtle`| `#616b87` | 4.9 ✓                  |
-| `--border`     | `#dde3f0` | —                      |
-| `--border-strong` | `#bfc8dd` | —                   |
-| `--accent-text`| `#b83c25` | 5.2 ✓                  |
+| Token | Hex | Uso |
+| --- | --- | --- |
+| `--bg` | `#f2f2f4` | Canvas de la página |
+| `--band` | `#eaeaed` | Secciones alternas |
+| `--surface` | `#fafafa` | Tarjetas elevadas (nunca `#ffffff`) |
+| `--surface-2` | `#e6e6ea` | Rellenos hundidos: chips, iconos, listas |
+| `--text` | `#1c2130` | Texto principal |
+| `--text-muted` | `#525766` | Párrafos y texto secundario |
+| `--text-subtle` | `#5c6072` | Labels, metadatos |
+| `--border` | `#dfdfe5` | Bordes de tarjeta |
+| `--border-strong` | `#c9c9d1` | Bordes de controles |
+| `--accent-text` | `#a93822` | Coral accesible para texto e iconos |
 
-> El token `--text-subtle` anterior (`#7f89a3`) daba 3.49:1 — fallaba WCAG AA y se usaba en eyebrows, estados de proyecto, footer y notas. Corregido.
+Contraste mínimo medido sobre la superficie más oscura donde aparece cada token:
+
+| Token | Mínimo | Antes |
+| --- | --- | --- |
+| `--text` | 12.9:1 | 15.5:1 |
+| `--text-muted` | 5.8:1 | 6.4:1 |
+| `--text-subtle` | 5.0:1 | 4.6:1 |
+| `--accent-text` | 5.2:1 | 4.9:1 |
+
+El texto principal baja su contraste a propósito (sigue muy por encima de AA). Los niveles secundarios no se pueden suavizar mucho más: `--text-subtle` ya está cerca del piso de 4.5:1.
+
+**Ritmo de secciones**: Hero con degradado propio → Entorno (banda) → Perfil (canvas) → Experiencia (banda) → Proyectos (canvas) → Stack (banda) → Formación (canvas) → Contacto (banda). La variante está en `sectionBand` (`src/styles.ts`). En modo oscuro `--band` es transparente, así que no hay bandas.
+
+**Fondo del Hero** (`.hero-bg`): degradado vertical de `--hero-top` a `--hero-bottom`, grilla de 72 px y un tinte de marca al 3.5%. Es local al Hero, no una capa fija de toda la página. La grilla usa un gris neutro al 13%: aplicar ese porcentaje al azul de marca original la habría endurecido (1.26:1); con el gris neutro queda en 1.11:1, igual de suave que antes.
 
 ### Neutros — Modo oscuro
 
