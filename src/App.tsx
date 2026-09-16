@@ -1,10 +1,14 @@
 import Hero from "./components/Hero"
+import ParticlesBackground from "./components/ParticlesBackground"
 
 function App() {
   return (
-    <main>
-      <Hero />
-    </main>
+    <>
+      <ParticlesBackground />
+      <main className="relative z-10">
+        <Hero />
+      </main>
+    </>
   )
 }
 

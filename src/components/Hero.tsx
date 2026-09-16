@@ -33,15 +33,11 @@ function Hero() {
       id="inicio"
       className="flex min-h-screen flex-col items-center justify-center gap-14 px-6 py-24 md:flex-row md:justify-around md:gap-8 md:px-16"
     >
-      <div className="relative shrink-0">
-        <div
-          className="absolute -inset-4 -z-10 rounded-[2rem] bg-accent/20 blur-2xl"
-          aria-hidden="true"
-        />
+      <div className="shrink-0">
         <img
           src="/img/perfil-01.png"
           alt="Retrato de Mauro Lucero"
-          className="h-64 w-64 rounded-[2rem] object-cover shadow-xl ring-4 ring-surface sm:h-80 sm:w-80 md:h-96 md:w-96"
+          className="h-64 w-64 rounded-xl object-cover shadow-xl ring-4 ring-surface sm:h-80 sm:w-80 md:h-96 md:w-96"
         />
       </div>
 
