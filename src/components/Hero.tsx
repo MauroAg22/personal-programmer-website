@@ -103,7 +103,7 @@ function Hero() {
                 alt="Retrato de Mauro Lucero"
                 className="h-[400px] w-[400px] rounded-2xl object-cover shadow-media ring-1 ring-media-edge"
               />
-              <div className="absolute -right-6 -bottom-5 rounded-xl border border-border bg-surface px-4 py-3 shadow-float">
+              <div className="absolute -right-6 -bottom-5 rounded-xl border border-media-edge bg-surface px-4 py-3 shadow-media">
                 <p className="text-[11px] tracking-wide text-text-subtle uppercase">
                   Actualmente
                 </p>
