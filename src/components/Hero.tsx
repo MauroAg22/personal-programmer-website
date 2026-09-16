@@ -2,13 +2,6 @@ import { CV_URL, GITHUB_URL, LINKEDIN_URL, MAILTO } from "../data"
 import { btnIcon, btnPrimary, btnSecondary, container } from "../styles"
 import { ArrowDown, Download, Github, Linkedin, Mail, MapPin } from "./icons"
 
-const ENTORNOS = [
-  "Lotería de San Luis",
-  "Epic Hoteles",
-  "Jugadón",
-  "Hipódromo de La Punta",
-]
-
 function Hero() {
   return (
     <section id="inicio" className="scroll-mt-24 pt-28 pb-16 sm:pt-36 sm:pb-24">
@@ -21,11 +14,11 @@ function Hero() {
               height={480}
               fetchPriority="high"
               alt="Retrato de Mauro Lucero"
-              className="mb-6 h-20 w-20 rounded-xl object-cover ring-1 ring-border lg:hidden"
+              className="mb-6 h-20 w-20 rounded-xl object-cover shadow-card ring-1 ring-border lg:hidden"
             />
 
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-text-muted">
-              <MapPin className="h-3.5 w-3.5 text-accent" />
+              <MapPin className="h-3.5 w-3.5 text-accent-text" />
               San Luis, Argentina · Presencial y remoto
             </p>
 
@@ -92,9 +85,9 @@ function Hero() {
                 width={720}
                 height={720}
                 alt="Retrato de Mauro Lucero"
-                className="h-[400px] w-[400px] rounded-2xl object-cover ring-1 ring-border"
+                className="h-[400px] w-[400px] rounded-2xl object-cover shadow-panel ring-1 ring-border"
               />
-              <div className="absolute -right-6 -bottom-5 rounded-xl border border-border bg-background/95 px-4 py-3 shadow-lg backdrop-blur-sm">
+              <div className="absolute -right-6 -bottom-5 rounded-xl border border-border bg-surface px-4 py-3 shadow-float">
                 <p className="text-[11px] tracking-wide text-text-subtle uppercase">
                   Actualmente
                 </p>
@@ -106,16 +99,6 @@ function Hero() {
           </div>
         </div>
 
-        <div className="mt-20 border-t border-border pt-6 sm:mt-24">
-          <p className="text-[11px] font-semibold tracking-[0.14em] text-text-subtle uppercase">
-            Entornos donde doy soporte
-          </p>
-          <div className="mt-3 flex flex-wrap gap-x-8 gap-y-2 text-sm text-text-muted">
-            {ENTORNOS.map((entorno) => (
-              <span key={entorno}>{entorno}</span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   )

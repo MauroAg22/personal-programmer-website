@@ -1,4 +1,5 @@
 import Contacto from "./components/Contacto"
+import Entorno from "./components/Entorno"
 import Experiencia from "./components/Experiencia"
 import Footer from "./components/Footer"
 import Formacion from "./components/Formacion"
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <main>
         <Hero />
+        <Entorno />
         <Perfil />
         <Experiencia />
         <Proyectos />

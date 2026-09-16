@@ -31,7 +31,7 @@ function Experiencia() {
         </Reveal>
 
         <Reveal className="mt-14">
-          <article className="rounded-xl border border-border bg-surface p-7 sm:p-9">
+          <article className="rounded-xl border border-border bg-surface p-7 shadow-card sm:p-9">
             <div className="flex flex-wrap items-start justify-between gap-4">
               <div>
                 <h3 className="text-xl font-semibold text-text">
@@ -46,10 +46,10 @@ function Experiencia() {
               </span>
             </div>
 
-            <p className="mt-6 border-l-2 border-accent pl-4 text-sm leading-relaxed text-text-muted">
-              Grupo empresario con varias unidades de negocio —Lotería de San
-              Luis, Epic Hoteles, Jugadón e Hipódromo de La Punta—, cada una
-              con sus propios usuarios, equipos y necesidades de soporte.
+            <p className="mt-6 border-l-2 border-accent pl-4 text-[0.9375rem] leading-relaxed text-text-muted">
+              Grupo de entretenimiento fundado en 1985, con más de 1000
+              colaboradores en 27 localidades y ocho unidades de negocio. Una
+              industria regulada donde la operación no puede detenerse.
             </p>
 
             <ul className="mt-7 flex flex-col gap-4">
@@ -59,7 +59,7 @@ function Experiencia() {
                     className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
                     aria-hidden="true"
                   />
-                  <span className="text-sm leading-relaxed text-text-muted">
+                  <span className="text-[0.9375rem] leading-relaxed text-text-muted">
                     {logro}
                   </span>
                 </li>
@@ -77,7 +77,7 @@ function Experiencia() {
         </Reveal>
 
         <Reveal className="mt-6">
-          <article className="rounded-xl border border-border p-7">
+          <article className="rounded-xl border border-border bg-surface p-7 shadow-card">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <h3 className="text-base font-semibold text-text">
                 Agente de Atención Telefónica

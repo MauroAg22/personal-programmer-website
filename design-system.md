@@ -38,17 +38,21 @@ El botón primario es **tinta invertida** (`bg-text` / `text-background`): negro
 
 ### Neutros — Modo claro
 
-| Token          | Hex       |
-| -------------- | --------- |
-| `--bg`         | `#ffffff` |
-| `--surface`    | `#f7f8fc` |
-| `--surface-2`  | `#eef1f8` |
-| `--text`       | `#101a3a` |
-| `--text-muted` | `#5b6478` |
-| `--text-subtle`| `#7f89a3` |
-| `--border`     | `#e3e7f0` |
-| `--border-strong` | `#cdd4e4` |
-| `--accent-text`| `#c03f28` |
+El canvas es una superficie levemente teñida y las tarjetas son blancas y elevadas. Es el patrón de GitHub y Stripe: evita la "pantalla blanca infinita" y da profundidad real sin recurrir a efectos.
+
+| Token          | Hex       | Contraste sobre canvas |
+| -------------- | --------- | ---------------------- |
+| `--bg` (canvas)| `#f4f6fb` | —                      |
+| `--surface` (tarjeta elevada) | `#ffffff` | —      |
+| `--surface-2` (relleno hundido) | `#eaeef8` | —    |
+| `--text`       | `#0d1530` | 16.6 ✓                 |
+| `--text-muted` | `#4b5570` | 6.9 ✓                  |
+| `--text-subtle`| `#616b87` | 4.9 ✓                  |
+| `--border`     | `#dde3f0` | —                      |
+| `--border-strong` | `#bfc8dd` | —                   |
+| `--accent-text`| `#b83c25` | 5.2 ✓                  |
+
+> El token `--text-subtle` anterior (`#7f89a3`) daba 3.49:1 — fallaba WCAG AA y se usaba en eyebrows, estados de proyecto, footer y notas. Corregido.
 
 ### Neutros — Modo oscuro
 
@@ -65,6 +69,19 @@ El botón primario es **tinta invertida** (`bg-text` / `text-background`): negro
 | `--accent-text`| `#ff8d76` |
 
 > Cambio respecto de v1: en oscuro, `surface` y `border` se desaturaron (antes `#152251` y `#26378b`). Los originales generaban tarjetas que se leían como bloques azules y bordes demasiado marcados.
+
+### Elevación
+
+Tres niveles, expresados con los tokens `--shadow-sm/md/lg` (utilidades `shadow-card`, `shadow-panel`, `shadow-float`):
+
+| Nivel | Uso                                    |
+| ----- | -------------------------------------- |
+| 0     | Canvas de la página                    |
+| 1     | Tarjetas y paneles (`shadow-card`)     |
+| 2     | Paneles destacados y hover (`shadow-panel`) |
+| 3     | Elementos flotantes sobre imagen (`shadow-float`) |
+
+En claro son sombras reales; en oscuro son casi imperceptibles, porque en interfaces oscuras la profundidad la dan los bordes y la diferencia de superficie, no la sombra.
 
 ---
 
@@ -95,14 +112,15 @@ Tres estados: **sistema** (por defecto, sigue `prefers-color-scheme`), **claro**
 
 Orden pensado para que el lector objetivo (reclutador / hiring manager de infraestructura) valide el perfil lo antes posible:
 
-1. **Hero** — avatar (mobile) o retrato grande (desktop), ubicación, titular de posicionamiento, subtítulo con la prueba concreta, CTA primario (CV) + secundario (experiencia) + accesos a LinkedIn/GitHub/email. Cierra con la franja "Entornos donde doy soporte" (empresas del grupo).
-2. **Perfil** — reemplaza al viejo "Sobre mí". Tres tarjetas: infraestructura Microsoft, automatización y desarrollo. El texto en primera persona quedó reducido a un párrafo de cierre.
-3. **Experiencia** — tarjeta principal de Grupo Slots con contexto del grupo, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.
-4. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador MSI (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
-5. **Stack** — panel destacado de Infraestructura y Microsoft (el diferencial), y debajo desarrollo, datos/herramientas e IA.
-6. **Formación** — timeline de estudios + panel de cursos.
-7. **Contacto** — panel de cierre con pregunta directa, CTA de email, CV y los cuatro canales.
-8. **Footer**.
+1. **Hero** — avatar (mobile) o retrato grande (desktop), ubicación, titular de posicionamiento, subtítulo con la prueba concreta, CTA primario (CV) + secundario (experiencia) + accesos a LinkedIn/GitHub/email.
+2. **El entorno** — cifras públicas de Grupo Slots (1985, +1000 colaboradores, 27 localidades, +60 unidades comerciales) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público del grupo.
+3. **Perfil** — reemplaza al viejo "Sobre mí". Tres tarjetas: infraestructura Microsoft, automatización y desarrollo. El texto en primera persona quedó reducido a un párrafo de cierre.
+4. **Experiencia** — tarjeta principal de Grupo Slots con contexto del grupo, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.
+5. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador MSI (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
+6. **Stack** — panel destacado de Infraestructura y Microsoft (el diferencial), y debajo desarrollo y datos/herramientas. La IA va como una línea de texto, no como categoría de habilidades: listar asistentes como "skills" lee a portfolio de estudiante.
+7. **Formación** — timeline de estudios + panel de cursos.
+8. **Contacto** — panel de cierre con pregunta directa, CTA de email, CV y los cuatro canales.
+9. **Footer**.
 
 Navegación: nav fijo con blur al hacer scroll, scrollspy que resalta la sección activa y menú hamburguesa por debajo de `lg`.
 

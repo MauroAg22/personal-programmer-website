@@ -36,15 +36,15 @@ function Perfil() {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border shadow-card md:grid-cols-3">
           {AREAS.map(({ Icon, titulo, texto }, index) => (
             <Reveal key={titulo} className="h-full" delay={index * 80}>
-              <div className="flex h-full flex-col gap-4 bg-background p-7">
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-accent">
+              <div className="flex h-full flex-col gap-4 bg-surface p-7">
+                <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface-2 text-accent-text">
                   <Icon className="h-5 w-5" />
                 </span>
                 <h3 className="text-base font-semibold text-text">{titulo}</h3>
-                <p className="text-sm leading-relaxed text-text-muted">
+                <p className="text-[0.9375rem] leading-relaxed text-text-muted">
                   {texto}
                 </p>
               </div>
@@ -53,7 +53,7 @@ function Perfil() {
         </div>
 
         <Reveal>
-          <p className="mt-10 max-w-3xl text-sm leading-relaxed text-text-muted">
+          <p className="mt-10 max-w-3xl text-[0.9375rem] leading-relaxed text-text-muted">
             Estudio Programación Universitaria de Sistemas en la Universidad
             Nacional de Villa Mercedes y sigo formándome en cloud computing,
             automatización e inteligencia artificial, siempre con la idea de

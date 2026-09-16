@@ -5,11 +5,11 @@ import ThemeToggle from "./ThemeToggle"
 import { Close, Download, Menu } from "./icons"
 
 const LINKS = [
+  { id: "entorno", label: "Entorno" },
   { id: "perfil", label: "Perfil" },
   { id: "experiencia", label: "Experiencia" },
   { id: "proyectos", label: "Proyectos" },
   { id: "stack", label: "Stack" },
-  { id: "formacion", label: "Formación" },
   { id: "contacto", label: "Contacto" },
 ]
 
@@ -48,7 +48,7 @@ function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "border-b border-border bg-background/85 backdrop-blur-md"
+          ? "border-b border-border bg-background/90 shadow-card backdrop-blur-md"
           : "border-b border-transparent"
       }`}
     >

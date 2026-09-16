@@ -12,7 +12,9 @@ export const btnIcon =
   "inline-flex h-11 w-11 items-center justify-center rounded-lg border border-border text-text-muted transition-colors hover:border-accent hover:text-accent-text"
 
 export const card =
-  "rounded-xl border border-border bg-surface transition-colors hover:border-border-strong"
+  "rounded-xl border border-border bg-surface shadow-card transition-colors hover:border-border-strong"
+
+export const panel = "rounded-xl border border-border bg-surface shadow-card"
 
 export const chip =
-  "inline-flex items-center gap-1.5 rounded-md border border-border bg-surface px-2.5 py-1 text-xs font-medium text-text-muted"
+  "inline-flex items-center gap-1.5 rounded-md border border-border bg-surface-2 px-2.5 py-1 text-xs font-medium text-text-muted"

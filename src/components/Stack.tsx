@@ -61,21 +61,13 @@ const GRUPOS: { titulo: string; items: Tech[] }[] = [
       { nombre: "Insomnia" },
     ],
   },
-  {
-    titulo: "IA y productividad",
-    items: [
-      { nombre: "Microsoft Copilot" },
-      { nombre: "Gemini Pro" },
-      { nombre: "Claude" },
-    ],
-  },
 ]
 
 function TechChip({ nombre, icono }: Tech) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-sm text-text">
+    <span className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-text">
       {icono && (
-        <span className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-white p-0.5 ring-1 ring-black/5">
+        <span className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-white p-0.5 ring-1 ring-black/10">
           <img
             src={icono}
             alt=""
@@ -102,14 +94,14 @@ function Stack() {
         </Reveal>
 
         <Reveal className="mt-14">
-          <div className="rounded-xl border border-border bg-surface p-7 sm:p-9">
+          <div className="rounded-xl border border-border bg-surface p-7 shadow-card sm:p-9">
             <h3 className="text-sm font-semibold tracking-[0.14em] text-text-subtle uppercase">
               Infraestructura y Microsoft
             </h3>
             <div className="mt-7 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {MICROSOFT.map(({ Icon, nombre, detalle }) => (
                 <div key={nombre} className="flex gap-3.5">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-background text-accent">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-2 text-accent-text">
                     <Icon className="h-[18px] w-[18px]" />
                   </span>
                   <div>
@@ -124,10 +116,10 @@ function Stack() {
           </div>
         </Reveal>
 
-        <div className="mt-6 grid gap-6 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 lg:grid-cols-2">
           {GRUPOS.map((grupo, index) => (
             <Reveal key={grupo.titulo} className="h-full" delay={index * 80}>
-              <div className="h-full rounded-xl border border-border p-7">
+              <div className="h-full rounded-xl border border-border bg-surface p-7 shadow-card">
                 <h3 className="text-sm font-semibold tracking-[0.14em] text-text-subtle uppercase">
                   {grupo.titulo}
                 </h3>
@@ -140,6 +132,14 @@ function Stack() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal>
+          <p className="mt-6 text-[0.9375rem] leading-relaxed text-text-muted">
+            Uso asistentes de IA (Copilot en Microsoft 365, Gemini y Claude)
+            como herramienta de trabajo diaria, tanto para acelerar tareas de
+            soporte como para desarrollar.
+          </p>
+        </Reveal>
       </div>
     </section>
   )

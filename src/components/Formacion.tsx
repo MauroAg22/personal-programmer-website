@@ -66,7 +66,7 @@ function Formacion() {
           </Reveal>
 
           <Reveal delay={80}>
-            <div className="rounded-xl border border-border p-7">
+            <div className="rounded-xl border border-border bg-surface p-7 shadow-card">
               <h3 className="text-sm font-semibold tracking-[0.14em] text-text-subtle uppercase">
                 Cursos
               </h3>

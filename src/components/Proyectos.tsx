@@ -110,7 +110,7 @@ function Proyectos() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {PROYECTOS.map((proyecto, index) => (
             <Reveal key={proyecto.titulo} className="h-full" delay={index * 80}>
-              <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors hover:border-border-strong">
+              <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface shadow-card transition-shadow hover:shadow-panel">
                 <div className="h-44 overflow-hidden border-b border-border">
                   {proyecto.cover}
                 </div>
@@ -127,7 +127,7 @@ function Proyectos() {
                   <h3 className="mt-2.5 text-lg font-semibold text-text">
                     {proyecto.titulo}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-text-muted">
+                  <p className="mt-3 flex-1 text-[0.9375rem] leading-relaxed text-text-muted">
                     {proyecto.descripcion}
                   </p>
 

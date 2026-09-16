@@ -26,7 +26,7 @@ function Contacto() {
     >
       <div className={container}>
         <Reveal>
-          <div className="overflow-hidden rounded-2xl border border-border bg-surface">
+          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-panel">
             <div className="grid gap-10 p-8 sm:p-12 lg:grid-cols-2 lg:gap-16">
               <div>
                 <p className="flex items-center gap-2.5 text-xs font-semibold tracking-[0.14em] text-accent-text uppercase">
@@ -71,7 +71,7 @@ function Contacto() {
                     href={href}
                     target={href.startsWith("mailto:") ? undefined : "_blank"}
                     rel="noreferrer"
-                    className="flex items-center gap-3.5 bg-background px-5 py-4 text-sm text-text transition-colors hover:text-accent-text"
+                    className="flex items-center gap-3.5 bg-surface-2 px-5 py-4 text-sm text-text transition-colors hover:text-accent-text"
                   >
                     <Icon className="h-[18px] w-[18px] shrink-0 text-text-subtle" />
                     <span className="truncate">{label}</span>
