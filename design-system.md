@@ -110,6 +110,11 @@
 6. **Formación** — timeline simple:
    - Programación Universitaria de Sistemas — Universidad Nacional de Villa Mercedes (2021 - Actualidad)
    - Técnico en Industria de Procesos — Centro Educativo Número 10 "Ramiro Podetti" (egresado en 2015)
+
+   Cursos:
+   - Primeros pasos del Desarrollo Front-End — Argentina Programa 4.0
+   - Procesamiento de Datos con Python — Argentina Programa 4.0
+   - Inglés — Instituto de Idiomas ULP (Universidad de La Punta)
 7. **Contacto** — bloque final con:
    - Email: mauroaglucero@gmail.com *(a futuro reemplazar por contacto@maurolucero.com.ar cuando esté operativo)*
    - LinkedIn: linkedin.com/in/mauro-ag-lucero

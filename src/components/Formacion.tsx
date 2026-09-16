@@ -20,6 +20,26 @@ const ESTUDIOS: Estudio[] = [
   },
 ]
 
+interface Curso {
+  nombre: string
+  institucion: string
+}
+
+const CURSOS: Curso[] = [
+  {
+    nombre: "Primeros pasos del Desarrollo Front-End",
+    institucion: "Argentina Programa 4.0",
+  },
+  {
+    nombre: "Procesamiento de Datos con Python",
+    institucion: "Argentina Programa 4.0",
+  },
+  {
+    nombre: "Inglés",
+    institucion: "Instituto de Idiomas ULP (Universidad de La Punta)",
+  },
+]
+
 function Formacion() {
   return (
     <section id="formacion" className="mx-auto max-w-2xl px-6 py-24">
@@ -43,6 +63,21 @@ function Formacion() {
           </div>
         ))}
       </div>
+
+      <h3 className="mt-14 mb-5 text-sm font-semibold tracking-wide text-text-muted uppercase">
+        Cursos
+      </h3>
+      <ul className="flex flex-col gap-3">
+        {CURSOS.map((curso) => (
+          <li key={curso.nombre} className="flex gap-3">
+            <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" />
+            <span className="text-text-muted">
+              <span className="font-medium text-text">{curso.nombre}</span> —{" "}
+              {curso.institucion}
+            </span>
+          </li>
+        ))}
+      </ul>
     </section>
   )
 }
