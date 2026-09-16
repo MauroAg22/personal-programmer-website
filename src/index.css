@@ -39,8 +39,16 @@
   --color-border: var(--border);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--color-background);
   color: var(--color-text);
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
 }
