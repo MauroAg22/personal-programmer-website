@@ -8,15 +8,6 @@ function Hero() {
       <div className={container}>
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <img
-              src="/img/perfil-01-480.webp"
-              width={480}
-              height={480}
-              fetchPriority="high"
-              alt="Retrato de Mauro Lucero"
-              className="mb-6 h-20 w-20 rounded-xl object-cover shadow-card ring-1 ring-border lg:hidden"
-            />
-
             <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-text-muted">
               <MapPin className="h-3.5 w-3.5 text-accent-text" />
               San Luis, Argentina · Presencial y remoto
@@ -27,7 +18,32 @@ function Hero() {
               herramientas.
             </h1>
 
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
+            <figure className="relative mt-8 overflow-hidden rounded-2xl shadow-panel ring-1 ring-border sm:max-w-sm lg:hidden">
+              <img
+                src="/img/perfil-01-720.webp"
+                srcSet="/img/perfil-01-480.webp 480w, /img/perfil-01-720.webp 720w, /img/perfil-01-960.webp 960w"
+                sizes="(min-width: 1024px) 1px, (min-width: 640px) 24rem, 88vw"
+                width={720}
+                height={900}
+                fetchPriority="high"
+                alt="Retrato de Mauro Lucero"
+                className="aspect-[4/5] w-full object-cover object-center"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b1226]/70 to-transparent"
+              />
+              <figcaption className="absolute inset-x-3 bottom-3 rounded-xl bg-[#0b1226]/85 px-4 py-3 ring-1 ring-white/10 backdrop-blur-sm">
+                <p className="text-[11px] tracking-[0.12em] text-white/70 uppercase">
+                  Actualmente
+                </p>
+                <p className="mt-0.5 text-sm font-semibold text-white">
+                  Técnico de Soporte IT · Grupo Slots
+                </p>
+              </figcaption>
+            </figure>
+
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
               Soy <span className="font-medium text-text">Mauro Lucero</span>,
               Técnico de Soporte IT en Grupo Slots. Administro Active
               Directory, Microsoft 365 y Microsoft Entra ID para las empresas
@@ -80,8 +96,8 @@ function Hero() {
             <div className="relative mx-auto w-fit">
               <img
                 src="/img/perfil-01-720.webp"
-                srcSet="/img/perfil-01-720.webp 720w, /img/perfil-01-960.webp 960w"
-                sizes="400px"
+                srcSet="/img/perfil-01-480.webp 480w, /img/perfil-01-720.webp 720w, /img/perfil-01-960.webp 960w"
+                sizes="(max-width: 1023px) 1px, 400px"
                 width={720}
                 height={720}
                 alt="Retrato de Mauro Lucero"

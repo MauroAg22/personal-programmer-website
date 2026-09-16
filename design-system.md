@@ -112,7 +112,10 @@ Tres estados: **sistema** (por defecto, sigue `prefers-color-scheme`), **claro**
 
 Orden pensado para que el lector objetivo (reclutador / hiring manager de infraestructura) valide el perfil lo antes posible:
 
-1. **Hero** — avatar (mobile) o retrato grande (desktop), ubicación, titular de posicionamiento, subtítulo con la prueba concreta, CTA primario (CV) + secundario (experiencia) + accesos a LinkedIn/GitHub/email.
+1. **Hero** — dirección de arte distinta por dispositivo:
+   - **Mobile/tablet**: ubicación → titular → **retrato 4:5 a todo el ancho** con placa de credencial superpuesta ("Actualmente · Técnico de Soporte IT · Grupo Slots") → subtítulo → CTA. La foto entra completa en la primera pantalla y funciona como credencial, no como avatar. El CTA de CV queda siempre accesible en el nav.
+   - **Desktop**: dos columnas, retrato cuadrado de 400 px con la tarjeta de rol flotando sobre el borde.
+   - Las dos imágenes usan `sizes` condicionado al breakpoint para que la versión oculta no descargue el archivo grande.
 2. **El entorno** — cifras públicas de Grupo Slots (1985, +1000 colaboradores, 27 localidades, +60 unidades comerciales) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público del grupo.
 3. **Perfil** — reemplaza al viejo "Sobre mí". Tres tarjetas: infraestructura Microsoft, automatización y desarrollo. El texto en primera persona quedó reducido a un párrafo de cierre.
 4. **Experiencia** — tarjeta principal de Grupo Slots con contexto del grupo, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.

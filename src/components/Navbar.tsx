@@ -59,7 +59,7 @@ function Navbar() {
           className="flex shrink-0 items-center gap-2.5"
         >
           <img src="/img/logo.webp" alt="" className="h-7 w-7" />
-          <span className="text-sm font-semibold tracking-tight text-text">
+          <span className="hidden text-sm font-semibold tracking-tight text-text sm:inline">
             Mauro Lucero
           </span>
         </a>
@@ -88,7 +88,7 @@ function Navbar() {
             href={CV_URL}
             target="_blank"
             rel="noreferrer"
-            className="hidden items-center gap-1.5 rounded-lg border border-border-strong px-3.5 py-2 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent-text sm:inline-flex"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-border-strong px-3.5 py-2 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent-text"
           >
             <Download className="h-4 w-4" />
             CV
