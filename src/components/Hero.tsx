@@ -49,11 +49,6 @@ function Hero() {
           Soporte IT · Microsoft 365 &amp; Active Directory · Desarrollo de
           Software
         </p>
-        <p className="text-text-muted">
-          Ayudo a personas y empresas a que su tecnología funcione, y
-          construyo software que hace el trabajo diario más simple.
-        </p>
-
         <div className="mt-2 flex w-full max-w-xs flex-col gap-3">
           <a
             href={CV_URL}
