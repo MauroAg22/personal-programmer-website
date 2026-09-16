@@ -87,8 +87,12 @@ function Habilidades() {
                   className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3.5 py-2 text-sm text-text"
                 >
                   {skill.icono && (
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white p-0.5">
-                      <img src={skill.icono} alt="" className="h-full w-full" />
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-md bg-white p-0.5">
+                      <img
+                        src={skill.icono}
+                        alt=""
+                        className="h-full w-full object-contain"
+                      />
                     </span>
                   )}
                   {skill.nombre}
