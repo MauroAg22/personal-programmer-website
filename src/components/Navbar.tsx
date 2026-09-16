@@ -1,4 +1,5 @@
 import { useState } from "react"
+import ThemeToggle from "./ThemeToggle"
 
 const LINKS = [
   { href: "#inicio", label: "Inicio" },
@@ -36,27 +37,31 @@ function Navbar() {
           <span className="font-semibold text-text">Mauro Lucero</span>
         </a>
 
-        <nav className="hidden items-center gap-6 md:flex">
-          {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-text-muted transition-colors hover:text-accent"
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
+        <div className="flex items-center gap-4">
+          <nav className="hidden items-center gap-6 md:flex">
+            {LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm font-medium text-text-muted transition-colors hover:text-accent"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label={open ? "Cerrar menú" : "Abrir menú"}
-          className="text-text md:hidden"
-        >
-          <MenuIcon open={open} />
-        </button>
+          <ThemeToggle />
+
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            className="text-text md:hidden"
+          >
+            <MenuIcon open={open} />
+          </button>
+        </div>
       </div>
 
       {open && (

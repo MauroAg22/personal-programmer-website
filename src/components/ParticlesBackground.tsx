@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { isDarkMode, THEME_CHANGE_EVENT } from "../theme"
 
 const LIGHT_COLORS = ["#152251", "#203075", "#26378b"]
 const DARK_COLORS = ["#3b57c2", "#5471d9", "#8fa3ea"]
@@ -50,7 +51,7 @@ function ParticlesBackground() {
     let height = 0
     let dpr = Math.min(window.devicePixelRatio || 1, 2)
     let particles: Particle[] = []
-    let colors = darkModeQuery.matches ? DARK_COLORS : LIGHT_COLORS
+    let colors = isDarkMode() ? DARK_COLORS : LIGHT_COLORS
     let animationId = 0
     let time = 0
 
@@ -98,8 +99,8 @@ function ParticlesBackground() {
       animationId = requestAnimationFrame(loop)
     }
 
-    function handleColorSchemeChange(e: MediaQueryListEvent) {
-      colors = e.matches ? DARK_COLORS : LIGHT_COLORS
+    function handleColorSchemeChange() {
+      colors = isDarkMode() ? DARK_COLORS : LIGHT_COLORS
       particles = createParticles(width, height, colors)
     }
 
@@ -114,6 +115,7 @@ function ParticlesBackground() {
     resize()
     window.addEventListener("resize", resize)
     darkModeQuery.addEventListener("change", handleColorSchemeChange)
+    window.addEventListener(THEME_CHANGE_EVENT, handleColorSchemeChange)
     document.addEventListener("visibilitychange", handleVisibilityChange)
 
     if (prefersReducedMotion) {
@@ -126,6 +128,7 @@ function ParticlesBackground() {
       cancelAnimationFrame(animationId)
       window.removeEventListener("resize", resize)
       darkModeQuery.removeEventListener("change", handleColorSchemeChange)
+      window.removeEventListener(THEME_CHANGE_EVENT, handleColorSchemeChange)
       document.removeEventListener("visibilitychange", handleVisibilityChange)
     }
   }, [])
