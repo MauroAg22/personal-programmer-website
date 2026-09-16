@@ -1,4 +1,5 @@
 import Experiencia from "./components/Experiencia"
+import Formacion from "./components/Formacion"
 import Habilidades from "./components/Habilidades"
 import Hero from "./components/Hero"
 import ParticlesBackground from "./components/ParticlesBackground"
@@ -15,6 +16,7 @@ function App() {
         <Experiencia />
         <Proyectos />
         <Habilidades />
+        <Formacion />
       </main>
     </>
   )
