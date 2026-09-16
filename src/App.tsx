@@ -1,3 +1,4 @@
+import Contacto from "./components/Contacto"
 import Experiencia from "./components/Experiencia"
 import Formacion from "./components/Formacion"
 import Habilidades from "./components/Habilidades"
@@ -17,6 +18,7 @@ function App() {
         <Proyectos />
         <Habilidades />
         <Formacion />
+        <Contacto />
       </main>
     </>
   )
