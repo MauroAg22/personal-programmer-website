@@ -1,4 +1,5 @@
 import Experiencia from "./components/Experiencia"
+import Habilidades from "./components/Habilidades"
 import Hero from "./components/Hero"
 import ParticlesBackground from "./components/ParticlesBackground"
 import Proyectos from "./components/Proyectos"
@@ -13,6 +14,7 @@ function App() {
         <SobreMi />
         <Experiencia />
         <Proyectos />
+        <Habilidades />
       </main>
     </>
   )
