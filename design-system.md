@@ -83,6 +83,8 @@ Tres niveles, expresados con los tokens `--shadow-sm/md/lg` (utilidades `shadow-
 
 En claro son sombras reales; en oscuro son casi imperceptibles, porque en interfaces oscuras la profundidad la dan los bordes y la diferencia de superficie, no la sombra.
 
+**Imágenes** (`shadow-media` + `ring-media-edge`): las fotos necesitan un tratamiento propio porque su contenido puede ser tan claro como el canvas y el borde se disuelve. La solución es la de GitHub y Stripe: un hairline de 1px algo más contrastado que el borde de las tarjetas (`--media-edge`, 16% en claro) más una sombra de tres capas de radio corto a largo. Define el recorte sin recurrir a una sombra grande que haría flotar la imagen.
+
 ---
 
 ## 3. Tipografía

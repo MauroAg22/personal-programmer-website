@@ -18,7 +18,7 @@ function Hero() {
               herramientas.
             </h1>
 
-            <figure className="relative mt-8 overflow-hidden rounded-2xl shadow-panel ring-1 ring-border sm:max-w-sm lg:hidden">
+            <figure className="relative mt-8 overflow-hidden rounded-2xl shadow-media ring-1 ring-media-edge sm:max-w-sm lg:hidden">
               <img
                 src="/img/perfil-01-720.webp"
                 srcSet="/img/perfil-01-480.webp 480w, /img/perfil-01-720.webp 720w, /img/perfil-01-960.webp 960w"
@@ -101,7 +101,7 @@ function Hero() {
                 width={720}
                 height={720}
                 alt="Retrato de Mauro Lucero"
-                className="h-[400px] w-[400px] rounded-2xl object-cover shadow-panel ring-1 ring-border"
+                className="h-[400px] w-[400px] rounded-2xl object-cover shadow-media ring-1 ring-media-edge"
               />
               <div className="absolute -right-6 -bottom-5 rounded-xl border border-border bg-surface px-4 py-3 shadow-float">
                 <p className="text-[11px] tracking-wide text-text-subtle uppercase">
