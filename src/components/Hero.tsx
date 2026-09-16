@@ -1,82 +1,120 @@
-const CV_URL = "/doc/mauro-lucero-cv.pdf"
-const LINKEDIN_URL = "https://www.linkedin.com/in/mauro-ag-lucero"
-const GITHUB_URL = "https://github.com/MauroAg22"
+import { CV_URL, GITHUB_URL, LINKEDIN_URL, MAILTO } from "../data"
+import { btnIcon, btnPrimary, btnSecondary, container } from "../styles"
+import { ArrowDown, Download, Github, Linkedin, Mail, MapPin } from "./icons"
 
-function DownloadIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.1a.5.5 0 0 1 1 0v2.1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.1a.5.5 0 0 1 .5-.5" />
-      <path d="M7.646 10.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 9.293V1.5a.5.5 0 0 0-1 0v7.793L5.354 7.146a.5.5 0 1 0-.708.708z" />
-    </svg>
-  )
-}
-
-function LinkedinIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193h-.016V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-    </svg>
-  )
-}
-
-function GithubIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-    </svg>
-  )
-}
+const ENTORNOS = [
+  "Lotería de San Luis",
+  "Epic Hoteles",
+  "Jugadón",
+  "Hipódromo de La Punta",
+]
 
 function Hero() {
   return (
-    <section
-      id="inicio"
-      className="flex min-h-screen flex-col items-center justify-center gap-14 px-6 py-24 md:flex-row md:justify-around md:gap-8 md:px-16"
-    >
-      <div className="shrink-0">
-        <img
-          src="/img/perfil-01.png"
-          alt="Retrato de Mauro Lucero"
-          className="h-64 w-64 rounded-xl object-cover shadow-xl ring-4 ring-surface sm:h-80 sm:w-80 md:h-96 md:w-96"
-        />
-      </div>
+    <section id="inicio" className="scroll-mt-24 pt-28 pb-16 sm:pt-36 sm:pb-24">
+      <div className={container}>
+        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-7">
+            <img
+              src="/img/perfil-01-480.webp"
+              width={480}
+              height={480}
+              fetchPriority="high"
+              alt="Retrato de Mauro Lucero"
+              className="mb-6 h-20 w-20 rounded-xl object-cover ring-1 ring-border lg:hidden"
+            />
 
-      <div className="flex max-w-lg flex-col items-center gap-5 text-center">
-        <h1 className="text-4xl font-semibold text-text sm:text-5xl">
-          Mauro Lucero
-        </h1>
-        <p className="text-lg font-medium text-accent">
-          Soporte IT · Microsoft 365 &amp; Active Directory · Desarrollo de
-          Software
-        </p>
-        <div className="mt-2 flex w-full max-w-xs flex-col gap-3">
-          <a
-            href={CV_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 font-medium text-white transition-colors hover:bg-primary-600"
-          >
-            <DownloadIcon />
-            Descargar CV
-          </a>
-          <a
-            href={LINKEDIN_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-5 py-3 font-medium text-text transition-colors hover:border-accent hover:text-accent"
-          >
-            <LinkedinIcon />
-            LinkedIn
-          </a>
-          <a
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center justify-center gap-2 rounded-md border border-border px-5 py-3 font-medium text-text transition-colors hover:border-accent hover:text-accent"
-          >
-            <GithubIcon />
-            GitHub
-          </a>
+            <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-medium text-text-muted">
+              <MapPin className="h-3.5 w-3.5 text-accent" />
+              San Luis, Argentina · Presencial y remoto
+            </p>
+
+            <h1 className="mt-6 text-[1.85rem] leading-[1.12] font-semibold tracking-tight text-text sm:text-[2.6rem] sm:leading-[1.1] lg:text-[3.15rem] lg:leading-[1.08]">
+              Que la infraestructura funcione. Y que el equipo tenga mejores
+              herramientas.
+            </h1>
+
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
+              Soy <span className="font-medium text-text">Mauro Lucero</span>,
+              Técnico de Soporte IT en Grupo Slots. Administro Active
+              Directory, Microsoft 365 y Microsoft Entra ID para las empresas
+              del grupo, y desarrollo las herramientas internas que el equipo
+              usa todos los días.
+            </p>
+
+            <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-9">
+              <a
+                href={CV_URL}
+                target="_blank"
+                rel="noreferrer"
+                className={`${btnPrimary} w-full sm:w-auto`}
+              >
+                <Download className="h-[18px] w-[18px]" />
+                Descargar CV
+              </a>
+              <a href="#experiencia" className={`${btnSecondary} w-full sm:w-auto`}>
+                Ver experiencia
+                <ArrowDown className="h-[18px] w-[18px]" />
+              </a>
+
+              <div className="flex items-center gap-2 sm:ml-2">
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={btnIcon}
+                  aria-label="Perfil de LinkedIn"
+                >
+                  <Linkedin />
+                </a>
+                <a
+                  href={GITHUB_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={btnIcon}
+                  aria-label="Perfil de GitHub"
+                >
+                  <Github />
+                </a>
+                <a href={MAILTO} className={btnIcon} aria-label="Enviar un email">
+                  <Mail className="h-[18px] w-[18px]" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden lg:col-span-5 lg:block">
+            <div className="relative mx-auto w-fit">
+              <img
+                src="/img/perfil-01-720.webp"
+                srcSet="/img/perfil-01-720.webp 720w, /img/perfil-01-960.webp 960w"
+                sizes="400px"
+                width={720}
+                height={720}
+                alt="Retrato de Mauro Lucero"
+                className="h-[400px] w-[400px] rounded-2xl object-cover ring-1 ring-border"
+              />
+              <div className="absolute -right-6 -bottom-5 rounded-xl border border-border bg-background/95 px-4 py-3 shadow-lg backdrop-blur-sm">
+                <p className="text-[11px] tracking-wide text-text-subtle uppercase">
+                  Actualmente
+                </p>
+                <p className="mt-0.5 text-sm font-semibold text-text">
+                  Soporte IT · Grupo Slots
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-20 border-t border-border pt-6 sm:mt-24">
+          <p className="text-[11px] font-semibold tracking-[0.14em] text-text-subtle uppercase">
+            Entornos donde doy soporte
+          </p>
+          <div className="mt-3 flex flex-wrap gap-x-8 gap-y-2 text-sm text-text-muted">
+            {ENTORNOS.map((entorno) => (
+              <span key={entorno}>{entorno}</span>
+            ))}
+          </div>
         </div>
       </div>
     </section>

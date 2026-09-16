@@ -1,31 +1,23 @@
-interface Estudio {
-  titulo: string
-  institucion: string
-  periodo: string
-  color: "accent" | "primary"
-}
+import { container, section } from "../styles"
+import Reveal from "./Reveal"
+import SectionHeader from "./SectionHeader"
 
-const ESTUDIOS: Estudio[] = [
+const ESTUDIOS = [
   {
     titulo: "Programación Universitaria de Sistemas",
     institucion: "Universidad Nacional de Villa Mercedes",
     periodo: "2021 — Actualidad",
-    color: "accent",
+    actual: true,
   },
   {
     titulo: "Técnico en Industria de Procesos",
-    institucion: 'Centro Educativo Número 10 "Ramiro Podetti"',
+    institucion: 'Centro Educativo N.º 10 "Ramiro Podetti"',
     periodo: "Egresado en 2015",
-    color: "primary",
+    actual: false,
   },
 ]
 
-interface Curso {
-  nombre: string
-  institucion: string
-}
-
-const CURSOS: Curso[] = [
+const CURSOS = [
   {
     nombre: "Primeros pasos del Desarrollo Front-End",
     institucion: "Argentina Programa 4.0",
@@ -36,48 +28,64 @@ const CURSOS: Curso[] = [
   },
   {
     nombre: "Inglés",
-    institucion: "Instituto de Idiomas ULP (Universidad de La Punta)",
+    institucion: "Instituto de Idiomas ULP — Universidad de La Punta",
   },
 ]
 
 function Formacion() {
   return (
-    <section id="formacion" className="mx-auto max-w-2xl px-6 py-24">
-      <h2 className="mb-10 text-3xl font-semibold text-text">Formación</h2>
+    <section id="formacion" className={section}>
+      <div className={container}>
+        <Reveal>
+          <SectionHeader eyebrow="Formación" title="Estudios y capacitación" />
+        </Reveal>
 
-      <div className="flex flex-col gap-10 border-l-2 border-border pl-8">
-        {ESTUDIOS.map((estudio) => (
-          <div key={estudio.titulo} className="relative">
-            <span
-              className={`absolute -left-[41px] top-1 h-4 w-4 rounded-full border-2 border-background ${
-                estudio.color === "accent" ? "bg-accent" : "bg-primary-500"
-              }`}
-            />
-            <h3 className="text-lg font-semibold text-text">
-              {estudio.titulo}
-            </h3>
-            <p className="text-text-muted">{estudio.institucion}</p>
-            <p className="text-sm font-medium text-text-muted">
-              {estudio.periodo}
-            </p>
-          </div>
-        ))}
+        <div className="mt-14 grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <Reveal>
+            <div className="flex flex-col gap-8 border-l border-border pl-7">
+              {ESTUDIOS.map((estudio) => (
+                <div key={estudio.titulo} className="relative">
+                  <span
+                    className={`absolute top-1.5 -left-[33px] h-2.5 w-2.5 rounded-full ring-4 ring-background ${
+                      estudio.actual ? "bg-accent" : "bg-border-strong"
+                    }`}
+                    aria-hidden="true"
+                  />
+                  <h3 className="text-base font-semibold text-text">
+                    {estudio.titulo}
+                  </h3>
+                  <p className="mt-1 text-sm text-text-muted">
+                    {estudio.institucion}
+                  </p>
+                  <p className="mt-1 text-xs font-medium tracking-wide text-text-subtle">
+                    {estudio.periodo}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <div className="rounded-xl border border-border p-7">
+              <h3 className="text-sm font-semibold tracking-[0.14em] text-text-subtle uppercase">
+                Cursos
+              </h3>
+              <ul className="mt-5 flex flex-col divide-y divide-border">
+                {CURSOS.map((curso) => (
+                  <li key={curso.nombre} className="py-3 first:pt-0 last:pb-0">
+                    <p className="text-sm font-medium text-text">
+                      {curso.nombre}
+                    </p>
+                    <p className="mt-0.5 text-xs text-text-muted">
+                      {curso.institucion}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
       </div>
-
-      <h3 className="mt-14 mb-5 text-sm font-semibold tracking-wide text-text-muted uppercase">
-        Cursos
-      </h3>
-      <ul className="flex flex-col gap-3">
-        {CURSOS.map((curso) => (
-          <li key={curso.nombre} className="flex gap-3">
-            <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-500" />
-            <span className="text-text-muted">
-              <span className="font-medium text-text">{curso.nombre}</span> —{" "}
-              {curso.institucion}
-            </span>
-          </li>
-        ))}
-      </ul>
     </section>
   )
 }

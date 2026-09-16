@@ -1,153 +1,145 @@
 # Portfolio de Mauro Lucero — Sistema de Diseño
 
-> Documento vivo. Se va actualizando a medida que definimos cada parte del proyecto.
-> Última actualización: 2026-09-15
+> Documento vivo. Refleja el estado real del código.
+> Última actualización: 2026-09-16 (v2 — rediseño enterprise)
 
 ---
 
-## 1. Concepto / Idea principal
+## 1. Posicionamiento
 
-- **Posicionamiento**: Técnico de Soporte IT + Administrador Microsoft 365 + Desarrollador de Software.
-- **Público objetivo**: reclutadores técnicos / empresas que buscan soporte IT-sysadmin, y clientes o empresas que buscan un dev.
-- **Tono visual**: serio, corporativo-tech, tipo dashboard/enterprise, con un toque cálido que evite que se sienta frío.
-- **Tagline (Hero)**: "Soporte IT · Microsoft 365 & Active Directory · Desarrollo de Software"
-- **Idioma del sitio**: español únicamente por ahora. Posible versión bilingüe (español/inglés) a futuro — tener en cuenta al estructurar el contenido para facilitar esa expansión más adelante.
+- **Perfil**: Técnico de Soporte IT e infraestructura Microsoft **que además desarrolla software**. La intersección es el diferencial; ninguna de las dos mitades sola lo es.
+- **Público objetivo (en orden de prioridad)**:
+  1. Reclutadores IT y hiring managers de infraestructura / Microsoft 365.
+  2. Empresas que necesitan soporte IT-sysadmin.
+  3. Clientes o empresas que buscan desarrollo.
+- **Mensaje principal**: "Que la infraestructura funcione. Y que el equipo tenga mejores herramientas."
+- **Prueba de 10 segundos**: al entrar, el visitante tiene que entender que trabaja en un entorno corporativo real (grupo empresario multi-unidad), que administra el stack Microsoft en producción, y que construye herramientas que la gente usa.
+- **Tono visual**: enterprise-tech sobrio. Referencias: Microsoft, Stripe, Linear, Vercel, GitHub.
+- **Idioma**: español. Contenido estructurado en `src/data.ts` y arrays por sección para facilitar una versión bilingüe a futuro.
 
 ---
 
 ## 2. Paleta de colores
 
-### Colores principales (marca)
-| Nombre       | Hex       | Uso sugerido                          |
-|--------------|-----------|----------------------------------------|
-| Primary      | `#152251` | Color principal, fondos oscuros, header/footer |
-| Primary 600  | `#203075` | Estados hover, secciones secundarias   |
-| Primary 500  | `#26378b` | Acentos de marca, bordes, iconos       |
+### Marca
 
-### Color de acento
-| Nombre       | Hex        | Uso sugerido                    |
-|--------------|------------|----------------------------------|
-| Accent       | `#f86449` | Botones CTA, links activos, detalles destacados |
+| Nombre      | Hex       | Uso                                            |
+| ----------- | --------- | ---------------------------------------------- |
+| Primary     | `#152251` | Color de marca, fondos oscuros, logos internos |
+| Primary 600 | `#203075` | Estados intermedios                            |
+| Primary 500 | `#26378b` | Acentos de marca, estados de proyecto          |
+| Accent      | `#f86449` | Detalles: eyebrows, dots, focus ring, iconos   |
 
-> Historial de prueba: se evaluaron `#F97316` (naranja vivo, descartado por muy "e-commerce") y `#B5591C` (terracota sobrio). Se eligió `#f86449` (coral-naranja) como balance entre calidez y sobriedad. Queda abierto a revisión más adelante.
+**Regla de uso del acento (importante)**: el coral es un acento, no un color de superficie. Nunca se usa como fondo de botón primario ni como color de texto corrido — `#f86449` sobre blanco no llega a contraste AA. Para texto se usa el token `--accent-text`, que es una variante accesible por tema.
+
+### Botones
+
+El botón primario es **tinta invertida** (`bg-text` / `text-background`): negro-azulado sobre claro, blanco sobre oscuro. Máximo contraste en ambos temas y lectura premium tipo Linear/Vercel. El secundario es bordeado.
 
 ### Neutros — Modo claro
-| Nombre       | Hex       | Uso                     |
-|--------------|-----------|--------------------------|
-| Background   | `#FFFFFF` | Fondo principal          |
-| Surface      | `#F4F6FB` | Tarjetas, secciones alternadas |
-| Text primary | `#152251` | Títulos y texto principal |
-| Text muted   | `#5B6478` | Texto secundario          |
-| Border       | `#E2E6F0` | Separadores, bordes suaves |
+
+| Token          | Hex       |
+| -------------- | --------- |
+| `--bg`         | `#ffffff` |
+| `--surface`    | `#f7f8fc` |
+| `--surface-2`  | `#eef1f8` |
+| `--text`       | `#101a3a` |
+| `--text-muted` | `#5b6478` |
+| `--text-subtle`| `#7f89a3` |
+| `--border`     | `#e3e7f0` |
+| `--border-strong` | `#cdd4e4` |
+| `--accent-text`| `#c03f28` |
 
 ### Neutros — Modo oscuro
-| Nombre       | Hex       | Uso                     |
-|--------------|-----------|--------------------------|
-| Background   | `#0B1226` | Fondo principal          |
-| Surface      | `#152251` | Tarjetas, secciones alternadas |
-| Text primary | `#F4F6FB` | Títulos y texto principal |
-| Text muted   | `#A8B0C7` | Texto secundario          |
-| Border       | `#26378b` | Separadores, bordes suaves |
 
-*(Pendiente: revisar contraste de accesibilidad —WCAG AA— una vez maquetado)*
+| Token          | Hex       |
+| -------------- | --------- |
+| `--bg`         | `#0b1226` |
+| `--surface`    | `#121a34` |
+| `--surface-2`  | `#18223f` |
+| `--text`       | `#f4f6fb` |
+| `--text-muted` | `#a8b0c7` |
+| `--text-subtle`| `#7d87a5` |
+| `--border`     | `#212c51` |
+| `--border-strong` | `#2e3b68` |
+| `--accent-text`| `#ff8d76` |
+
+> Cambio respecto de v1: en oscuro, `surface` y `border` se desaturaron (antes `#152251` y `#26378b`). Los originales generaban tarjetas que se leían como bloques azules y bordes demasiado marcados.
 
 ---
 
 ## 3. Tipografía
 
-| Uso        | Fuente          | Peso        | Fallback   |
-|------------|-----------------|-------------|------------|
-| Títulos    | IBM Plex Sans   | 600 (semibold) | sans-serif |
-| Subtítulos | IBM Plex Sans   | 500 (medium)   | sans-serif |
-| Cuerpo     | IBM Plex Sans   | 400 (regular)  | sans-serif |
+- Familia única: **IBM Plex Sans** (400/500/600/700), cargada con `preconnect` + `<link>` en el `<head>` (no `@import` en CSS, que bloquea el render).
+- Monoespaciada: stack del sistema (`ui-monospace`), sin request extra. Se usa solo en la portada del proyecto MSI.
 
-> Se descartó la combinación Space Grotesk + Inter en favor de una única familia (IBM Plex Sans) con distintos pesos: da un look técnico, serio y prolijo, coherente con el perfil de infraestructura/dev tools.
+Escala:
 
-- Escalas de tamaño y line-height: **pendiente de definir** al momento de maquetar.
+| Uso              | Clase                                              |
+| ---------------- | -------------------------------------------------- |
+| H1 (hero)        | `1.85rem` → `2.6rem` (sm) → `3.15rem` (lg), tracking-tight |
+| H2 (sección)     | `text-2xl` → `text-3xl` (sm)                        |
+| H3 (tarjetas)    | `text-base` / `text-lg`                             |
+| Cuerpo           | `text-sm` / `text-base`, `leading-relaxed`          |
+| Eyebrow          | `text-xs`, uppercase, `tracking-[0.14em]`           |
 
 ---
 
 ## 4. Modo claro / oscuro
 
-- El sitio soportará **ambos modos**, con toggle manual y detección de preferencia del sistema (`prefers-color-scheme`) como default.
+Tres estados: **sistema** (por defecto, sigue `prefers-color-scheme`), **claro** y **oscuro** forzados mediante `data-theme` en `<html>`. La preferencia se guarda en `localStorage` y se aplica con un script inline en `index.html` antes del primer pintado, para evitar parpadeo.
 
 ---
 
-## 5. Estructura de contenido (secciones)
+## 5. Estructura de contenido
 
-1. **Hero**: layout `space-around`, foto grande (retrato) a la izquierda, bloque de texto centrado a la derecha (nombre, tagline, texto breve) con los 3 botones apilados verticalmente (Descargar CV, LinkedIn, GitHub). Foto protagonista, no un avatar chico.
-2. **Sobre mí** — solo texto, 2-3 párrafos. Copy definitivo:
+Orden pensado para que el lector objetivo (reclutador / hiring manager de infraestructura) valide el perfil lo antes posible:
 
-   > Trabajo en Grupo Slots como Técnico de Soporte IT desde enero de 2025, dando soporte a colaboradores y negocios de la empresa, y administrando Active Directory, Microsoft 365 y Microsoft Entra ID en el día a día. Entre las tareas que más disfruto está el soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, en San Luis.
-   >
-   > Aunque el soporte técnico me gusta, lo que más me apasiona es programar y desarrollar: trabajo con integraciones de API y desarrollo pequeños scripts que facilitan el trabajo diario del equipo de soporte IT, además de aplicaciones web con React, Node.js y PHP.
-   >
-   > Estudio Programación Universitaria de Sistemas en la Universidad Nacional de Villa Mercedes y sigo formándome en cloud computing, automatización e inteligencia artificial, siempre con la idea de aportar soluciones que realmente sumen valor.
+1. **Hero** — avatar (mobile) o retrato grande (desktop), ubicación, titular de posicionamiento, subtítulo con la prueba concreta, CTA primario (CV) + secundario (experiencia) + accesos a LinkedIn/GitHub/email. Cierra con la franja "Entornos donde doy soporte" (empresas del grupo).
+2. **Perfil** — reemplaza al viejo "Sobre mí". Tres tarjetas: infraestructura Microsoft, automatización y desarrollo. El texto en primera persona quedó reducido a un párrafo de cierre.
+3. **Experiencia** — tarjeta principal de Grupo Slots con contexto del grupo, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.
+4. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador MSI (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
+5. **Stack** — panel destacado de Infraestructura y Microsoft (el diferencial), y debajo desarrollo, datos/herramientas e IA.
+6. **Formación** — timeline de estudios + panel de cursos.
+7. **Contacto** — panel de cierre con pregunta directa, CTA de email, CV y los cuatro canales.
+8. **Footer**.
 
-3. **Experiencia** (Grupo Slots — enero 2025 en adelante) — formato timeline, bloque principal. Bullets definitivos:
-   - Brindo soporte técnico presencial y remoto a colaboradores y negocios de Grupo Slots, administrando Active Directory, Microsoft 365 y Microsoft Entra ID
-   - Desarrollé el Generador de Firmas institucional (HTML/CSS/JS), una herramienta usada por todo el personal de la empresa para generar firmas de correo estandarizadas
-   - Doy soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, San Luis
-   - Desarrollé scripts de instalación silenciosa de software, que evolucionaron en un instalador MSI corporativo para equipar automáticamente los equipos de los colaboradores con todo el software utilizado en la empresa
-   - **Experiencia anterior** (bloque compacto, sin remarcar fechas/duración): Metrickal (Barcelona, España — remoto), Agente de Atención Telefónica. Mencionar solo por encima: experiencia trabajando 100% remoto para una empresa internacional, en atención a clientes de Ecoscooting y AliExpress.
-4. **Proyectos / Portfolio técnico** — grid de tarjetas (imagen + título + stack + link).
-
-   | Proyecto | Stack | Descripción | Links |
-   |----------|-------|--------------|-------|
-   | Clinic System | PHP, MySQL, Bootstrap, HTML, CSS, JS | Sistema de gestión para clínicas/hospitales: médicos, especialidades, pacientes y consultas. Aún en desarrollo. | [Código](https://github.com/MauroAg22/clinic-system) · [Demo](https://maurolucero.com.ar/projects/clinic-system/) |
-   | Generador de Firmas — Grupo Slots | HTML, CSS, JS (datos en JSON) | Herramienta institucional en producción: genera firmas de correo estandarizadas para colaboradores de Grupo Slots, con formatos según cada empresa del grupo (Lotería de San Luis, Epic Hoteles, Jugadón, etc.). | [Demo](https://firma.gruposlots.ar/) · Código en GitLab interno de la empresa (pendiente de migrar a GitHub personal) |
-   | Instalador MSI Corporativo | InnoSetup, scripts CMD (instalación silenciosa) | Instalador corporativo que equipa automáticamente los equipos de colaboradores con todo el software utilizado en la empresa. Incluye seteo preestablecido de contraseñas para asistencia remota (AnyDesk, UltraVNC). En desarrollo/uso interno. | Código en GitLab interno de la empresa (pendiente de migrar a GitHub personal) |
-
-5. **Habilidades técnicas** — solo iconos/logos agrupados por categoría:
-   - **Infraestructura & Microsoft**: Microsoft 365 · Microsoft Entra ID · Active Directory · Windows
-   - **Frontend**: HTML · CSS · JavaScript · TypeScript · React · Tailwind CSS · Bootstrap
-   - **Backend**: PHP · Node.js · Express.js
-   - **Bases de datos**: MySQL · PostgreSQL
-   - **Herramientas de desarrollo**: Git · GitHub · GitLab · VS Code · Terminal (PowerShell / CMD) · Postman · Insomnia
-   - **IA & Productividad**: Microsoft Copilot (M365) · Gemini Pro · Claude
-
-   > Se descartó (por ahora) la categoría "Aprendiendo" del sitio viejo (Docker, MongoDB, Prisma, Laravel, etc.) — posible reincorporación futura.
-6. **Formación** — timeline simple:
-   - Programación Universitaria de Sistemas — Universidad Nacional de Villa Mercedes (2021 - Actualidad)
-   - Técnico en Industria de Procesos — Centro Educativo Número 10 "Ramiro Podetti" (egresado en 2015)
-
-   Cursos:
-   - Primeros pasos del Desarrollo Front-End — Argentina Programa 4.0
-   - Procesamiento de Datos con Python — Argentina Programa 4.0
-   - Inglés — Instituto de Idiomas ULP (Universidad de La Punta)
-7. **Contacto** — bloque final con:
-   - Email: mauroaglucero@gmail.com *(a futuro reemplazar por contacto@maurolucero.com.ar cuando esté operativo)*
-   - LinkedIn: linkedin.com/in/mauro-ag-lucero
-   - GitHub: github.com/MauroAg22
-   - WhatsApp: +54 9 2657 28-1741
-
-> Navegación: página única con scroll (single-page), nav fijo arriba con links ancla a cada sección.
-
-*(Pendiente: revisar copy final de Habilidades, Formación y Contacto si hace falta ajustar algo)*
+Navegación: nav fijo con blur al hacer scroll, scrollspy que resalta la sección activa y menú hamburguesa por debajo de `lg`.
 
 ---
 
 ## 6. Stack tecnológico
 
-- **Framework**: React + Vite (o Next.js si se suma blog/SEO a futuro)
-- **Estilos**: Tailwind CSS, con paleta como variables CSS/tokens
-- **Animaciones**: Framer Motion (opcional)
-- **Deploy**: Vercel o Netlify
-- **Contacto**: Formspree o EmailJS
-
-*(Pendiente: decisión final de framework y de servicio de contacto)*
+- **Framework**: React 19 + TypeScript + Vite.
+- **Estilos**: Tailwind CSS v4 con tokens como variables CSS (`@theme inline`).
+- **Animación**: sin librerías. Un solo patrón de entrada (`Reveal`, IntersectionObserver + transición CSS) que respeta `prefers-reduced-motion`.
+- **Fondo**: grilla CSS estática con máscara radial. Sin canvas ni `requestAnimationFrame`.
+- **Deploy**: pendiente (Vercel o Netlify).
 
 ---
 
-## 7. Pendientes / Próximos pasos
+## 7. Accesibilidad y SEO
 
-- [x] Confirmar tono exacto del naranja de acento → `#f86449`
-- [x] Definir tipografía final → IBM Plex Sans
-- [x] Escribir tagline del Hero → "Soporte IT · Microsoft 365 & Active Directory · Desarrollo de Software"
-- [x] Wireframe de cada sección → definido (ver sección 5), Hero con layout space-around
-- [x] Definir proyectos concretos a incluir → Clinic System, Generador de Firmas (Grupo Slots), tercer proyecto pendiente de finalizar
-- [x] Copy final de "Sobre mí" → definido
-- [x] Logros/bullets de Experiencia en Grupo Slots → definidos
-- [x] Definir tercer proyecto → Instalador MSI Corporativo (InnoSetup + CMD)
-- [ ] Migrar repos internos (GitLab de la empresa) a GitHub personal para poder linkear el código: Generador de Firmas e Instalador MSI Corporativo
-- [ ] Activar contacto@maurolucero.com.ar y reemplazarlo como email de contacto en el sitio
+- Foco visible global (`:focus-visible` con anillo de acento).
+- Contraste: el acento nunca se usa como texto pequeño; para eso está `--accent-text`.
+- Imágenes con `width`/`height` para evitar CLS, `srcset` en el retrato y `loading="lazy"` fuera del hero.
+- `index.html` incluye: meta description, canonical, Open Graph + Twitter Card con imagen 1200×630 (`/img/og-image.jpg`), `theme-color` por esquema y JSON-LD de tipo `Person`.
+- `public/robots.txt` y `public/sitemap.xml`.
+
+---
+
+## 8. Assets
+
+- Los originales pesados viven en `assets-src/` (fuera del build).
+- En `public/img/` solo van las versiones optimizadas: `perfil-01-{480,720,960}.webp` (19–70 KB) y `og-image.jpg`.
+
+---
+
+## 9. Pendientes
+
+- [ ] Conseguir capturas reales del Generador de Firmas y del Instalador MSI para reemplazar las portadas ilustrativas.
+- [ ] Sumar métricas concretas al bloque de experiencia (usuarios soportados, equipos administrados, tiempos de respuesta).
+- [ ] Certificaciones Microsoft (MS-900 / AZ-900 / MD-102) — hoy no hay sección porque no hay contenido.
+- [ ] Migrar los repos internos de GitLab a GitHub personal para poder linkear código.
+- [ ] Activar `contacto@maurolucero.com.ar` y reemplazar el email en `src/data.ts`.
+- [ ] Definir hosting y apuntar el dominio al nuevo build.

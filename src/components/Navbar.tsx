@@ -1,81 +1,125 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { CV_URL } from "../data"
+import { container } from "../styles"
 import ThemeToggle from "./ThemeToggle"
+import { Close, Download, Menu } from "./icons"
 
 const LINKS = [
-  { href: "#inicio", label: "Inicio" },
-  { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#experiencia", label: "Experiencia" },
-  { href: "#proyectos", label: "Proyectos" },
-  { href: "#habilidades", label: "Habilidades" },
-  { href: "#formacion", label: "Formación" },
-  { href: "#contacto", label: "Contacto" },
+  { id: "perfil", label: "Perfil" },
+  { id: "experiencia", label: "Experiencia" },
+  { id: "proyectos", label: "Proyectos" },
+  { id: "stack", label: "Stack" },
+  { id: "formacion", label: "Formación" },
+  { id: "contacto", label: "Contacto" },
 ]
-
-function MenuIcon({ open }: { open: boolean }) {
-  return (
-    <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      {open ? (
-        <path d="M2.146 2.146a.5.5 0 0 1 .708 0L8 7.293l5.146-5.147a.5.5 0 1 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854a.5.5 0 0 1 0-.708" />
-      ) : (
-        <path
-          fillRule="evenodd"
-          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-        />
-      )}
-    </svg>
-  )
-}
 
 function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const [active, setActive] = useState("")
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8)
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = LINKS.map((link) => document.getElementById(link.id)).filter(
+      (el): el is HTMLElement => el !== null,
+    )
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]
+        if (visible) setActive(visible.target.id)
+      },
+      { rootMargin: "-20% 0px -70% 0px" },
+    )
+
+    sections.forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3.5">
-        <a href="#inicio" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <img src="/img/logo.webp" alt="" className="h-8 w-8" />
-          <span className="font-semibold text-text">Mauro Lucero</span>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
+        scrolled
+          ? "border-b border-border bg-background/85 backdrop-blur-md"
+          : "border-b border-transparent"
+      }`}
+    >
+      <div className={`${container} flex h-16 items-center justify-between gap-4`}>
+        <a
+          href="#inicio"
+          onClick={() => setOpen(false)}
+          className="flex shrink-0 items-center gap-2.5"
+        >
+          <img src="/img/logo.webp" alt="" className="h-7 w-7" />
+          <span className="text-sm font-semibold tracking-tight text-text">
+            Mauro Lucero
+          </span>
         </a>
 
-        <div className="flex items-center gap-4">
-          <nav className="hidden items-center gap-6 md:flex">
-            {LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-text-muted transition-colors hover:text-accent"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+        <nav className="hidden items-center gap-1 lg:flex">
+          {LINKS.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              aria-current={active === link.id ? "true" : undefined}
+              className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                active === link.id
+                  ? "text-text"
+                  : "text-text-muted hover:text-text"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
 
+        <div className="flex items-center gap-2">
           <ThemeToggle />
+
+          <a
+            href={CV_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden items-center gap-1.5 rounded-lg border border-border-strong px-3.5 py-2 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent-text sm:inline-flex"
+          >
+            <Download className="h-4 w-4" />
+            CV
+          </a>
 
           <button
             type="button"
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => setOpen((value) => !value)}
             aria-expanded={open}
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
-            className="text-text md:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-border text-text lg:hidden"
           >
-            <MenuIcon open={open} />
+            {open ? <Close className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </div>
 
       {open && (
-        <nav className="flex flex-col gap-1 border-t border-border px-6 py-4 md:hidden">
-          {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-2 text-sm font-medium text-text-muted transition-colors hover:bg-surface hover:text-accent"
-            >
-              {link.label}
-            </a>
-          ))}
+        <nav className="border-t border-border bg-background/95 backdrop-blur-md lg:hidden">
+          <div className={`${container} flex flex-col py-3`}>
+            {LINKS.map((link) => (
+              <a
+                key={link.id}
+                href={`#${link.id}`}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-2 py-2.5 text-sm font-medium text-text-muted transition-colors hover:text-text"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </nav>
       )}
     </header>

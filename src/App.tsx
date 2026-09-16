@@ -1,27 +1,28 @@
 import Contacto from "./components/Contacto"
 import Experiencia from "./components/Experiencia"
+import Footer from "./components/Footer"
 import Formacion from "./components/Formacion"
-import Habilidades from "./components/Habilidades"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
-import ParticlesBackground from "./components/ParticlesBackground"
+import Perfil from "./components/Perfil"
 import Proyectos from "./components/Proyectos"
-import SobreMi from "./components/SobreMi"
+import Stack from "./components/Stack"
 
 function App() {
   return (
     <>
-      <ParticlesBackground />
+      <div className="bg-grid" aria-hidden="true" />
       <Navbar />
-      <main className="relative z-10">
+      <main>
         <Hero />
-        <SobreMi />
+        <Perfil />
         <Experiencia />
         <Proyectos />
-        <Habilidades />
+        <Stack />
         <Formacion />
         <Contacto />
       </main>
+      <Footer />
     </>
   )
 }
