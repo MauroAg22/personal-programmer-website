@@ -3,6 +3,7 @@ import Entorno from "./components/Entorno"
 import Experiencia from "./components/Experiencia"
 import Footer from "./components/Footer"
 import Formacion from "./components/Formacion"
+import Gratitud from "./components/Gratitud"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
 import Perfil from "./components/Perfil"
@@ -21,6 +22,7 @@ function App() {
         <Proyectos />
         <Stack />
         <Formacion />
+        <Gratitud />
         <Contacto />
       </main>
       <Footer />

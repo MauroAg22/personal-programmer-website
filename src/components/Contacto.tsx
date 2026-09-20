@@ -7,7 +7,7 @@ import {
   WHATSAPP_LABEL,
   WHATSAPP_URL,
 } from "../data"
-import { btnPrimary, btnSecondary, container, sectionBand } from "../styles"
+import { btnPrimary, btnSecondary, container, section } from "../styles"
 import Reveal from "./Reveal"
 import { Download, Github, Linkedin, Mail, MapPin, Whatsapp } from "./icons"
 
@@ -20,7 +20,7 @@ const CANALES = [
 
 function Contacto() {
   return (
-    <section id="contacto" className={sectionBand}>
+    <section id="contacto" className={section}>
       <div className={container}>
         <Reveal>
           <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-panel">

@@ -138,8 +138,9 @@ Orden pensado para que el lector objetivo (reclutador / hiring manager de infrae
 5. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador MSI (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
 6. **Stack** — panel destacado de Infraestructura y Microsoft (el diferencial), y debajo desarrollo y datos/herramientas. La IA va como una línea de texto, no como categoría de habilidades: listar asistentes como "skills" lee a portfolio de estudiante.
 7. **Formación** — timeline de estudios + panel de cursos.
-8. **Contacto** — panel de cierre con pregunta directa, CTA de email, CV y los cuatro canales.
-9. **Footer**.
+8. **Detrás de cada proyecto** — reconocimiento a profesores, compañeros de trabajo, amigos y familia en una cuadrícula de cuatro tarjetas, más una cita destacada sobre el azul de marca. Va después de Formación y antes de Contacto: cierra el recorrido en tono humano justo antes de la llamada a la acción, sin interrumpir el argumento profesional.
+9. **Contacto** — panel de cierre con pregunta directa, CTA de email, CV y los cuatro canales.
+10. **Footer**.
 
 Navegación: nav fijo con blur al hacer scroll, scrollspy que resalta la sección activa y menú hamburguesa por debajo de `lg`.
 
