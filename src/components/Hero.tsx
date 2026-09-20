@@ -49,10 +49,10 @@ function Hero() {
 
             <p className="mt-8 max-w-xl text-base leading-relaxed text-text-muted sm:text-lg">
               Soy <span className="font-medium text-text">Mauro Lucero</span>,
-              Técnico de Soporte IT en Grupo Slots. Administro Active
-              Directory, Microsoft 365 y Microsoft Entra ID para las empresas
-              del grupo, y desarrollo las herramientas internas que el equipo
-              usa todos los días.
+              Técnico de Soporte TI en Grupo Slots. Además de brindar soporte
+              a colaboradores y unidades de negocio de la empresa, desarrollo 
+              herramientas internas de uso diario y administro entornos Microsoft
+              365 y Active Directory. 
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-9">
@@ -112,7 +112,7 @@ function Hero() {
                   Actualmente
                 </p>
                 <p className="mt-0.5 text-sm font-semibold text-text">
-                  Soporte IT · Grupo Slots
+                  Soporte TI · Grupo Slots
                 </p>
               </div>
             </div>

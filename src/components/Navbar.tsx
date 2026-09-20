@@ -73,7 +73,7 @@ function Navbar() {
               className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
                 active === link.id
                   ? "text-text"
-                  : "text-text-muted hover:text-text"
+                  : "text-text-muted hover:text-accent-text"
               }`}
             >
               {link.label}
@@ -88,7 +88,7 @@ function Navbar() {
             href={CV_URL}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-border-strong px-3.5 py-2 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent-text"
+            className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-border-strong px-3.5 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent-text"
           >
             <Download className="h-4 w-4" />
             CV
@@ -114,7 +114,7 @@ function Navbar() {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={() => setOpen(false)}
-                className="rounded-md px-2 py-2.5 text-sm font-medium text-text-muted transition-colors hover:text-text"
+                className="rounded-md px-2 py-2.5 text-sm font-medium text-text-muted transition-colors hover:text-accent-text"
               >
                 {link.label}
               </a>

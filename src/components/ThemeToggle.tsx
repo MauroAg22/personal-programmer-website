@@ -37,7 +37,7 @@ function ThemeToggle() {
     <div
       role="group"
       aria-label="Tema de color"
-      className="inline-flex items-center rounded-lg border border-border p-0.5"
+      className="inline-flex h-9 items-center rounded-lg border border-border-strong p-0.5 transition-colors hover:border-accent"
     >
       {OPTIONS.map(({ value, label, Icon }) => (
         <button
@@ -47,10 +47,8 @@ function ThemeToggle() {
           aria-label={label}
           aria-pressed={theme === value}
           title={label}
-          className={`flex h-7 w-7 items-center justify-center rounded-md transition-colors ${
-            theme === value
-              ? "bg-surface-2 text-text"
-              : "text-text-subtle hover:text-text"
+          className={`flex h-7 w-7 items-center justify-center rounded-md transition-colors hover:text-accent-text ${
+            theme === value ? "bg-surface-2 text-text" : "text-text-subtle"
           }`}
         >
           <Icon className="h-[15px] w-[15px]" />

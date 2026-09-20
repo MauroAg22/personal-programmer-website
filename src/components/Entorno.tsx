@@ -3,7 +3,7 @@ import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 
 const CIFRAS = [
-  { valor: "1985", label: "Año de fundación del grupo" },
+  { valor: "1985", label: "Año de fundación" },
   { valor: "+1000", label: "Colaboradores" },
   { valor: "27", label: "Localidades" },
   { valor: "+60", label: "Unidades comerciales" },

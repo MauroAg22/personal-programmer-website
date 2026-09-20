@@ -5,7 +5,7 @@ export const section = "scroll-mt-24 border-t border-border py-20 sm:py-24 lg:py
 export const sectionBand = `${section} bg-band`
 
 export const btnPrimary =
-  "inline-flex items-center justify-center gap-2 rounded-lg bg-text px-5 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+  "inline-flex items-center justify-center gap-2 rounded-lg bg-text px-5 py-3 text-sm font-semibold text-background transition-colors hover:bg-accent-solid"
 
 export const btnSecondary =
   "inline-flex items-center justify-center gap-2 rounded-lg border border-border-strong px-5 py-3 text-sm font-semibold text-text transition-colors hover:border-accent hover:text-accent-text"
