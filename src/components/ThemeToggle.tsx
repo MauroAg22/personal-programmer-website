@@ -51,7 +51,7 @@ function ThemeToggle() {
             theme === value ? "bg-surface-2 text-text" : "text-text-subtle"
           }`}
         >
-          <Icon className="h-[15px] w-[15px]" />
+          <Icon className="h-3.75 w-3.75" />
         </button>
       ))}
     </div>

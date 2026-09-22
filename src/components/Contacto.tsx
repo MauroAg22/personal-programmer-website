@@ -41,7 +41,7 @@ function Contacto() {
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   <a href={MAILTO} className={btnPrimary}>
-                    <Mail className="h-[18px] w-[18px]" />
+                    <Mail className="h-4.5 w-4.5" />
                     Escribirme
                   </a>
                   <a
@@ -50,7 +50,7 @@ function Contacto() {
                     rel="noreferrer"
                     className={btnSecondary}
                   >
-                    <Download className="h-[18px] w-[18px]" />
+                    <Download className="h-4.5 w-4.5" />
                     Descargar CV
                   </a>
                 </div>
@@ -70,7 +70,7 @@ function Contacto() {
                     rel="noreferrer"
                     className="flex items-center gap-3.5 bg-surface-2 px-5 py-4 text-sm text-text transition-colors hover:text-accent-text"
                   >
-                    <Icon className="h-[18px] w-[18px] shrink-0 text-text-subtle" />
+                    <Icon className="h-4.5 w-4.5 shrink-0 text-text-subtle" />
                     <span className="truncate">{label}</span>
                   </a>
                 ))}

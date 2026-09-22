@@ -46,7 +46,7 @@ function Formacion() {
               {ESTUDIOS.map((estudio) => (
                 <div key={estudio.titulo} className="relative">
                   <span
-                    className={`absolute top-1.5 -left-[33px] h-2.5 w-2.5 rounded-full ring-4 ring-background ${
+                    className={`absolute top-1.5 -left-8.25 h-2.5 w-2.5 rounded-full ring-4 ring-background ${
                       estudio.actual ? "bg-accent" : "bg-border-strong"
                     }`}
                     aria-hidden="true"

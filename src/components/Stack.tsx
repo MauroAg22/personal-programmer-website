@@ -102,7 +102,7 @@ function Stack() {
               {MICROSOFT.map(({ Icon, nombre, detalle }) => (
                 <div key={nombre} className="flex gap-3.5">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-surface-2 text-accent-text">
-                    <Icon className="h-[18px] w-[18px]" />
+                    <Icon className="h-4.5 w-4.5" />
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-text">{nombre}</p>

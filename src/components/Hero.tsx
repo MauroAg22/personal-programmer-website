@@ -31,11 +31,11 @@ function Hero() {
                 height={900}
                 fetchPriority="high"
                 alt="Retrato de Mauro Lucero"
-                className="aspect-[4/5] w-full object-cover object-center"
+                className="aspect-4/5 w-full object-cover object-center"
               />
               <div
                 aria-hidden="true"
-                className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0b1226]/70 to-transparent"
+                className="absolute inset-x-0 bottom-0 h-2/5 bg-linear-to-t from-[#0b1226]/70 to-transparent"
               />
               <figcaption className="absolute inset-x-3 bottom-3 rounded-xl bg-[#0b1226]/85 px-4 py-3 ring-1 ring-white/10 backdrop-blur-sm">
                 <p className="text-[11px] tracking-[0.12em] text-white/70 uppercase">
@@ -62,12 +62,12 @@ function Hero() {
                 rel="noreferrer"
                 className={`${btnPrimary} w-full sm:w-auto`}
               >
-                <Download className="h-[18px] w-[18px]" />
+                <Download className="h-4.5 w-4.5" />
                 Descargar CV
               </a>
               <a href="#experiencia" className={`${btnSecondary} w-full sm:w-auto`}>
                 Ver experiencia
-                <ArrowDown className="h-[18px] w-[18px]" />
+                <ArrowDown className="h-4.5 w-4.5" />
               </a>
 
               <div className="flex items-center gap-2 sm:ml-2">
@@ -90,7 +90,7 @@ function Hero() {
                   <Github />
                 </a>
                 <a href={MAILTO} className={btnIcon} aria-label="Enviar un email">
-                  <Mail className="h-[18px] w-[18px]" />
+                  <Mail className="h-4.5 w-4.5" />
                 </a>
               </div>
             </div>
@@ -105,7 +105,7 @@ function Hero() {
                 width={720}
                 height={720}
                 alt="Retrato de Mauro Lucero"
-                className="h-[400px] w-[400px] rounded-2xl object-cover shadow-media ring-1 ring-media-edge"
+                className="h-100 w-100 rounded-2xl object-cover shadow-media ring-1 ring-media-edge"
               />
               <div className="absolute -right-6 -bottom-5 rounded-xl border border-media-edge bg-surface px-4 py-3 shadow-media">
                 <p className="text-[11px] tracking-wide text-text-subtle uppercase">

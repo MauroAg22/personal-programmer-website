@@ -43,7 +43,7 @@ function Footer() {
             aria-label="Email"
             className="flex h-9 w-9 items-center justify-center rounded-lg text-text-subtle transition-colors hover:text-accent-text"
           >
-            <Mail className="h-[18px] w-[18px]" />
+            <Mail className="h-4.5 w-4.5" />
           </a>
         </div>
       </div>
