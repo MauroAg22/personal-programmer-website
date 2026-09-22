@@ -38,35 +38,40 @@ El botón primario es **tinta invertida** (`bg-text` / `text-background`): negro
 
 ### Neutros — Modo claro
 
-Grises neutros, sin blanco puro en ninguna superficie. El objetivo es comodidad en sesiones largas de lectura: menos luminancia total, contraste de texto alto pero no extremo, y separación por tono en lugar de por blanco.
+Neutros tintados con el azul de marca, sin blanco puro en ninguna superficie. Conservan la luminosidad baja que resolvió la fatiga visual y recuperan el tono de marca que habían perdido los grises acromáticos. Es la técnica de GitHub y Stripe: grises con temperatura de marca.
+
+**Principio**: el azul es identidad y estructura (fondos, bordes, botón principal); el texto es neutro (negro y grises), y el coral es acción y énfasis (eyebrows, viñetas, hovers). Se probaron los títulos en azul de marca y se descartaron: el texto azul se leía menos sobrio que el negro.
 
 | Token | Hex | Uso |
 | --- | --- | --- |
-| `--bg` | `#f2f2f4` | Canvas de la página |
-| `--band` | `#eaeaed` | Secciones alternas |
-| `--surface` | `#fafafa` | Tarjetas elevadas (nunca `#ffffff`) |
-| `--surface-2` | `#e6e6ea` | Rellenos hundidos: chips, iconos, listas |
-| `--text` | `#1c2130` | Texto principal |
-| `--text-muted` | `#525766` | Párrafos y texto secundario |
-| `--text-subtle` | `#5c6072` | Labels, metadatos |
-| `--border` | `#dfdfe5` | Bordes de tarjeta |
-| `--border-strong` | `#c9c9d1` | Bordes de controles |
-| `--accent-text` | `#a93822` | Coral accesible para texto e iconos |
+| `--bg` | `#eef1f7` | Canvas de la página |
+| `--band` | `#e4e9f4` | Secciones alternas, azuladas de baja intensidad |
+| `--surface` | `#f7f9fc` | Tarjetas elevadas (nunca `#ffffff`) |
+| `--surface-2` | `#e1e7f3` | Rellenos hundidos: chips, iconos, listas |
+| `--text` | `#1d1f24` | Títulos y texto destacado, casi negro neutro |
+| `--btn-primary` | `#152251` | Fondo del botón primario, en el azul de marca (en oscuro conserva el color claro invertido) |
+| `--text-muted` | `#52555d` | Párrafos, gris neutro |
+| `--text-subtle` | `#5a5d66` | Labels, metadatos |
+| `--border` | `#d6ddec` | Bordes de tarjeta |
+| `--border-strong` | `#bcc7df` | Bordes de controles |
+| `--card-hover` | `rgba(38, 55, 139, 0.35)` | Borde de las tarjetas de proyecto en hover |
+| `--accent-text` | `#f86449` | Coral para eyebrows, iconos y hovers |
 
 Contraste mínimo medido sobre la superficie más oscura donde aparece cada token:
 
-| Token | Mínimo | Antes |
-| --- | --- | --- |
-| `--text` | 12.9:1 | 15.5:1 |
-| `--text-muted` | 5.8:1 | 6.4:1 |
-| `--text-subtle` | 5.0:1 | 4.6:1 |
-| `--accent-text` | 5.2:1 | 4.9:1 |
+| Token | Mínimo |
+| --- | --- |
+| `--text` | 13.3:1 |
+| `--text-muted` | 6.0:1 |
+| `--text-subtle` | 5.3:1 |
 
-El texto principal baja su contraste a propósito (sigue muy por encima de AA). Los niveles secundarios no se pueden suavizar mucho más: `--text-subtle` ya está cerca del piso de 4.5:1.
+La luminosidad de cada superficie es levemente menor que la de la paleta gris anterior, así que el tinte azul no vuelve a subir el brillo.
 
-**Ritmo de secciones**: Hero con degradado propio → Entorno (banda) → Perfil (canvas) → Experiencia (banda) → Proyectos (canvas) → Stack (banda) → Formación (canvas) → Contacto (banda). La variante está en `sectionBand` (`src/styles.ts`). En modo oscuro `--band` es transparente, así que no hay bandas.
+**Ritmo de secciones**: Hero con degradado propio → Entorno (banda) → Perfil (canvas) → Experiencia (banda) → Proyectos (canvas) → Stack (banda) → Formación (canvas) → Detrás de cada proyecto (banda) → Contacto (canvas). La variante está en `sectionBand` (`src/styles.ts`). En modo oscuro `--band` es transparente, así que no hay bandas.
 
-**Fondo del Hero** (`.hero-bg`): degradado vertical de `--hero-top` a `--hero-bottom`, grilla de 72 px y un tinte de marca al 3.5%. Es local al Hero, no una capa fija de toda la página. La grilla usa un gris neutro al 13%: aplicar ese porcentaje al azul de marca original la habría endurecido (1.26:1); con el gris neutro queda en 1.11:1, igual de suave que antes.
+**Fondo del Hero** (`.hero-bg`): degradado vertical de `--hero-top` (`#dce4f3`, azul suave) a `--hero-bottom`, grilla de 72 px y un tinte de marca al 6%. Es local al Hero, no una capa fija de toda la página. La grilla usa el azul de marca al 6%, que da exactamente la misma suavidad que la grilla gris anterior (1.10:1).
+
+**Modo oscuro**: todos los tokens que cambian en claro están redefinidos en los dos bloques oscuros, y `--card-hover` se fija igual a `--border`. El oscuro no hereda nada del bloque claro salvo el coral de marca, que es el mismo en ambos temas.
 
 ### Neutros — Modo oscuro
 

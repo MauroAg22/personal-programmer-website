@@ -4,8 +4,8 @@ import SectionHeader from "./SectionHeader"
 
 const LOGROS = [
   "Administro Active Directory y el entorno Microsoft 365 para las empresas, con soporte presencial y remoto a colaboradores y negocios.",
-  "Diseñé y desarrollé el Generador de Firmas institucional: hoy está en producción y se usa para emitir firmas de correo estandarizadas y omologadas.",
-  "Automaticé la puesta a punto de equipos con scripts de instalación silenciosa que evolucionaron en un instalador EXE corporativo, incluyendo todas las configuración.",
+  "Diseñé y desarrollé el Generador de Firmas institucional: hoy está en producción y se usa para emitir firmas de correo estandarizadas y homologadas.",
+  "Automaticé la puesta a punto de equipos con scripts de instalación silenciosa que evolucionaron en un instalador EXE corporativo, incluyendo toda la configuración.",
   "A cargo del soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, donde cada jornada depende de que la infraestructura no falle.",
 ]
 
@@ -48,7 +48,7 @@ function Experiencia() {
             </div>
 
             <p className="mt-6 border-l-2 border-accent pl-4 text-[0.9375rem] leading-relaxed text-text-muted">
-              Empresa de entretenimiento fundado en 1985, con más de 1350
+              Empresa de entretenimiento fundada en 1985, con más de 1350
               colaboradores en más de 20 localidades y ocho unidades de negocio. Una
               industria regulada donde la operación no puede detenerse.
             </p>

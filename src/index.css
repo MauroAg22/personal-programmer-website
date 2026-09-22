@@ -8,30 +8,32 @@
   --brand-primary-500: #26378b;
   --brand-accent: #f86449;
 
-  --bg: #f2f2f4;
-  --band: #eaeaed;
-  --surface: #fafafa;
-  --surface-2: #e6e6ea;
-  --text: #1c2130;
-  --text-muted: #525766;
-  --text-subtle: #5c6072;
-  --border: #dfdfe5;
-  --border-strong: #c9c9d1;
+  --bg: #eef1f7;
+  --band: #e4e9f4;
+  --surface: #f7f9fc;
+  --surface-2: #e1e7f3;
+  --text: #1d1f24;
+  --btn-primary: #152251;
+  --text-muted: #52555d;
+  --text-subtle: #5a5d66;
+  --border: #d6ddec;
+  --border-strong: #bcc7df;
+  --card-hover: rgba(38, 55, 139, 0.35);
   --accent-text: #f86449;
   --accent-solid: #f86449;
 
-  --hero-top: #e6e6ea;
-  --hero-bottom: #f2f2f4;
-  --grid-line: rgba(150, 152, 165, 0.13);
-  --glow: rgba(21, 34, 81, 0.035);
+  --hero-top: #dce4f3;
+  --hero-bottom: #eef1f7;
+  --grid-line: rgba(38, 55, 139, 0.06);
+  --glow: rgba(38, 55, 139, 0.06);
 
-  --shadow-sm: 0 1px 2px rgba(24, 24, 36, 0.05), 0 1px 3px rgba(24, 24, 36, 0.04);
-  --shadow-md: 0 2px 4px rgba(24, 24, 36, 0.04), 0 8px 22px rgba(24, 24, 36, 0.065);
-  --shadow-lg: 0 4px 8px rgba(24, 24, 36, 0.05), 0 16px 38px rgba(24, 24, 36, 0.09);
-  --media-edge: rgba(24, 24, 36, 0.15);
+  --shadow-sm: 0 1px 2px rgba(21, 34, 81, 0.05), 0 1px 3px rgba(21, 34, 81, 0.04);
+  --shadow-md: 0 2px 4px rgba(21, 34, 81, 0.04), 0 8px 22px rgba(21, 34, 81, 0.065);
+  --shadow-lg: 0 4px 8px rgba(21, 34, 81, 0.05), 0 16px 38px rgba(21, 34, 81, 0.09);
+  --media-edge: rgba(21, 34, 81, 0.15);
   --shadow-media:
-    0 1px 2px rgba(24, 24, 36, 0.06), 0 6px 12px rgba(24, 24, 36, 0.06),
-    0 18px 36px rgba(24, 24, 36, 0.08);
+    0 1px 2px rgba(21, 34, 81, 0.06), 0 6px 12px rgba(21, 34, 81, 0.06),
+    0 18px 36px rgba(21, 34, 81, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,10 +45,12 @@
     --surface: #121a34;
     --surface-2: #18223f;
     --text: #f4f6fb;
+    --btn-primary: #f4f6fb;
     --text-muted: #a8b0c7;
     --text-subtle: #7d87a5;
     --border: #212c51;
     --border-strong: #2e3b68;
+    --card-hover: var(--border);
 
     --hero-top: #0b1226;
     --hero-bottom: #0b1226;
@@ -69,10 +73,12 @@
   --surface: #121a34;
   --surface-2: #18223f;
   --text: #f4f6fb;
+  --btn-primary: #f4f6fb;
   --text-muted: #a8b0c7;
   --text-subtle: #7d87a5;
   --border: #212c51;
   --border-strong: #2e3b68;
+  --card-hover: var(--border);
 
   --hero-top: #0b1226;
   --hero-bottom: #0b1226;
@@ -102,10 +108,12 @@
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
   --color-text: var(--text);
+  --color-btn-primary: var(--btn-primary);
   --color-text-muted: var(--text-muted);
   --color-text-subtle: var(--text-subtle);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
+  --color-card-hover: var(--card-hover);
 
   --color-media-edge: var(--media-edge);
 

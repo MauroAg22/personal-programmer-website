@@ -3,27 +3,6 @@ import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 import { ArrowUpRight } from "./icons"
 
-function FirmaCover() {
-  return (
-    <div className="flex h-full items-center justify-center bg-surface-2 p-6">
-      <div className="w-full max-w-[250px] rounded-lg bg-[#fafafa] p-4 shadow-sm ring-1 ring-black/5">
-        <div className="flex items-center gap-3">
-          <div className="h-10 w-10 shrink-0 rounded-full bg-[#152251]" />
-          <div className="flex-1 space-y-1.5">
-            <div className="h-2 w-3/4 rounded-full bg-[#152251]" />
-            <div className="h-1.5 w-1/2 rounded-full bg-[#152251]/30" />
-          </div>
-        </div>
-        <div className="mt-3 space-y-1.5 border-t border-black/10 pt-3">
-          <div className="h-1.5 w-full rounded-full bg-black/10" />
-          <div className="h-1.5 w-4/5 rounded-full bg-black/10" />
-          <div className="h-1.5 w-2/3 rounded-full bg-[#f86449]/60" />
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function TerminalCover() {
   return (
     <div className="h-full bg-[#0a0f20] p-5 font-mono text-[11px] leading-relaxed">
@@ -60,7 +39,14 @@ const PROYECTOS: Proyecto[] = [
     descripcion:
       "Herramienta institucional que usa todo el personal de Grupo Slots para generar firmas de correo estandarizadas, con el formato y la identidad de cada empresa del grupo.",
     stack: ["HTML", "CSS", "JavaScript", "JSON"],
-    cover: <FirmaCover />,
+    cover: (
+      <img
+        src="/img/projects/firma-slots.webp"
+        alt="Captura de pantalla del Generador de Firmas de Grupo Slots"
+        loading="lazy"
+        className="h-full w-full object-cover object-top-left"
+      />
+    ),
     enlaces: [{ label: "Ver herramienta", href: "https://firma.gruposlots.ar/" }],
     nota: "Código en el GitLab interno de la empresa",
   },
@@ -110,7 +96,7 @@ function Proyectos() {
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {PROYECTOS.map((proyecto, index) => (
             <Reveal key={proyecto.titulo} className="h-full" delay={index * 80}>
-              <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface shadow-card transition-shadow hover:shadow-panel">
+              <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface shadow-card transition hover:border-card-hover hover:shadow-panel">
                 <div className="h-44 overflow-hidden border-b border-border">
                   {proyecto.cover}
                 </div>
