@@ -8,19 +8,19 @@ const AREAS = [
     Icon: Server,
     titulo: "Soporte IT e infraestructura Microsoft",
     texto:
-      "Administración diaria de Active Directory, Microsoft 365 y Microsoft Entra ID. Soporte presencial y remoto a los colaboradores y negocios del grupo, incluidos los sistemas de eventos hípicos del Hipódromo de La Punta, donde la continuidad del servicio durante cada jornada es crítica.",
+      "Administración de Active Directory y Microsoft 365. Soporte presencial y remoto a los colaboradores y negocios de la empresa, donde la continuidad de las actividades durante cada jornada es crítica.",
   },
   {
     Icon: Terminal,
-    titulo: "Automatización y puesta a punto de equipos",
+    titulo: "Puesta a punto de equipos",
     texto:
-      "Scripts de instalación silenciosa que evolucionaron en un instalador MSI corporativo: un equipo nuevo queda operativo con todo el software estándar de la empresa y la configuración de asistencia remota, sin intervención manual.",
+      "Scripts de instalación automatizada, recopilación de información y diagnóstico de problemas. Equipos nuevos operativos con todo el software y configuración estándar de la empresa sin intervención manual.",
   },
   {
     Icon: Code,
     titulo: "Desarrollo de software e integraciones",
     texto:
-      "Integraciones de API y aplicaciones web con React, Node.js y PHP. Herramientas internas que nacen de un problema concreto del equipo de soporte y terminan usándose en toda la organización.",
+      "Desarrollo de herramientas internas que facilitan el trabajo, unifican y establecen estándares que terminan usándose en toda la organización.",
   },
 ]
 
@@ -54,10 +54,9 @@ function Perfil() {
 
         <Reveal>
           <p className="mt-10 max-w-3xl text-[0.9375rem] leading-relaxed text-text-muted">
-            Estudio Programación Universitaria de Sistemas en la Universidad
-            Nacional de Villa Mercedes y sigo formándome en cloud computing,
-            automatización e inteligencia artificial, siempre con la idea de
-            aportar soluciones que realmente sumen valor.
+            Me desenvuelvo día a día con programación de sistemas informáticos, cloud computing,
+            automatización, inteligencia artificial, me estoy formando también en el ámbito de
+            redes y servidores, siempre con la idea de aportar soluciones que realmente sumen valor.
           </p>
         </Reveal>
       </div>

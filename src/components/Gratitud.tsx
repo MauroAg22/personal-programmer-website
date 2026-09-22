@@ -16,12 +16,12 @@ const RECONOCIMIENTOS = [
   {
     titulo: "Amigos y compañeros",
     texto:
-      "Por su apoyo y compañerismo, por sus consejos y porque siempre están cuando los necesito.",
+      "Por acompañarme en cada etapa, celebrar cada logro y empujarme a no bajar los brazos en los momentos difíciles. Por el valor de compartir ideas, mates, risas y proyectos juntos; tenerlos cerca marca la diferencia.",
   },
   {
     titulo: "Familia",
     texto:
-      "Lo más importante para mí, mi gran motor. Por acompañarme en cada paso, por estar presentes en cada logro y en cada desafío. Y especialmente a mis padres, por los valores que me enseñaron, por su apoyo incondicional, y porque soy la persona que soy gracias a ellos.",
+      "Lo más importante para mí, mi gran motor. Por acompañarme en cada paso, por estar presentes en cada logro pero más aún cuando las cosas no salen. Y especialmente a mis padres, por los valores que me enseñaron, por su apoyo incondicional, y porque soy la persona que soy gracias a ellos.",
   },
 ]
 
@@ -58,8 +58,8 @@ function Gratitud() {
               aria-hidden="true"
             />
             <blockquote className="mx-auto mt-7 max-w-2xl text-lg leading-relaxed text-balance text-white sm:text-xl">
-              Ningún logro es completamente individual. Este portafolio también
-              les pertenece a quienes formaron parte de mi camino.
+              Ningún logro es completamente individual. También
+              le pertenece a quienes formaron parte de mi camino. Simplemente ¡GRACIAS!
             </blockquote>
           </figure>
         </Reveal>

@@ -3,17 +3,17 @@ import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 
 const CIFRAS = [
-  { valor: "1985", label: "Año de fundación" },
-  { valor: "+1000", label: "Colaboradores" },
-  { valor: "27", label: "Localidades" },
-  { valor: "+60", label: "Unidades comerciales" },
+  { valor: "+1350", label: "Colaboradores" },
+  { valor: "+20", label: "Localidades" },
+  { valor: "+60", label: "Puntos de operación" },
+  { valor: "8", label: "Unidades de negocio" },
 ]
 
 const UNIDADES = [
   "Salas y Casinos",
-  "Juego Online",
-  "Tecnología",
-  "Lotería",
+  "Jugadon",
+  "Eva System",
+  "Lotería de San Luis",
   "Hotelería",
   "Gastronomía",
   "Hípica",
@@ -27,8 +27,8 @@ function Entorno() {
         <Reveal>
           <SectionHeader
             eyebrow="El entorno"
-            title="No es un entorno de práctica: es un grupo empresario en operación"
-            lead="Grupo Slots opera en una industria regulada y de servicio continuo, donde una caída no es un inconveniente sino una operación detenida. Ese es el contexto en el que administro identidades, equipos y accesos todos los días."
+            title="Soporte TI para una empresa de más de 1350 personas"
+            lead="Formo parte del equipo de Soporte TI de Grupo Slots, un grupo de entretenimiento con base en San Luis y ocho unidades de negocio. Cada una tiene sus propios usuarios, equipos y horarios, así que mi trabajo es moverme entre contextos muy distintos —una sala de juego, un hotel, una jornada hípica— sin que ninguno deje de funcionar."
           />
         </Reveal>
 
@@ -49,11 +49,8 @@ function Entorno() {
           <div className="rounded-xl border border-border bg-surface p-7 shadow-card sm:p-8">
             <div className="flex flex-wrap items-baseline justify-between gap-3">
               <h3 className="text-sm font-semibold tracking-[0.14em] text-text-subtle uppercase">
-                Ocho unidades de negocio
+                Negocios a los que doy soporte
               </h3>
-              <p className="text-xs text-text-subtle">
-                Datos públicos de Grupo Slots
-              </p>
             </div>
 
             <ul className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 sm:grid-cols-4">
@@ -72,10 +69,9 @@ function Entorno() {
             </ul>
 
             <p className="mt-7 border-t border-border pt-6 text-sm leading-relaxed text-text-muted">
-              Cada unidad tiene sus propios usuarios, equipos, sistemas y
-              horarios. Dar soporte ahí significa moverse entre contextos muy
-              distintos —una sala de juego, un hotel, una jornada hípica— sin
-              que ninguno deje de funcionar.
+              Cada vertical opera bajo dinámicas, infraestructuras y criticidades diferentes. Mi rol
+              es adaptarme con agilidad a cada entorno tecnológico para garantizar una respuesta rápida
+              y mantener la operación continua en todos los puntos.
             </p>
           </div>
         </Reveal>

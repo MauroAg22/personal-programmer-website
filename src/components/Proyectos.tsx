@@ -65,10 +65,10 @@ const PROYECTOS: Proyecto[] = [
     nota: "Código en el GitLab interno de la empresa",
   },
   {
-    titulo: "Instalador MSI Corporativo",
+    titulo: "Instalador EXE Corporativo",
     estado: { label: "Uso interno", color: "bg-primary-500" },
     descripcion:
-      "Instalador que deja un equipo nuevo listo para trabajar: instala en silencio todo el software estándar de la empresa y deja configurada la asistencia remota (AnyDesk, UltraVNC).",
+      "Instalador que deja un equipo nuevo listo para trabajar: instala en silencio todo el software estándar de la empresa y deja configurada la asistencia remota y carga al equipo en la base de datos.",
     stack: ["InnoSetup", "CMD", "Silent install"],
     cover: <TerminalCover />,
     enlaces: [],
@@ -85,7 +85,7 @@ const PROYECTOS: Proyecto[] = [
         src="/img/projects/clinic-system.webp"
         alt="Captura de pantalla de Clinic System"
         loading="lazy"
-        className="h-full w-full object-cover object-left-top"
+        className="h-full w-full object-cover object-top-left"
       />
     ),
     enlaces: [
