@@ -1,7 +1,7 @@
 import { chip, container, section } from "../styles"
 import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
-import { ArrowUpRight } from "./icons"
+import { ArrowUpRight, Lock } from "./icons"
 
 function TerminalCover() {
   return (
@@ -29,6 +29,7 @@ interface Proyecto {
   stack: string[]
   cover: React.ReactNode
   enlaces: { label: string; href: string }[]
+  acceso?: string
   nota?: string
 }
 
@@ -47,7 +48,8 @@ const PROYECTOS: Proyecto[] = [
         className="h-full w-full object-cover object-top-left"
       />
     ),
-    enlaces: [{ label: "Ver herramienta", href: "https://firma.gruposlots.ar/" }],
+    enlaces: [],
+    acceso: "Demo pendiente de autorización",
     nota: "Código en el GitLab interno de la empresa",
   },
   {
@@ -138,6 +140,12 @@ function Proyectos() {
                         <ArrowUpRight className="h-4 w-4" />
                       </a>
                     ))}
+                    {proyecto.acceso && (
+                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-text-subtle">
+                        <Lock className="h-4 w-4" />
+                        {proyecto.acceso}
+                      </span>
+                    )}
                     {proyecto.nota && (
                       <span className="text-xs text-text-subtle">
                         {proyecto.nota}
