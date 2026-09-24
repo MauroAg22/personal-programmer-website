@@ -28,56 +28,61 @@ const MICROSOFT = [
 
 interface Tech {
   nombre: string
-  icono?: string
+  icono: string
 }
 
 const GRUPOS: { titulo: string; items: Tech[] }[] = [
   {
     titulo: "Desarrollo",
     items: [
-      { nombre: "HTML", icono: "/icons/html.svg" },
-      { nombre: "CSS", icono: "/icons/css.svg" },
-      { nombre: "JavaScript", icono: "/icons/js.svg" },
-      { nombre: "TypeScript", icono: "/icons/typescript.svg" },
-      { nombre: "React", icono: "/icons/react.svg" },
-      { nombre: "Tailwind CSS", icono: "/icons/tailwindcss.svg" },
-      { nombre: "Bootstrap", icono: "/icons/bootstrap.svg" },
-      { nombre: "PHP", icono: "/icons/php.svg" },
-      { nombre: "Node.js", icono: "/icons/nodejs.svg" },
-      { nombre: "Express.js", icono: "/icons/expressjs.svg" },
+      { nombre: "HTML", icono: "/icons/mono/html.svg" },
+      { nombre: "CSS", icono: "/icons/mono/css.svg" },
+      { nombre: "JavaScript", icono: "/icons/mono/javascript.svg" },
+      { nombre: "TypeScript", icono: "/icons/mono/typescript.svg" },
+      { nombre: "React", icono: "/icons/mono/react.svg" },
+      { nombre: "Tailwind CSS", icono: "/icons/mono/tailwindcss.svg" },
+      { nombre: "Bootstrap", icono: "/icons/mono/bootstrap.svg" },
+      { nombre: "PHP", icono: "/icons/mono/php.svg" },
+      { nombre: "Node.js", icono: "/icons/mono/nodejs.svg" },
+      { nombre: "Express.js", icono: "/icons/mono/express.svg" },
     ],
   },
   {
     titulo: "Datos y herramientas",
     items: [
-      { nombre: "MySQL", icono: "/icons/mysql.svg" },
-      { nombre: "PostgreSQL", icono: "/icons/postgresql.svg" },
-      { nombre: "Git", icono: "/icons/git.svg" },
-      { nombre: "GitHub", icono: "/icons/github.svg" },
-      { nombre: "GitLab" },
-      { nombre: "VS Code", icono: "/icons/vscode.svg" },
-      { nombre: "PowerShell / CMD", icono: "/icons/terminal.svg" },
-      { nombre: "Postman" },
-      { nombre: "Insomnia" },
+      { nombre: "MySQL", icono: "/icons/mono/mysql.svg" },
+      { nombre: "PostgreSQL", icono: "/icons/mono/postgresql.svg" },
+      { nombre: "Git", icono: "/icons/mono/git.svg" },
+      { nombre: "GitHub", icono: "/icons/mono/github.svg" },
+      { nombre: "GitLab", icono: "/icons/mono/gitlab.svg" },
+      { nombre: "VS Code", icono: "/icons/mono/vscode.svg" },
+      { nombre: "PowerShell / CMD", icono: "/icons/mono/powershell.svg" },
+      { nombre: "Postman", icono: "/icons/mono/postman.svg" },
+      { nombre: "Insomnia", icono: "/icons/mono/insomnia.svg" },
+      // { nombre: "Claude", icono: "/icons/mono/claude.svg" },
     ],
   },
 ]
 
-function TechChip({ nombre, icono }: Tech) {
+function TechItem({ nombre, icono }: Tech) {
   return (
-    <span className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-text">
-      {icono && (
-        <span className="flex h-5 w-5 shrink-0 items-center justify-center overflow-hidden rounded-[5px] bg-[#fafafa] p-0.5 ring-1 ring-black/10">
-          <img
-            src={icono}
-            alt=""
-            loading="lazy"
-            className="h-full w-full object-contain"
-          />
-        </span>
-      )}
+    <li className="inline-flex items-center gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-text">
+      <span
+        aria-hidden="true"
+        className="h-5 w-5 shrink-0 bg-current text-text"
+        style={{
+          maskImage: `url(${icono})`,
+          WebkitMaskImage: `url(${icono})`,
+          maskRepeat: "no-repeat",
+          WebkitMaskRepeat: "no-repeat",
+          maskSize: "contain",
+          WebkitMaskSize: "contain",
+          maskPosition: "center",
+          WebkitMaskPosition: "center",
+        }}
+      />
       {nombre}
-    </span>
+    </li>
   )
 }
 
@@ -123,11 +128,11 @@ function Stack() {
                 <h3 className="text-sm font-semibold tracking-[0.14em] text-text-subtle uppercase">
                   {grupo.titulo}
                 </h3>
-                <div className="mt-5 flex flex-wrap gap-2">
+                <ul className="mt-5 flex flex-wrap gap-2">
                   {grupo.items.map((item) => (
-                    <TechChip key={item.nombre} {...item} />
+                    <TechItem key={item.nombre} {...item} />
                   ))}
-                </div>
+                </ul>
               </div>
             </Reveal>
           ))}
