@@ -7,10 +7,10 @@
 
 ## 1. Posicionamiento
 
-- **Perfil**: Técnico de Soporte IT e infraestructura Microsoft **que además desarrolla software**. La intersección es el diferencial; ninguna de las dos mitades sola lo es.
+- **Perfil**: Técnico de Soporte TI e infraestructura Microsoft **que además desarrolla software**. La intersección es el diferencial; ninguna de las dos mitades sola lo es.
 - **Público objetivo (en orden de prioridad)**:
-  1. Reclutadores IT y hiring managers de infraestructura / Microsoft 365.
-  2. Empresas que necesitan soporte IT-sysadmin.
+  1. Reclutadores TI y hiring managers de infraestructura / Microsoft 365.
+  2. Empresas que necesitan soporte TI-sysadmin.
   3. Clientes o empresas que buscan desarrollo.
 - **Mensaje principal**: "Que la infraestructura funcione. Y que el equipo tenga mejores herramientas."
 - **Prueba de 10 segundos**: al entrar, el visitante tiene que entender que trabaja en un entorno corporativo real (grupo empresario multi-unidad), que administra el stack Microsoft en producción, y que construye herramientas que la gente usa.
@@ -134,7 +134,7 @@ Tres estados: **sistema** (por defecto, sigue `prefers-color-scheme`), **claro**
 Orden pensado para que el lector objetivo (reclutador / hiring manager de infraestructura) valide el perfil lo antes posible:
 
 1. **Hero** — dirección de arte distinta por dispositivo:
-   - **Mobile/tablet**: ubicación → titular → **retrato 4:5 a todo el ancho** con placa de credencial superpuesta ("Actualmente · Técnico de Soporte IT · Grupo Slots") → subtítulo → CTA. La foto entra completa en la primera pantalla y funciona como credencial, no como avatar. El CTA de CV queda siempre accesible en el nav.
+   - **Mobile/tablet**: ubicación → titular → **retrato 4:5 a todo el ancho** con placa de credencial superpuesta ("Actualmente · Técnico de Soporte TI · Grupo Slots") → subtítulo → CTA. La foto entra completa en la primera pantalla y funciona como credencial, no como avatar. El CTA de CV queda siempre accesible en el nav.
    - **Desktop**: dos columnas, retrato cuadrado de 400 px con la tarjeta de rol flotando sobre el borde.
    - Las dos imágenes usan `sizes` condicionado al breakpoint para que la versión oculta no descargue el archivo grande.
 2. **El entorno** — cifras públicas de Grupo Slots (1985, +1000 colaboradores, 27 localidades, +60 unidades comerciales) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público del grupo.

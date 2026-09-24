@@ -4,7 +4,7 @@
 
 # Mauro Lucero — Portfolio profesional
 
-**Soporte IT · Microsoft 365, Entra ID y Active Directory · Desarrollo de software**
+**Soporte TI · Microsoft 365, Entra ID y Active Directory · Desarrollo de software**
 
 Sitio personal de presentación profesional. Página única, en español, construida con React y TypeScript.
 
@@ -29,7 +29,7 @@ No está pensado como una galería de proyectos para otros desarrolladores, sino
 
 ## Perfil
 
-Trabajo como **Técnico de Soporte IT en Grupo Slots** desde enero de 2025. Administro **Active Directory, Microsoft 365 y Microsoft Entra ID** para las empresas del grupo, y desarrollo las herramientas internas que usa el equipo.
+Trabajo como **Técnico de Soporte TI en Grupo Slots** desde enero de 2025. Administro **Active Directory, Microsoft 365 y Microsoft Entra ID** para las empresas del grupo, y desarrollo las herramientas internas que usa el equipo.
 
 Grupo Slots es un grupo empresario de entretenimiento fundado en 1985, con más de 1000 colaboradores en 27 localidades y ocho unidades de negocio, en una industria regulada donde la operación no puede detenerse. Entre otras cosas, doy soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, en San Luis.
 
