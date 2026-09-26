@@ -1,0 +1,27 @@
+# Servir index.html aunque quede algún index.php del sitio anterior
+DirectoryIndex index.html
+
+# El repositorio que clona Hostinger no debe quedar expuesto
+RedirectMatch 404 /\.git
+
+# Páginas del sitio anterior (PHP): redirección permanente a su equivalente,
+# para no perder visitas de enlaces viejos ni el posicionamiento en Google
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^index\.php$ / [R=301,L]
+  RewriteRule ^proyectos\.php$ /#proyectos [R=301,NE,L]
+  RewriteRule ^servicios\.php$ /#perfil [R=301,NE,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # JS y CSS llevan un hash en el nombre que cambia en cada build:
+  # se pueden guardar un año sin riesgo de servir una versión vieja
+  <FilesMatch "-[A-Za-z0-9_-]{8}\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # El HTML se revalida siempre, así cada despliegue se ve al instante
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>
