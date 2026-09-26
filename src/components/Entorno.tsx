@@ -28,7 +28,7 @@ function Entorno() {
           <SectionHeader
             eyebrow="El entorno"
             title="Soporte TI para una empresa de más de 1350 personas"
-            lead="Formo parte del equipo de Soporte TI de Grupo Slots, un grupo de entretenimiento con base en San Luis y ocho unidades de negocio. Cada una tiene sus propios usuarios, equipos y horarios, así que mi trabajo es moverme entre contextos muy distintos —una sala de juego, un hotel, una jornada hípica— sin que ninguno deje de funcionar."
+            lead="Formo parte del equipo de Soporte TI de Grupo Slots, una empresa de entretenimiento con base en San Luis y ocho unidades de negocio. Cada una tiene sus propios usuarios, equipos y horarios, así que mi trabajo es moverme entre contextos muy distintos —una sala de juego, un hotel, una jornada hípica— sin que ninguno deje de funcionar."
           />
         </Reveal>
 
