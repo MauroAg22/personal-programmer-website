@@ -1,0 +1,50 @@
+# Compila el sitio en cada push a main y publica el resultado (dist/) en la
+# rama "deploy". Hostinger copia esa rama a public_html, así que el servidor
+# solo recibe archivos listos para servir, nunca el código fuente.
+name: Compilar y preparar despliegue
+
+on:
+  push:
+    branches: [main]
+  # Permite correrlo a mano desde la pestaña Actions
+  workflow_dispatch:
+
+# Necesario para que el workflow pueda escribir la rama deploy
+permissions:
+  contents: write
+
+# Si llegan dos pushes seguidos, el segundo espera a que termine el primero
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Revisar el código
+        run: npm run lint
+
+      - name: Compilar
+        run: npm run build
+
+      # Cada publicación agrega un commit a la rama deploy (no la reescribe),
+      # así Hostinger puede actualizar con un pull normal y se puede volver atrás.
+      - name: Publicar dist/ en la rama deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: deploy
+          publish_dir: ./dist
