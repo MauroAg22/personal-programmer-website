@@ -42,7 +42,7 @@ function Hero() {
                   Actualmente
                 </p>
                 <p className="mt-0.5 text-sm font-semibold text-white">
-                  Técnico de Soporte IT · Grupo Slots
+                  Técnico de Soporte TI · Grupo Slots
                 </p>
               </figcaption>
             </figure>

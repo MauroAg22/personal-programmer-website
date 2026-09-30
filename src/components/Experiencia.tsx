@@ -3,9 +3,9 @@ import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 
 const LOGROS = [
-  "Administro Active Directory y el entorno Microsoft 365 para las empresas, con soporte presencial y remoto a colaboradores y negocios.",
-  "Diseñé y desarrollé el Generador de Firmas institucional: hoy está en producción y se usa para emitir firmas de correo estandarizadas y homologadas.",
-  "Automaticé la puesta a punto de equipos con scripts de instalación silenciosa que evolucionaron en un instalador EXE corporativo, incluyendo toda la configuración.",
+  "Administro Active Directory y el entorno Microsoft 365 y Entra ID de las empresas del grupo, con soporte presencial y remoto a colaboradores y negocios, en un equipo de Sistemas que resuelve unos 30 tickets por semana.",
+  "Diseñé y desarrollé el Generador de Firmas institucional: hoy está en producción y el equipo de Soporte lo usa para emitir firmas de correo estandarizadas y homologadas.",
+  "Automaticé la puesta a punto de equipos con scripts de instalación silenciosa que evolucionaron en un instalador EXE corporativo, incluyendo toda la configuración: redujo un 60 % el tiempo por equipo y liberó a una persona de supervisar instalaciones.",
   "A cargo del soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, donde cada jornada depende de que la infraestructura no falle.",
 ]
 
@@ -43,7 +43,7 @@ function Experiencia() {
                 </p>
               </div>
               <span className="rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs font-semibold text-accent-text">
-                Actualidad
+                Ene 2025 – Actualidad
               </span>
             </div>
 
@@ -84,7 +84,7 @@ function Experiencia() {
                 Agente de Atención Telefónica
               </h3>
               <span className="text-xs font-medium text-text-subtle">
-                Experiencia anterior
+                Oct 2024 – Dic 2024
               </span>
             </div>
             <p className="mt-1 text-sm text-text-muted">
@@ -105,7 +105,7 @@ function Experiencia() {
                 Vendedor de servicios
               </h3>
               <span className="text-xs font-medium text-text-subtle">
-                Experiencia anterior
+                Feb 2024 – Jul 2024
               </span>
             </div>
             <p className="mt-1 text-sm text-text-muted">

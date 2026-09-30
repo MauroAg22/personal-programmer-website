@@ -6,7 +6,7 @@ const ESTUDIOS = [
   {
     titulo: "Programación Universitaria de Sistemas",
     institucion: "Universidad Nacional de Villa Mercedes",
-    periodo: "2021 — Actualidad",
+    periodo: "2021 — Más de la mitad de la carrera aprobada",
     actual: true,
   },
   {
@@ -27,7 +27,7 @@ const CURSOS = [
     institucion: "Argentina Programa 4.0",
   },
   {
-    nombre: "Inglés",
+    nombre: "Inglés · nivel básico, en curso",
     institucion: "Instituto de Idiomas ULP — Universidad de La Punta",
   },
 ]

@@ -12,7 +12,7 @@ function TerminalCover() {
         <span className="h-2 w-2 rounded-full bg-[#28c840]" />
       </div>
       <p className="text-slate-300">
-        <span className="text-[#7ee787]">C:\&gt;</span> setup.msi /quiet
+        <span className="text-[#7ee787]">C:\&gt;</span> setup.exe /VERYSILENT
       </p>
       <p className="text-slate-500">Instalando paquete corporativo…</p>
       <p className="text-slate-500">Software estándar ······ OK</p>
@@ -38,7 +38,7 @@ const PROYECTOS: Proyecto[] = [
     titulo: "Generador de Firmas",
     estado: { label: "En producción", color: "bg-emerald-500" },
     descripcion:
-      "Herramienta institucional que usa todo el personal de Grupo Slots para generar firmas de correo estandarizadas, con el formato y la identidad de cada empresa del grupo.",
+      "Herramienta institucional con la que el equipo de Soporte de Grupo Slots emite firmas de correo homologadas, con el formato y la identidad de cada empresa del grupo.",
     stack: ["HTML", "CSS", "JavaScript", "JSON"],
     cover: (
       <img
@@ -56,7 +56,7 @@ const PROYECTOS: Proyecto[] = [
     titulo: "Instalador EXE Corporativo",
     estado: { label: "Uso interno", color: "bg-primary-500" },
     descripcion:
-      "Instalador que deja un equipo nuevo listo para trabajar: instala en silencio todo el software estándar de la empresa y deja configurada la asistencia remota y carga al equipo en la base de datos.",
+      "Instalador que deja un equipo nuevo listo para trabajar: instala en silencio todo el software estándar de la empresa, deja configurada la asistencia remota y da de alta el equipo en la base de datos. Redujo un 60 % el tiempo de puesta a punto.",
     stack: ["InnoSetup", "CMD", "Silent install"],
     cover: <TerminalCover />,
     enlaces: [],

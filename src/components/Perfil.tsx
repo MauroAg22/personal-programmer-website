@@ -6,7 +6,7 @@ import { Code, Server, Terminal } from "./icons"
 const AREAS = [
   {
     Icon: Server,
-    titulo: "Soporte IT e infraestructura Microsoft",
+    titulo: "Soporte TI e infraestructura Microsoft",
     texto:
       "Administración de Active Directory y Microsoft 365. Soporte presencial y remoto a los colaboradores y negocios de la empresa, donde la continuidad de las actividades durante cada jornada es crítica.",
   },
