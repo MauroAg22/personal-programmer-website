@@ -31,7 +31,7 @@ No está pensado como una galería de proyectos para otros desarrolladores, sino
 
 Trabajo como **Técnico de Soporte TI en Grupo Slots** desde enero de 2025. Administro **Active Directory, Microsoft 365 y Microsoft Entra ID** para las empresas del grupo, y desarrollo las herramientas internas que usa el equipo.
 
-Grupo Slots es un grupo empresario de entretenimiento fundado en 1985, con más de 1000 colaboradores en 27 localidades y ocho unidades de negocio, en una industria regulada donde la operación no puede detenerse. Entre otras cosas, doy soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, en San Luis.
+Grupo Slots es una empresa de entretenimiento fundada en 1985, con más de 1350 colaboradores en más de 20 localidades y ocho unidades de negocio, en una industria regulada donde la operación no puede detenerse. Entre otras cosas, doy soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, en San Luis.
 
 Ese cruce —infraestructura Microsoft en producción y desarrollo de software— es lo que el sitio busca comunicar.
 
@@ -40,7 +40,7 @@ Ese cruce —infraestructura Microsoft en producción y desarrollo de software�
 - **Tema claro, oscuro y automático.** Tres estados seleccionables, con la preferencia persistida y aplicada antes del primer pintado para evitar el parpadeo inicial.
 - **Accesibilidad WCAG AA.** Todos los textos verificados por contraste medido en ambos temas, foco visible en navegación por teclado y animaciones que respetan `prefers-reduced-motion`.
 - **Dirección de arte por dispositivo.** El retrato se presenta en formato 4:5 a todo el ancho en móvil y como composición de dos columnas en escritorio, sirviendo en cada caso solo la imagen que corresponde.
-- **Rendimiento.** Sin librerías de UI ni de animación: 79 KB de JavaScript y 7 KB de CSS comprimidos. Imágenes en WebP con `srcset` (19–70 KB según dispositivo).
+- **Rendimiento.** Sin librerías de UI ni de animación: 80 KB de JavaScript y 7 KB de CSS comprimidos. Imágenes en WebP con `srcset` (19–70 KB según dispositivo).
 - **SEO técnico.** Metadatos completos, Open Graph y Twitter Card con imagen propia, datos estructurados `Person` en JSON-LD, `sitemap.xml` y `robots.txt`.
 - **Navegación con scrollspy.** Header fijo que resalta la sección activa y menú adaptado a pantallas chicas.
 
@@ -52,7 +52,7 @@ Ese cruce —infraestructura Microsoft en producción y desarrollo de software�
 | **El entorno** | Escala del grupo empresario donde trabajo y sus ocho unidades de negocio, con los datos públicos de la compañía. |
 | **Perfil** | Las tres áreas en las que trabajo: infraestructura Microsoft, automatización y desarrollo de software. |
 | **Experiencia** | Trayectoria en Grupo Slots con logros concretos, más la experiencia previa en modalidad remota internacional. |
-| **Trabajo destacado** | Herramientas en producción (Generador de Firmas, Instalador MSI Corporativo) y proyectos propios. |
+| **Trabajo destacado** | Herramientas en producción (Generador de Firmas, Instalador EXE Corporativo) y proyectos propios. |
 | **Stack** | Tecnologías agrupadas, con el ecosistema Microsoft como eje principal. |
 | **Formación** | Estudios universitarios, título técnico y cursos. |
 | **Contacto** | Canales directos: email, WhatsApp, LinkedIn y GitHub. |

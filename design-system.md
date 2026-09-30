@@ -109,7 +109,7 @@ En claro son sombras reales; en oscuro son casi imperceptibles, porque en interf
 ## 3. Tipografía
 
 - Familia única: **IBM Plex Sans** (400/500/600/700), cargada con `preconnect` + `<link>` en el `<head>` (no `@import` en CSS, que bloquea el render).
-- Monoespaciada: stack del sistema (`ui-monospace`), sin request extra. Se usa solo en la portada del proyecto MSI.
+- Monoespaciada: stack del sistema (`ui-monospace`), sin request extra. Se usa solo en la portada del Instalador EXE.
 
 Escala:
 
@@ -137,10 +137,10 @@ Orden pensado para que el lector objetivo (reclutador / hiring manager de infrae
    - **Mobile/tablet**: ubicación → titular → **retrato 4:5 a todo el ancho** con placa de credencial superpuesta ("Actualmente · Técnico de Soporte TI · Grupo Slots") → subtítulo → CTA. La foto entra completa en la primera pantalla y funciona como credencial, no como avatar. El CTA de CV queda siempre accesible en el nav.
    - **Desktop**: dos columnas, retrato cuadrado de 400 px con la tarjeta de rol flotando sobre el borde.
    - Las dos imágenes usan `sizes` condicionado al breakpoint para que la versión oculta no descargue el archivo grande.
-2. **El entorno** — cifras públicas de Grupo Slots (1985, +1000 colaboradores, 27 localidades, +60 unidades comerciales) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público del grupo.
+2. **El entorno** — cifras públicas de Grupo Slots (1985, +1350 colaboradores, +20 localidades, +60 puntos de operación) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público del grupo.
 3. **Perfil** — reemplaza al viejo "Sobre mí". Tres tarjetas: infraestructura Microsoft, automatización y desarrollo. El texto en primera persona quedó reducido a un párrafo de cierre.
 4. **Experiencia** — tarjeta principal de Grupo Slots con contexto del grupo, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.
-5. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador MSI (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
+5. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador EXE (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
 6. **Stack** — panel destacado de Infraestructura y Microsoft (el diferencial), y debajo desarrollo y datos/herramientas. La IA va como una línea de texto, no como categoría de habilidades: listar asistentes como "skills" lee a portfolio de estudiante.
 7. **Formación** — timeline de estudios + panel de cursos.
 8. **Detrás de cada proyecto** — reconocimiento a profesores, compañeros de trabajo, amigos y familia en una cuadrícula de cuatro tarjetas, más una cita destacada sobre el azul de marca. Va después de Formación y antes de Contacto: cierra el recorrido en tono humano justo antes de la llamada a la acción, sin interrumpir el argumento profesional.
@@ -178,10 +178,18 @@ Navegación: nav fijo con blur al hacer scroll, scrollspy que resalta la secció
 
 ---
 
-## 9. Pendientes
+## 9. Currículum
 
-- [ ] Conseguir capturas reales del Generador de Firmas y del Instalador MSI para reemplazar las portadas ilustrativas.
-- [ ] Sumar métricas concretas al bloque de experiencia (usuarios soportados, equipos administrados, tiempos de respuesta).
+Las tres versiones del CV viven en `assets-src/cv/` como HTML A4 con los mismos tokens, tipografía y patrones del sitio (eyebrow con línea coral, chips, puntos de estado, grilla del hero). `node assets-src/cv/generar-cv.mjs` las imprime a PDF con Chrome headless en `assets-src/cv/pdf/`.
+
+- **Regla de sincronización**: cualquier dato laboral, técnico o formativo que cambie en el sitio se cambia también en los tres HTML del CV, y al revés.
+- **ATS**: ningún elemento con texto lleva `position`: Chrome escribe al final del PDF el texto posicionado, y el nombre dejaría de ser lo primero que lee un parser. Las viñetas son fondos y la grilla decorativa es una capa de `background`.
+- **QR**: `qr-maurolucero.png` apunta a `https://maurolucero.com.ar/`; siempre sobre blanco y a 21 mm o más.
+
+## 10. Pendientes
+
+- [ ] Conseguir capturas reales del Generador de Firmas y del Instalador EXE para reemplazar las portadas ilustrativas.
+- [x] Sumar métricas concretas al bloque de experiencia (~30 tickets semanales del equipo, instalador con 60 % menos de tiempo por equipo).
 - [ ] Certificaciones Microsoft (MS-900 / AZ-900 / MD-102) — hoy no hay sección porque no hay contenido.
 - [ ] Migrar los repos internos de GitLab a GitHub personal para poder linkear código.
 - [ ] Activar `contacto@maurolucero.com.ar` y reemplazar el email en `src/data.ts`.
