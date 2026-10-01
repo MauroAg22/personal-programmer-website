@@ -28,7 +28,7 @@ interface Proyecto {
   descripcion: string
   stack: string[]
   cover: React.ReactNode
-  enlaces: { label: string; href: string }[]
+  enlaces: { label: string; href: string; disabled?: boolean }[]
   acceso?: string
   nota?: string
 }
@@ -78,7 +78,11 @@ const PROYECTOS: Proyecto[] = [
     ),
     enlaces: [
       { label: "Código", href: "https://github.com/MauroAg22/clinic-system" },
-      { label: "Demo", href: "https://maurolucero.com.ar/projects/clinic-system/" },
+      {
+        label: "Demo",
+        href: "https://maurolucero.com.ar/projects/clinic-system/",
+        disabled: true,
+      },
     ],
   },
 ]
@@ -128,18 +132,30 @@ function Proyectos() {
                   </div>
 
                   <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-border pt-5">
-                    {proyecto.enlaces.map((enlace) => (
-                      <a
-                        key={enlace.href}
-                        href={enlace.href}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="inline-flex items-center gap-1 text-sm font-semibold text-text transition-colors hover:text-accent-text"
-                      >
-                        {enlace.label}
-                        <ArrowUpRight className="h-4 w-4" />
-                      </a>
-                    ))}
+                    {proyecto.enlaces.map((enlace) =>
+                      enlace.disabled ? (
+                        <span
+                          key={enlace.href}
+                          aria-disabled="true"
+                          title="Próximamente"
+                          className="inline-flex cursor-not-allowed items-center gap-1 text-sm font-semibold text-text-subtle"
+                        >
+                          {enlace.label}
+                          <ArrowUpRight className="h-4 w-4" />
+                        </span>
+                      ) : (
+                        <a
+                          key={enlace.href}
+                          href={enlace.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex items-center gap-1 text-sm font-semibold text-text transition-colors hover:text-accent-text"
+                        >
+                          {enlace.label}
+                          <ArrowUpRight className="h-4 w-4" />
+                        </a>
+                      ),
+                    )}
                     {proyecto.acceso && (
                       <span className="inline-flex items-center gap-1.5 text-sm font-medium text-text-subtle">
                         <Lock className="h-4 w-4" />
