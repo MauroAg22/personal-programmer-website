@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mauro Lucero — CV · Soporte TI e infraestructura Microsoft</title>
+    <meta name="author" content="Mauro Lucero" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="cv.css" />
+    <style>
+      /* Versión A: una sola columna, orden de lectura lineal para ATS. */
+
+      .cabecera {
+        display: grid;
+        grid-template-columns: 30.8mm 1fr auto;
+        align-items: center;
+        gap: 7mm;
+        padding: 7.4mm 13mm;
+        /* Grilla de la imagen de marca (OG) como capas de fondo, que se
+           desvanece hacia la esquina oscura. Nada posicionado: así el nombre es
+           lo primero que lee un ATS. */
+        background:
+          linear-gradient(125deg, transparent 25%, var(--ink) 100%),
+          linear-gradient(to right, rgba(148, 170, 255, 0.07) 0.25mm, transparent 0.25mm) 0 0 / 9mm 9mm,
+          linear-gradient(to bottom, rgba(148, 170, 255, 0.07) 0.25mm, transparent 0.25mm) 0 0 / 9mm 9mm,
+          linear-gradient(125deg, var(--primary) 0%, #101a3c 55%, var(--ink) 100%);
+        color: #fff;
+      }
+
+      .foto {
+        display: block;
+        width: 30.8mm;
+        height: 30.8mm;
+        border-radius: 3.3mm;
+        object-fit: cover;
+        /* Zoom sutil, con el recorte pegado al borde superior de la foto para
+           bajar la cara todo lo que el original permite */
+        object-view-box: inset(0 4.5% 9% 4.5%);
+        box-shadow:
+          0 0 0 0.385mm rgba(255, 255, 255, 0.16),
+          0 3mm 8mm rgba(0, 0, 0, 0.35);
+      }
+
+      .cabecera h1 {
+        color: #fff;
+        font-size: 25pt;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+      }
+
+      .rol {
+        margin-top: 2.2mm;
+        font-size: 10.6pt;
+        font-weight: 500;
+        color: var(--hero-top);
+      }
+
+      .pastilla {
+        display: inline-flex;
+        align-items: center;
+        gap: 1.8mm;
+        margin-top: 3.6mm;
+        border: 0.25mm solid rgba(148, 170, 255, 0.28);
+        border-radius: 99mm;
+        background: rgba(255, 255, 255, 0.06);
+        padding: 1mm 3.2mm 1mm 2.4mm;
+        font-size: 7.6pt;
+        color: #e8ecf8;
+      }
+
+      .pastilla::before {
+        content: "";
+        width: 1.5mm;
+        height: 1.5mm;
+        border-radius: 50%;
+        background: #35c07a;
+      }
+
+      .cabecera .qr {
+        box-shadow: 0 3mm 8mm rgba(0, 0, 0, 0.3);
+      }
+
+      .contacto {
+        display: grid;
+        grid-template-columns: 1.05fr 1.1fr 1fr;
+        gap: 1.9mm 6mm;
+        padding: 3.4mm 13mm;
+        border-bottom: 0.25mm solid var(--border);
+        background: var(--bg);
+        font-size: 7.9pt;
+        color: var(--text);
+      }
+
+      .contacto .i {
+        color: var(--primary-500);
+      }
+
+      .cuerpo {
+        display: flex;
+        flex-direction: column;
+        gap: 4.6mm;
+        padding: 5.4mm 13mm 0;
+      }
+
+      .seccion > .eyebrow {
+        margin-bottom: 2.8mm;
+      }
+
+      .perfil {
+        font-size: 8.9pt;
+        line-height: 1.52;
+      }
+
+      .puesto + .puesto {
+        margin-top: 3.4mm;
+      }
+
+      .puesto-cabecera {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 4mm;
+      }
+
+      .puesto h3 {
+        font-size: 10.4pt;
+      }
+
+      .empresa {
+        margin-top: 0.4mm;
+        font-size: 8.5pt;
+        color: var(--muted);
+      }
+
+      .empresa b {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .fecha {
+        flex: none;
+        border-radius: 99mm;
+        background: var(--surface-2);
+        padding: 0.5mm 2.6mm;
+        font-size: 7.3pt;
+        font-weight: 600;
+        color: var(--primary);
+        white-space: nowrap;
+      }
+
+      .fecha.suave {
+        background: none;
+        padding: 0;
+        font-weight: 500;
+        color: var(--subtle);
+      }
+
+      .contexto {
+        margin: 2mm 0 2.4mm;
+        border-left: 0.5mm solid var(--accent);
+        padding-left: 3mm;
+        font-size: 8.2pt;
+        line-height: 1.45;
+      }
+
+      .previos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+        margin-top: 3.2mm;
+        border-top: 0.25mm solid var(--border);
+        padding-top: 2.8mm;
+      }
+
+      .previos h3 {
+        font-size: 9pt;
+      }
+
+      .previos .empresa {
+        font-size: 7.9pt;
+      }
+
+      .previos p:last-child {
+        margin-top: 1.2mm;
+        font-size: 8.1pt;
+      }
+
+      .competencias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        border: 0.25mm solid var(--border);
+        border-radius: 2.2mm;
+        background: var(--surface);
+      }
+
+      .competencias div {
+        padding: 1.8mm 3.4mm;
+      }
+
+      .competencias div:nth-child(odd) {
+        border-right: 0.25mm solid var(--border);
+      }
+
+      .competencias div:nth-child(-n + 4) {
+        border-bottom: 0.25mm solid var(--border);
+      }
+
+      .competencias dt {
+        font-size: 8.2pt;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .competencias dd {
+        margin-top: 0.5mm;
+        font-size: 8pt;
+        line-height: 1.42;
+      }
+
+      .formacion {
+        display: grid;
+        grid-template-columns: 1.08fr 1fr;
+        gap: 9mm;
+      }
+
+      .estudios {
+        display: flex;
+        flex-direction: column;
+        gap: 3mm;
+        margin-left: 1mm;
+        border-left: 0.25mm solid var(--border-strong);
+        padding-left: 4.4mm;
+      }
+
+      /* Punto flotado con márgenes que se anulan: no desplaza el texto ni lo posiciona */
+      .estudios li::before {
+        content: "";
+        float: left;
+        width: 2.1mm;
+        height: 2.1mm;
+        margin: 1.3mm 3.45mm 0 -5.55mm;
+        border-radius: 50%;
+        background: var(--primary-500);
+        box-shadow: 0 0 0 0.8mm #fff;
+      }
+
+      .estudios li.previo::before {
+        background: var(--border-strong);
+      }
+
+      .estudios h3,
+      .lista-simple b {
+        font-size: 8.8pt;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .estudios p,
+      .lista-simple span {
+        font-size: 7.9pt;
+      }
+
+      .meta {
+        font-size: 7.4pt;
+        font-weight: 500;
+        color: var(--subtle);
+      }
+
+      .lista-simple {
+        display: flex;
+        flex-direction: column;
+        gap: 1.9mm;
+      }
+
+      .lista-simple li {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="cabecera">
+        <img class="foto" src="perfil.jpg" alt="Retrato de Mauro Lucero" />
+        <div>
+          <h1>Mauro Lucero</h1>
+          <p class="rol">Técnico de Soporte TI · Infraestructura Microsoft</p>
+          <p class="pastilla mono">Microsoft 365 · Entra ID · Active Directory</p>
+        </div>
+        <a class="qr" href="https://maurolucero.com.ar/">
+          <img src="qr-maurolucero.png" alt="Código QR al portfolio maurolucero.com.ar" />
+          <span>maurolucero.com.ar</span>
+        </a>
+      </header>
+
+      <nav class="contacto" aria-label="Contacto">
+        <a href="https://wa.me/5492657281741">
+          <svg class="i i-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.003c4.368 0 7.926-3.558 7.93-7.93a7.9 7.9 0 0 0-2.326-5.607zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+          +54 9 2657 28-1741
+        </a>
+        <a href="mailto:mauroaglucero@gmail.com">
+          <svg class="i i-stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+          mauroaglucero@gmail.com
+        </a>
+        <a href="https://maps.app.goo.gl/ATXEetEZKdzSDsoy5">
+          <svg class="i i-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          San Luis, Argentina · Presencial y remoto
+        </a>
+        <a href="https://www.linkedin.com/in/mauro-ag-lucero">
+          <svg class="i i-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193h-.016V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+          linkedin.com/in/mauro-ag-lucero
+        </a>
+        <a href="https://github.com/MauroAg22">
+          <svg class="i i-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+          github.com/MauroAg22
+        </a>
+        <a href="https://maurolucero.com.ar/">
+          <svg class="i i-stroke" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+          maurolucero.com.ar
+        </a>
+      </nav>
+
+      <div class="cuerpo">
+        <section class="seccion">
+          <h2 class="eyebrow">Perfil</h2>
+          <p class="perfil">
+            Técnico de Soporte TI en <span class="fuerte">Grupo Slots</span>, empresa de entretenimiento con más
+            de 1350 colaboradores y ocho unidades de negocio en una industria regulada de operación
+            continua. Administro <span class="fuerte">Active Directory, Microsoft 365 y Entra ID</span>,
+            doy soporte presencial y remoto y automatizo lo repetitivo: mi instalador corporativo redujo
+            un 60&nbsp;% el tiempo de puesta a punto de cada equipo.
+          </p>
+        </section>
+
+        <section class="seccion">
+          <h2 class="eyebrow">Experiencia</h2>
+
+          <article class="puesto">
+            <div class="puesto-cabecera">
+              <div>
+                <h3>Técnico de Soporte TI</h3>
+                <p class="empresa"><b>Grupo Slots</b> · San Luis, Argentina</p>
+              </div>
+              <span class="fecha">Ene 2025 – Actualidad</span>
+            </div>
+            <p class="contexto">
+              Empresa de entretenimiento fundada en 1985 · +1350 colaboradores · +20 localidades ·
+              +60 puntos de operación · 8 unidades de negocio
+            </p>
+            <ul class="logros">
+              <li>
+                Administro <strong>Active Directory</strong> (usuarios, grupos, permisos y políticas) y
+                el entorno <strong>Microsoft 365 y Entra ID</strong> (cuentas, licencias, identidades y
+                accesos) de la empresa.
+              </li>
+              <li>
+                Brindo soporte presencial y remoto (AnyDesk, UltraVNC) a colaboradores de las ocho
+                unidades de negocio, en un equipo de Sistemas que resuelve
+                <strong>~30 tickets por semana</strong>: hardware, software, conectividad y Windows.
+              </li>
+              <li>
+                A cargo del soporte a los sistemas de eventos hípicos del
+                <strong>Hipódromo de La Punta</strong>, de operación crítica en cada jornada.
+              </li>
+              <li>
+                Automaticé la puesta a punto de equipos con un <strong>instalador EXE corporativo</strong>
+                (InnoSetup): software estándar en modo silencioso, asistencia remota y alta en la base de
+                datos. <strong>60&nbsp;% menos de tiempo</strong> por equipo y una persona menos
+                supervisando instalaciones.
+              </li>
+              <li>
+                Diseñé y desarrollé el <strong>Generador de Firmas institucional</strong>, en producción:
+                Soporte lo usa para emitir firmas de correo homologadas para cada unidad de negocio de la empresa.
+              </li>
+            </ul>
+          </article>
+
+          <div class="previos">
+            <article>
+              <div class="puesto-cabecera">
+                <h3>Agente de Atención Telefónica</h3>
+                <span class="fecha suave">Oct 2024 – Dic 2024</span>
+              </div>
+              <p class="empresa"><b>Metrickal</b> · Barcelona, España · 100&nbsp;% remoto</p>
+              <p>
+                Atención a clientes de Ecoscooting y AliExpress y gestión de consultas e incidencias,
+                en un equipo distribuido internacional.
+              </p>
+            </article>
+            <article>
+              <div class="puesto-cabecera">
+                <h3>Vendedor de servicios</h3>
+                <span class="fecha suave">Feb 2024 – Jul 2024</span>
+              </div>
+              <p class="empresa"><b>DirecTV</b> · Villa Mercedes, San Luis · 100&nbsp;% remoto</p>
+              <p>Comercialización de productos y servicios, con seguimiento y cierre de ventas.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="seccion">
+          <h2 class="eyebrow">Competencias técnicas</h2>
+          <dl class="competencias">
+            <div>
+              <dt>Microsoft e identidades</dt>
+              <dd>Microsoft 365 (tenant, cuentas y licencias) · Microsoft Entra ID · Active Directory (usuarios, grupos, permisos y políticas)</dd>
+            </div>
+            <div>
+              <dt>Endpoints y mesa de ayuda</dt>
+              <dd>Windows · Diagnóstico de hardware, software y conectividad · Gestión de tickets · Atención a usuarios no técnicos</dd>
+            </div>
+            <div>
+              <dt>Asistencia remota y despliegue</dt>
+              <dd>AnyDesk · UltraVNC · Instalación silenciosa · InnoSetup</dd>
+            </div>
+            <div>
+              <dt>Automatización</dt>
+              <dd>PowerShell · CMD · Scripts de instalación, recopilación de información y diagnóstico</dd>
+            </div>
+            <div>
+              <dt>Desarrollo</dt>
+              <dd>HTML · CSS · JavaScript · TypeScript · React · PHP · Node.js · MySQL · PostgreSQL · Git (GitHub y GitLab)</dd>
+            </div>
+            <div>
+              <dt>IA aplicada al trabajo</dt>
+              <dd>Copilot en Microsoft 365 · Gemini · Claude, para acelerar tareas de soporte y desarrollo</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="formacion">
+          <div class="seccion">
+            <h2 class="eyebrow">Formación</h2>
+            <ul class="estudios">
+              <li>
+                <h3>Programación Universitaria de Sistemas</h3>
+                <p>Universidad Nacional de Villa Mercedes</p>
+                <p class="meta">2021 – Más de la mitad de la carrera aprobada</p>
+              </li>
+              <li class="previo">
+                <h3>Técnico en Industria de Procesos</h3>
+                <p>Centro Educativo N.º 10 «Ramiro Podetti»</p>
+                <p class="meta">Egresado en 2015</p>
+              </li>
+            </ul>
+          </div>
+          <div class="seccion">
+            <h2 class="eyebrow">Cursos e idiomas</h2>
+            <ul class="lista-simple">
+              <li><b>Primeros pasos del Desarrollo Front-End</b><span>Argentina Programa 4.0</span></li>
+              <li><b>Procesamiento de Datos con Python</b><span>Argentina Programa 4.0</span></li>
+              <li>
+                <b>Español nativo · Inglés básico (en curso)</b>
+                <span>Instituto de Idiomas ULP — Universidad de La Punta</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mauro Lucero — CV · Desarrollo web frontend</title>
+    <meta name="author" content="Mauro Lucero" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="cv.css" />
+    <style>
+      /* Versión C: cabecera clara como el hero de escritorio del sitio, proyectos
+         primero y columna lateral con contacto, QR y stack. */
+
+      .cabecera {
+        display: grid;
+        grid-template-columns: 1fr 49.4mm;
+        align-items: center;
+        gap: 9mm;
+        padding: 9.5mm 14mm 9mm 13mm;
+        border-bottom: 0.25mm solid var(--border);
+        /* Grilla de 72 px del hero como capas de fondo, desvanecida hacia abajo.
+           Nada posicionado: así el nombre es lo primero que lee un ATS. */
+        background:
+          linear-gradient(to bottom, transparent 30%, var(--surface) 100%),
+          linear-gradient(to right, var(--grid-line) 0.25mm, transparent 0.25mm) 0 0 / 9mm 9mm,
+          linear-gradient(to bottom, var(--grid-line) 0.25mm, transparent 0.25mm) 0 0 / 9mm 9mm,
+          linear-gradient(to bottom, var(--hero-top), var(--surface));
+      }
+
+      .cabecera h1 {
+        margin-top: 2.8mm;
+        font-size: 25pt;
+        line-height: 1.02;
+        letter-spacing: -0.02em;
+      }
+
+      .rol {
+        margin-top: 1.8mm;
+        font-size: 10.4pt;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .resumen {
+        margin-top: 3mm;
+        max-width: 128mm;
+        font-size: 8.7pt;
+        line-height: 1.5;
+      }
+
+      .cabecera .chips {
+        margin-top: 3.2mm;
+      }
+
+      .cabecera .chip {
+        border-color: var(--border-strong);
+        background: var(--surface);
+        color: var(--text);
+      }
+
+      /* Retrato con la tarjeta de rol flotando sobre el borde (hero desktop) */
+      /* Todo el conjunto (foto + tarjeta) va a 1,3× del diseño original */
+      .retrato {
+        position: relative;
+        width: 49.4mm;
+      }
+
+      .retrato img {
+        display: block;
+        width: 49.4mm;
+        height: 49.4mm;
+        border-radius: 3.9mm;
+        object-fit: cover;
+        /* Zoom sutil, con el recorte pegado al borde superior de la foto para
+           bajar la cara todo lo que el original permite */
+        object-view-box: inset(0 4.5% 9% 4.5%);
+        box-shadow:
+          0 0 0 0.25mm rgba(21, 34, 81, 0.15),
+          0 0.4mm 0.8mm rgba(21, 34, 81, 0.06),
+          0 2mm 4mm rgba(21, 34, 81, 0.06),
+          0 5mm 10mm rgba(21, 34, 81, 0.08);
+      }
+
+      .rol-flotante {
+        position: absolute;
+        right: -5.2mm;
+        bottom: -5.85mm;
+        border-radius: 2.6mm;
+        background: var(--primary);
+        box-shadow: 0 2.6mm 6.5mm rgba(21, 34, 81, 0.25);
+        padding: 1.95mm 3.38mm;
+        white-space: nowrap;
+      }
+
+      .rol-flotante small {
+        display: block;
+        font-size: 7.28pt;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .rol-flotante b {
+        display: block;
+        font-size: 9.62pt;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .page {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cuerpo {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 60mm;
+      }
+
+      .principal {
+        display: flex;
+        flex-direction: column;
+        gap: 4mm;
+        padding: 6.2mm 8mm 0 13mm;
+      }
+
+      .lateral {
+        display: flex;
+        flex-direction: column;
+        gap: 4.4mm;
+        border-left: 0.25mm solid var(--border);
+        background: var(--band);
+        padding: 6.4mm 7mm 7mm 6.5mm;
+      }
+
+      .seccion > .eyebrow,
+      .lateral .eyebrow {
+        margin-bottom: 2.6mm;
+      }
+
+      /* Proyectos: tarjetas de «Trabajo destacado» */
+      .proyectos {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2mm;
+      }
+
+      .proyecto {
+        border: 0.25mm solid var(--border);
+        border-radius: 2.2mm;
+        background: var(--surface);
+        padding: 2.4mm 3.4mm 2.6mm;
+        box-shadow: 0 0.3mm 0.6mm rgba(21, 34, 81, 0.05);
+      }
+
+      .proyecto-cabecera {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 3mm;
+      }
+
+      .proyecto h3 {
+        font-size: 9.4pt;
+      }
+
+      .proyecto p {
+        margin-top: 0.9mm;
+        font-size: 8.1pt;
+        line-height: 1.45;
+      }
+
+      .proyecto-pie {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3mm;
+        margin-top: 1.7mm;
+      }
+
+      .enlaces {
+        display: flex;
+        gap: 3.2mm;
+        font-size: 7.5pt;
+        font-weight: 600;
+        color: var(--text);
+        white-space: nowrap;
+      }
+
+      .enlaces a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6mm;
+      }
+
+      .enlaces .nota {
+        font-weight: 500;
+        color: var(--subtle);
+      }
+
+      .puesto-cabecera {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 3mm;
+      }
+
+      .puesto h3 {
+        font-size: 9.8pt;
+      }
+
+      .empresa {
+        margin-top: 0.3mm;
+        font-size: 8.1pt;
+      }
+
+      .empresa b {
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .fecha {
+        flex: none;
+        border-radius: 99mm;
+        background: var(--surface-2);
+        padding: 0.45mm 2.4mm;
+        font-size: 7.1pt;
+        font-weight: 600;
+        color: var(--primary);
+        white-space: nowrap;
+      }
+
+      .puesto .logros {
+        margin-top: 2mm;
+        font-size: 8.2pt;
+      }
+
+      .previos {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8mm;
+        margin-top: 2.6mm;
+        border-top: 0.25mm solid var(--border);
+        padding-top: 2.2mm;
+        font-size: 7.9pt;
+      }
+
+      .previos b {
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .previos span {
+        color: var(--subtle);
+      }
+
+      .formacion {
+        display: grid;
+        grid-template-columns: 1.15fr 1fr;
+        gap: 5mm;
+      }
+
+      .formacion h3 {
+        font-size: 8.5pt;
+      }
+
+      .formacion p {
+        font-size: 7.7pt;
+        line-height: 1.4;
+      }
+
+      .formacion li + li {
+        margin-top: 1.8mm;
+      }
+
+      .meta {
+        font-size: 7.2pt;
+        font-weight: 500;
+        color: var(--subtle);
+      }
+
+      /* Lateral */
+      .lateral .contacto {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6mm;
+        font-size: 7.5pt;
+        color: var(--text);
+      }
+
+      .lateral .contacto .i {
+        color: var(--text);
+      }
+
+      /* QR al pie de la columna, centrado entre sus bordes */
+      .qr-bloque {
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+      }
+
+      .qr-bloque .qr span {
+        font-size: 7.4pt;
+        color: var(--text);
+      }
+
+      .qr-bloque .qr {
+        border: 0.25mm solid var(--border);
+        box-shadow: 0 0.6mm 1.6mm rgba(21, 34, 81, 0.08);
+      }
+
+      .qr-bloque .qr img {
+        width: 34mm;
+        height: 34mm;
+      }
+
+      .stack h3 {
+        margin: 2mm 0 1.2mm;
+        font-size: 7.4pt;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .stack h3:first-of-type {
+        margin-top: 0;
+      }
+
+      .stack .chip {
+        font-size: 6.7pt;
+      }
+
+      .practicas {
+        display: flex;
+        flex-direction: column;
+        gap: 1.3mm;
+        font-size: 7.4pt;
+        line-height: 1.4;
+      }
+
+      .practicas b {
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .idiomas {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6mm;
+        font-size: 7.5pt;
+      }
+
+      .idiomas b {
+        font-weight: 600;
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="cabecera">
+        <div>
+          <p class="eyebrow">Desarrollo web · Frontend</p>
+          <h1>Mauro Lucero</h1>
+          <p class="rol">Desarrollador Frontend Junior · React y TypeScript</p>
+          <p class="resumen">
+            Desarrollo interfaces con <span class="fuerte">React, TypeScript y Tailwind CSS</span>, con
+            foco en accesibilidad y rendimiento, y tengo base de backend con PHP, Node.js y SQL. Trabajo
+            como Técnico de Soporte TI en Grupo Slots, donde construí herramientas que hoy están en uso:
+            el <span class="fuerte">Generador de Firmas institucional</span> y un instalador corporativo
+            que redujo un 60&nbsp;% el tiempo de preparación de equipos.
+          </p>
+          <div class="chips">
+            <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Tailwind CSS</span><span class="chip">HTML y CSS</span><span class="chip">PHP</span><span class="chip">Node.js</span><span class="chip">Git</span>
+          </div>
+        </div>
+        <figure class="retrato">
+          <img src="perfil.jpg" alt="Retrato de Mauro Lucero" />
+          <figcaption class="rol-flotante">
+            <small>Actualmente</small>
+            <b>Soporte TI · Grupo Slots</b>
+          </figcaption>
+        </figure>
+      </header>
+
+      <div class="cuerpo">
+        <div class="principal">
+          <section class="seccion">
+            <h2 class="eyebrow">Proyectos</h2>
+            <div class="proyectos">
+              <article class="proyecto">
+                <div class="proyecto-cabecera">
+                  <h3>Portfolio profesional</h3>
+                  <span class="estado">Público</span>
+                </div>
+                <p>
+                  React 19 y TypeScript estricto con Vite y Tailwind CSS 4: tema claro/oscuro sin parpadeo,
+                  contraste WCAG AA medido, 80 KB de JavaScript comprimido sin librerías de UI, SEO
+                  técnico y despliegue automático con GitHub Actions.
+                </p>
+                <div class="proyecto-pie">
+                  <div class="chips"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Vite</span><span class="chip">Tailwind CSS</span><span class="chip">GitHub Actions</span></div>
+                  <div class="enlaces">
+                    <a href="https://maurolucero.com.ar/">Sitio ↗</a>
+                    <a href="https://github.com/MauroAg22/personal-programmer-website">Código ↗</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="proyecto">
+                <div class="proyecto-cabecera">
+                  <h3>Generador de Firmas</h3>
+                  <span class="estado ok">En producción</span>
+                </div>
+                <p>
+                  Herramienta institucional con la que el equipo de Soporte de Grupo Slots emite firmas
+                  de correo homologadas, con el formato y la identidad de cada unidad de negocio.
+                </p>
+                <div class="proyecto-pie">
+                  <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">JSON</span></div>
+                  <div class="enlaces"><span class="nota">Código en el GitLab interno</span></div>
+                </div>
+              </article>
+
+              <article class="proyecto">
+                <div class="proyecto-cabecera">
+                  <h3>Clinic System</h3>
+                  <span class="estado wip">En desarrollo</span>
+                </div>
+                <p>
+                  Sistema de gestión para clínicas y hospitales: médicos, especialidades, pacientes y
+                  consultas. Proyecto propio para profundizar en backend y modelado de datos.
+                </p>
+                <div class="proyecto-pie">
+                  <div class="chips"><span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">Bootstrap</span><span class="chip">JavaScript</span></div>
+                  <div class="enlaces"><a href="https://github.com/MauroAg22/clinic-system">Código ↗</a></div>
+                </div>
+              </article>
+
+              <article class="proyecto">
+                <div class="proyecto-cabecera">
+                  <h3>Instalador EXE Corporativo</h3>
+                  <span class="estado">Uso interno</span>
+                </div>
+                <p>
+                  Deja un equipo listo para trabajar: software estándar en silencio, asistencia remota y alta en
+                  la base de datos. Redujo un 60&nbsp;% el tiempo de puesta a punto.
+                </p>
+                <div class="proyecto-pie">
+                  <div class="chips"><span class="chip">InnoSetup</span><span class="chip">CMD</span><span class="chip">Instalación silenciosa</span></div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section class="seccion">
+            <h2 class="eyebrow">Experiencia</h2>
+            <article class="puesto">
+              <div class="puesto-cabecera">
+                <div>
+                  <h3>Técnico de Soporte TI</h3>
+                  <p class="empresa"><b>Grupo Slots</b> · San Luis, Argentina · +1350 colaboradores</p>
+                </div>
+                <span class="fecha">Ene 2025 – Actualidad</span>
+              </div>
+              <ul class="logros">
+                <li>
+                  Desarrollé dos herramientas internas hoy en uso: el <strong>Generador de Firmas
+                  institucional</strong>, en producción, y un <strong>instalador EXE corporativo</strong> que
+                  redujo un <strong>60&nbsp;% el tiempo</strong> de puesta a punto de cada equipo.
+                </li>
+                <li>
+                  Administro Microsoft 365, Entra ID y Active Directory y doy soporte a usuarios no técnicos
+                  de ocho unidades de negocio, en un equipo que resuelve ~30 tickets por semana.
+                </li>
+              </ul>
+            </article>
+            <div class="previos">
+              <p>
+                <b>Agente de Atención Telefónica</b> · Metrickal, Barcelona (100&nbsp;% remoto)
+                <span>· Oct – Dic 2024</span>
+              </p>
+              <p>
+                <b>Vendedor de servicios</b> · DirecTV, Villa Mercedes (100&nbsp;% remoto)
+                <span>· Feb – Jul 2024</span>
+              </p>
+            </div>
+          </section>
+
+          <section class="formacion">
+            <div class="seccion">
+              <h2 class="eyebrow">Formación</h2>
+              <ul>
+                <li>
+                  <h3>Programación Universitaria de Sistemas</h3>
+                  <p>Universidad Nacional de Villa Mercedes</p>
+                  <p class="meta">2021 – Más de la mitad de la carrera aprobada</p>
+                </li>
+                <li>
+                  <h3>Técnico en Industria de Procesos</h3>
+                  <p>Centro Educativo N.º 10 «Ramiro Podetti» · 2015</p>
+                </li>
+              </ul>
+            </div>
+            <div class="seccion">
+              <h2 class="eyebrow">Cursos</h2>
+              <ul>
+                <li>
+                  <h3>Primeros pasos del Desarrollo Front-End</h3>
+                  <p>Argentina Programa 4.0</p>
+                </li>
+                <li>
+                  <h3>Procesamiento de Datos con Python</h3>
+                  <p>Argentina Programa 4.0</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <aside class="lateral">
+          <section>
+            <h2 class="eyebrow">Contacto</h2>
+            <nav class="contacto" aria-label="Contacto">
+        <a href="https://wa.me/5492657281741">
+          <svg class="i i-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.003c4.368 0 7.926-3.558 7.93-7.93a7.9 7.9 0 0 0-2.326-5.607zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
+          +54 9 2657 28-1741
+        </a>
+        <a href="mailto:mauroaglucero@gmail.com">
+          <svg class="i i-stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+          mauroaglucero@gmail.com
+        </a>
+        <a href="https://maps.app.goo.gl/ATXEetEZKdzSDsoy5">
+          <svg class="i i-stroke" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          San Luis, Argentina · GMT-3
+        </a>
+        <a href="https://www.linkedin.com/in/mauro-ag-lucero">
+          <svg class="i i-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193h-.016V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+          linkedin.com/in/mauro-ag-lucero
+        </a>
+        <a href="https://github.com/MauroAg22">
+          <svg class="i i-fill" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg>
+          github.com/MauroAg22
+        </a>
+        <a href="https://maurolucero.com.ar/">
+          <svg class="i i-stroke" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>
+          maurolucero.com.ar
+        </a>
+      </nav>
+          </section>
+
+
+          <section class="stack">
+            <h2 class="eyebrow">Stack</h2>
+            <h3>Frontend</h3>
+            <div class="chips">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">React</span><span class="chip">Tailwind CSS</span><span class="chip">Bootstrap</span>
+            </div>
+            <h3>Backend y datos</h3>
+            <div class="chips">
+              <span class="chip">PHP</span><span class="chip">Node.js</span><span class="chip">Express.js</span><span class="chip">MySQL</span><span class="chip">PostgreSQL</span>
+            </div>
+            <h3>Herramientas</h3>
+            <div class="chips">
+              <span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">GitLab</span><span class="chip">VS Code</span><span class="chip">Postman</span><span class="chip">Insomnia</span>
+            </div>
+          </section>
+
+          <section>
+            <h2 class="eyebrow">Buenas prácticas</h2>
+            <ul class="practicas">
+              <li><b>Accesibilidad:</b> contraste WCAG AA, foco visible y reduced motion.</li>
+              <li><b>Rendimiento:</b> WebP con srcset y sin librerías de UI.</li>
+              <li><b>Calidad:</b> TypeScript estricto y oxlint.</li>
+              <li><b>Entrega:</b> CI/CD con GitHub Actions.</li>
+              <li><b>IA:</b> Copilot, Gemini y Claude en el día a día.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="eyebrow">Idiomas</h2>
+            <div class="idiomas">
+              <p><b>Español</b> · nativo</p>
+              <p><b>Inglés</b> · básico, en curso (ULP)</p>
+            </div>
+          </section>
+
+          <div class="qr-bloque">
+            <a class="qr" href="https://maurolucero.com.ar/">
+              <img src="qr-maurolucero.png" alt="Código QR al portfolio maurolucero.com.ar" />
+              <span>maurolucero.com.ar</span>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

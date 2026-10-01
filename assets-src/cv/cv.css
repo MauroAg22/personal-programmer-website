@@ -1,0 +1,252 @@
+/*
+ * Base común de las tres versiones del CV.
+ * Los tokens son los del modo claro de src/index.css: el azul es identidad y
+ * estructura, el texto es neutro y el coral es solo acento (líneas y viñetas,
+ * nunca texto: sobre blanco no llega a contraste AA).
+ * La página impresa va sobre blanco puro, a diferencia del sitio: en papel el
+ * canvas azulado se ve como un error de impresión.
+ */
+
+:root {
+  --primary: #152251;
+  --primary-600: #203075;
+  --primary-500: #26378b;
+  --ink: #0b1226;
+  --accent: #f86449;
+  --nodo: #94aaff;
+  --logo-claro: #b9c4e8;
+
+  --text: #1d1f24;
+  --muted: #52555d;
+  --subtle: #5a5d66;
+  --border: #d6ddec;
+  --border-strong: #bcc7df;
+  --bg: #eef1f7;
+  --band: #e4e9f4;
+  --surface: #f7f9fc;
+  --surface-2: #e1e7f3;
+  --hero-top: #dce4f3;
+  --grid-line: rgba(38, 55, 139, 0.07);
+
+  --ok: #10b981;
+  --wip: #f59e0b;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  font-size: 8.7pt;
+  line-height: 1.45;
+  color: var(--muted);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  overflow: hidden;
+  background: #fff;
+}
+
+/* Vista en navegador: la hoja flotando sobre la banda azulada del sitio */
+@media screen {
+  body {
+    background: var(--band);
+    padding: 12mm 0;
+  }
+
+  .page {
+    margin: 0 auto;
+    box-shadow:
+      0 4px 8px rgba(21, 34, 81, 0.05),
+      0 16px 38px rgba(21, 34, 81, 0.12);
+  }
+}
+
+.mono {
+  font-family: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+
+/* Iconos: mismos trazos que src/components/icons.tsx */
+.i {
+  width: 1.15em;
+  height: 1.15em;
+  flex: none;
+}
+
+.i-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.i-fill {
+  fill: currentColor;
+}
+
+/* Eyebrow de sección: el patrón de SectionHeader (línea coral + versalitas),
+   con el texto en el negro de los títulos para que sea legible impreso. */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 2.2mm;
+  font-size: 7.2pt;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 5.5mm;
+  height: 0.3mm;
+  background: var(--accent);
+}
+
+/* Chip: el mismo de src/styles.ts */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2mm;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  border: 0.25mm solid var(--border);
+  border-radius: 1.1mm;
+  background: var(--surface-2);
+  padding: 0.35mm 1.7mm;
+  font-size: 6.9pt;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Viñeta coral de los logros, como en Experiencia del sitio */
+.logros {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35mm;
+}
+
+/* La viñeta es un fondo y no un pseudo-elemento posicionado: Chrome escribe al
+   final del PDF el texto de los elementos posicionados, y un ATS que lea el
+   flujo en crudo vería los logros después de todo lo demás. */
+.logros li {
+  padding-left: 3.6mm;
+  background: radial-gradient(circle closest-side, var(--accent) 90%, transparent 100%) 0 1.55mm /
+    1.3mm 1.3mm no-repeat;
+}
+
+.logros strong,
+.fuerte {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Punto de estado de proyecto: los tres colores del sitio */
+.estado {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2mm;
+  font-size: 6.4pt;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--subtle);
+  white-space: nowrap;
+}
+
+.estado::before {
+  content: "";
+  width: 1.4mm;
+  height: 1.4mm;
+  border-radius: 50%;
+  background: var(--estado, var(--primary-500));
+}
+
+.estado.ok {
+  --estado: var(--ok);
+}
+
+.estado.wip {
+  --estado: var(--wip);
+}
+
+/* QR al sitio: siempre sobre blanco con margen propio para que escanee */
+.qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1mm;
+  border-radius: 2.4mm;
+  background: #fff;
+  padding: 1.6mm 1.6mm 1.9mm;
+}
+
+.qr img {
+  display: block;
+  width: 24mm;
+  height: 24mm;
+}
+
+.qr span {
+  font-size: 6.6pt;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--primary);
+}
+
+/* Contacto: filas con icono */
+.contacto a {
+  display: flex;
+  align-items: center;
+  gap: 1.8mm;
+  white-space: nowrap;
+}
+
+.sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
