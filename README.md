@@ -29,7 +29,7 @@ No está pensado como una galería de proyectos para otros desarrolladores, sino
 
 ## Perfil
 
-Trabajo como **Técnico de Soporte TI en Grupo Slots** desde enero de 2025. Administro **Active Directory, Microsoft 365 y Microsoft Entra ID** para las empresas del grupo, y desarrollo las herramientas internas que usa el equipo.
+Trabajo como **Técnico de Soporte TI en Grupo Slots** desde enero de 2025. Administro **Active Directory, Microsoft 365 y Microsoft Entra ID** para la empresa, y desarrollo las herramientas internas que usa el equipo.
 
 Grupo Slots es una empresa de entretenimiento fundada en 1985, con más de 1350 colaboradores en más de 20 localidades y ocho unidades de negocio, en una industria regulada donde la operación no puede detenerse. Entre otras cosas, doy soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, en San Luis.
 
@@ -49,7 +49,7 @@ Ese cruce —infraestructura Microsoft en producción y desarrollo de software�
 | Sección | Contenido |
 | --- | --- |
 | **Hero** | Propuesta de valor, ubicación, retrato con placa de rol y accesos directos a CV, LinkedIn, GitHub y email. |
-| **El entorno** | Escala del grupo empresario donde trabajo y sus ocho unidades de negocio, con los datos públicos de la compañía. |
+| **El entorno** | Escala de la empresa donde trabajo y sus ocho unidades de negocio, con los datos públicos de la compañía. |
 | **Perfil** | Las tres áreas en las que trabajo: infraestructura Microsoft, automatización y desarrollo de software. |
 | **Experiencia** | Trayectoria en Grupo Slots con logros concretos, más la experiencia previa en modalidad remota internacional. |
 | **Trabajo destacado** | Herramientas en producción (Generador de Firmas, Instalador EXE Corporativo) y proyectos propios. |

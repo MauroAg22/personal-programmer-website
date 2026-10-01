@@ -13,7 +13,7 @@
   2. Empresas que necesitan soporte TI-sysadmin.
   3. Clientes o empresas que buscan desarrollo.
 - **Mensaje principal**: "Que la infraestructura funcione. Y que el equipo tenga mejores herramientas."
-- **Prueba de 10 segundos**: al entrar, el visitante tiene que entender que trabaja en un entorno corporativo real (grupo empresario multi-unidad), que administra el stack Microsoft en producción, y que construye herramientas que la gente usa.
+- **Prueba de 10 segundos**: al entrar, el visitante tiene que entender que trabaja en un entorno corporativo real (una empresa con varias unidades de negocio), que administra el stack Microsoft en producción, y que construye herramientas que la gente usa.
 - **Tono visual**: enterprise-tech sobrio. Referencias: Microsoft, Stripe, Linear, Vercel, GitHub.
 - **Idioma**: español. Contenido estructurado en `src/data.ts` y arrays por sección para facilitar una versión bilingüe a futuro.
 
@@ -137,9 +137,9 @@ Orden pensado para que el lector objetivo (reclutador / hiring manager de infrae
    - **Mobile/tablet**: ubicación → titular → **retrato 4:5 a todo el ancho** con placa de credencial superpuesta ("Actualmente · Técnico de Soporte TI · Grupo Slots") → subtítulo → CTA. La foto entra completa en la primera pantalla y funciona como credencial, no como avatar. El CTA de CV queda siempre accesible en el nav.
    - **Desktop**: dos columnas, retrato cuadrado de 400 px con la tarjeta de rol flotando sobre el borde.
    - Las dos imágenes usan `sizes` condicionado al breakpoint para que la versión oculta no descargue el archivo grande.
-2. **El entorno** — cifras públicas de Grupo Slots (1985, +1350 colaboradores, +20 localidades, +60 puntos de operación) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público del grupo.
+2. **El entorno** — cifras públicas de Grupo Slots (1985, +1350 colaboradores, +20 localidades, +60 puntos de operación) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público de la empresa.
 3. **Perfil** — reemplaza al viejo "Sobre mí". Tres tarjetas: infraestructura Microsoft, automatización y desarrollo. El texto en primera persona quedó reducido a un párrafo de cierre.
-4. **Experiencia** — tarjeta principal de Grupo Slots con contexto del grupo, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.
+4. **Experiencia** — tarjeta principal de Grupo Slots con contexto de la empresa, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.
 5. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador EXE (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
 6. **Stack** — panel destacado de Infraestructura y Microsoft (el diferencial), y debajo desarrollo y datos/herramientas. La IA va como una línea de texto, no como categoría de habilidades: listar asistentes como "skills" lee a portfolio de estudiante.
 7. **Formación** — timeline de estudios + panel de cursos.
@@ -188,9 +188,9 @@ Las tres versiones del CV viven en `assets-src/cv/` como HTML A4 con los mismos 
 
 ## 10. Pendientes
 
-- [ ] Conseguir capturas reales del Generador de Firmas y del Instalador EXE para reemplazar las portadas ilustrativas.
+- [x] Conseguir capturas reales del Generador de Firmas y del Instalador EXE para reemplazar las portadas ilustrativas.
 - [x] Sumar métricas concretas al bloque de experiencia (~30 tickets semanales del equipo, instalador con 60 % menos de tiempo por equipo).
 - [ ] Certificaciones Microsoft (MS-900 / AZ-900 / MD-102) — hoy no hay sección porque no hay contenido.
 - [ ] Migrar los repos internos de GitLab a GitHub personal para poder linkear código.
 - [ ] Activar `contacto@maurolucero.com.ar` y reemplazar el email en `src/data.ts`.
-- [ ] Definir hosting y apuntar el dominio al nuevo build.
+- [x] Construir el deploy con GitHub Actions y enlazar con el servidor.
