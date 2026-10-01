@@ -38,7 +38,7 @@ const PROYECTOS: Proyecto[] = [
     titulo: "Generador de Firmas",
     estado: { label: "En producción", color: "bg-emerald-500" },
     descripcion:
-      "Herramienta institucional con la que el equipo de Soporte de Grupo Slots emite firmas de correo homologadas, con el formato y la identidad de cada empresa del grupo.",
+      "Herramienta institucional con la que el equipo de Soporte de Grupo Slots emite firmas de correo homologadas, con el formato y la identidad de cada unidad de negocio.",
     stack: ["HTML", "CSS", "JavaScript", "JSON"],
     cover: (
       <img

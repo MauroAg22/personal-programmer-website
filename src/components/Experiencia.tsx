@@ -3,7 +3,7 @@ import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
 
 const LOGROS = [
-  "Administro Active Directory y el entorno Microsoft 365 y Entra ID de las empresas del grupo, con soporte presencial y remoto a colaboradores y negocios, en un equipo de Sistemas que resuelve unos 30 tickets por semana.",
+  "Administro Active Directory y el entorno Microsoft 365 y Entra ID de la empresa, con soporte presencial y remoto a colaboradores y negocios, en un equipo de Sistemas que resuelve unos 30 tickets por semana.",
   "Diseñé y desarrollé el Generador de Firmas institucional: hoy está en producción y el equipo de Soporte lo usa para emitir firmas de correo estandarizadas y homologadas.",
   "Automaticé la puesta a punto de equipos con scripts de instalación silenciosa que evolucionaron en un instalador EXE corporativo, incluyendo toda la configuración: redujo un 60 % el tiempo por equipo y liberó a una persona de supervisar instalaciones.",
   "A cargo del soporte a los sistemas de eventos hípicos del Hipódromo de La Punta, donde cada jornada depende de que la infraestructura no falle.",
