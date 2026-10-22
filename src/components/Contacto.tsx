@@ -68,9 +68,9 @@ function Contacto() {
                     href={href}
                     target={href.startsWith("mailto:") ? undefined : "_blank"}
                     rel="noreferrer"
-                    className="flex items-center gap-3.5 bg-surface-2 px-5 py-4 text-sm text-text transition-colors hover:text-accent-text"
+                    className="group flex items-center gap-3.5 bg-surface-2 px-5 py-4 text-sm text-text transition-colors hover:text-accent-text"
                   >
-                    <Icon className="h-4.5 w-4.5 shrink-0 text-text-subtle" />
+                    <Icon className="h-4.5 w-4.5 shrink-0 text-text-subtle transition-colors group-hover:text-accent-text" />
                     <span className="truncate">{label}</span>
                   </a>
                 ))}

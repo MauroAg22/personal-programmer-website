@@ -27,7 +27,7 @@
 | ----------- | --------- | ---------------------------------------------- |
 | Primary     | `#152251` | Color de marca, fondos oscuros, logos internos |
 | Primary 600 | `#203075` | Estados intermedios                            |
-| Primary 500 | `#26378b` | Acentos de marca, estados de proyecto          |
+| Primary 500 | `#26378b` | Acentos de marca                               |
 | Accent      | `#f86449` | Detalles: eyebrows, dots, focus ring, iconos   |
 
 **Regla de uso del acento (importante)**: el coral es un acento, no un color de superficie. Nunca se usa como fondo de botón primario ni como color de texto corrido — `#f86449` sobre blanco no llega a contraste AA. Para texto se usa el token `--accent-text`, que es una variante accesible por tema.
@@ -54,8 +54,7 @@ Neutros tintados con el azul de marca, sin blanco puro en ninguna superficie. Co
 | `--text-subtle` | `#5a5d66` | Labels, metadatos |
 | `--border` | `#d6ddec` | Bordes de tarjeta |
 | `--border-strong` | `#bcc7df` | Bordes de controles |
-| `--card-hover` | `rgba(38, 55, 139, 0.35)` | Borde de las tarjetas de proyecto en hover |
-| `--accent-text` | `#f86449` | Coral para eyebrows, iconos y hovers |
+| `--card-hover` | `rgba(38, 55, 139, 0.35)` | Borde de las tarjetas de proyecto en hover || `--accent-text` | `#f86449` | Coral para eyebrows, iconos y hovers |
 
 Contraste mínimo medido sobre la superficie más oscura donde aparece cada token:
 
@@ -84,8 +83,7 @@ La luminosidad de cada superficie es levemente menor que la de la paleta gris an
 | `--text-muted` | `#a8b0c7` |
 | `--text-subtle`| `#7d87a5` |
 | `--border`     | `#212c51` |
-| `--border-strong` | `#2e3b68` |
-| `--accent-text`| `#ff8d76` |
+| `--border-strong` | `#2e3b68` || `--accent-text`| `#ff8d76` |
 
 > Cambio respecto de v1: en oscuro, `surface` y `border` se desaturaron (antes `#152251` y `#26378b`). Los originales generaban tarjetas que se leían como bloques azules y bordes demasiado marcados.
 
@@ -109,7 +107,7 @@ En claro son sombras reales; en oscuro son casi imperceptibles, porque en interf
 ## 3. Tipografía
 
 - Familia única: **IBM Plex Sans** (400/500/600/700), cargada con `preconnect` + `<link>` en el `<head>` (no `@import` en CSS, que bloquea el render).
-- Monoespaciada: stack del sistema (`ui-monospace`), sin request extra. Se usa solo en la portada del Instalador EXE.
+- Monoespaciada: stack del sistema (`ui-monospace`), sin request extra. Queda definida en `--font-mono`, pero hoy ninguna sección la usa.
 
 Escala:
 
@@ -126,7 +124,6 @@ Escala:
 ## 4. Modo claro / oscuro
 
 Tres estados: **sistema** (por defecto, sigue `prefers-color-scheme`), **claro** y **oscuro** forzados mediante `data-theme` en `<html>`. La preferencia se guarda en `localStorage` y se aplica con un script inline en `index.html` antes del primer pintado, para evitar parpadeo.
-
 ---
 
 ## 5. Estructura de contenido
@@ -140,7 +137,7 @@ Orden pensado para que el lector objetivo (reclutador / hiring manager de infrae
 2. **El entorno** — cifras públicas de Grupo Slots (1985, +1350 colaboradores, +20 localidades, +60 puntos de operación) y las ocho unidades de negocio. Establece escala y criticidad antes de hablar de él mismo, y va siempre atribuido como dato público de la empresa.
 3. **Perfil** — reemplaza al viejo "Sobre mí". Tres tarjetas: infraestructura Microsoft, automatización y desarrollo. El texto en primera persona quedó reducido a un párrafo de cierre.
 4. **Experiencia** — tarjeta principal de Grupo Slots con contexto de la empresa, logros orientados a resultado y tecnologías. Bloque compacto para Metrickal.
-5. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (en producción) → Instalador EXE (uso interno) → Clinic System (en desarrollo). Cada tarjeta tiene portada diseñada; las que no tienen captura usan una composición propia, nunca un placeholder vacío.
+5. **Trabajo destacado** — orden por relevancia para el público objetivo: Generador de Firmas (uso interno) → Instalador EXE (uso interno) → Clinic System (en desarrollo). El estado se marca con un punto de color: verde para uso interno, ámbar para en desarrollo. Las tres portadas son capturas reales (`public/img/projects/`); un proyecto sin captura usa una composición propia, nunca un placeholder vacío.
 6. **Stack** — panel destacado de Infraestructura y Microsoft (el diferencial), y debajo desarrollo y datos/herramientas. La IA va como una línea de texto, no como categoría de habilidades: listar asistentes como "skills" lee a portfolio de estudiante.
 7. **Formación** — timeline de estudios + panel de cursos.
 8. **Detrás de cada proyecto** — reconocimiento a profesores, compañeros de trabajo, amigos y familia en una cuadrícula de cuatro tarjetas, más una cita destacada sobre el azul de marca. Va después de Formación y antes de Contacto: cierra el recorrido en tono humano justo antes de la llamada a la acción, sin interrumpir el argumento profesional.

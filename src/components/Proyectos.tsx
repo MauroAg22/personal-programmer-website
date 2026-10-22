@@ -1,26 +1,7 @@
 import { chip, container, section } from "../styles"
 import Reveal from "./Reveal"
 import SectionHeader from "./SectionHeader"
-import { ArrowUpRight, Lock } from "./icons"
-
-function TerminalCover() {
-  return (
-    <div className="h-full bg-[#0a0f20] p-5 font-mono text-[11px] leading-relaxed">
-      <div className="flex gap-1.5 pb-3" aria-hidden="true">
-        <span className="h-2 w-2 rounded-full bg-[#ff5f57]" />
-        <span className="h-2 w-2 rounded-full bg-[#febc2e]" />
-        <span className="h-2 w-2 rounded-full bg-[#28c840]" />
-      </div>
-      <p className="text-slate-300">
-        <span className="text-[#7ee787]">C:\&gt;</span> setup.exe /VERYSILENT
-      </p>
-      <p className="text-slate-500">Instalando paquete corporativo…</p>
-      <p className="text-slate-500">Software estándar ······ OK</p>
-      <p className="text-slate-500">Asistencia remota ······ OK</p>
-      <p className="text-[#7ee787]">Equipo listo para el usuario.</p>
-    </div>
-  )
-}
+import { ArrowUpRight } from "./icons"
 
 interface Proyecto {
   titulo: string
@@ -29,14 +10,13 @@ interface Proyecto {
   stack: string[]
   cover: React.ReactNode
   enlaces: { label: string; href: string; disabled?: boolean }[]
-  acceso?: string
   nota?: string
 }
 
 const PROYECTOS: Proyecto[] = [
   {
     titulo: "Generador de Firmas",
-    estado: { label: "En producción", color: "bg-emerald-500" },
+    estado: { label: "Uso interno", color: "bg-emerald-500" },
     descripcion:
       "Herramienta institucional con la que el equipo de Soporte de Grupo Slots emite firmas de correo homologadas, con el formato y la identidad de cada unidad de negocio.",
     stack: ["HTML", "CSS", "JavaScript", "JSON"],
@@ -49,16 +29,22 @@ const PROYECTOS: Proyecto[] = [
       />
     ),
     enlaces: [],
-    acceso: "Demo pendiente de autorización",
     nota: "Código en el GitLab interno de la empresa",
   },
   {
     titulo: "Instalador EXE Corporativo",
-    estado: { label: "Uso interno", color: "bg-primary-500" },
+    estado: { label: "Uso interno", color: "bg-emerald-500" },
     descripcion:
       "Instalador que deja un equipo nuevo listo para trabajar: instala en silencio todo el software estándar de la empresa, deja configurada la asistencia remota y da de alta el equipo en la base de datos. Redujo un 60 % el tiempo de puesta a punto.",
     stack: ["InnoSetup", "CMD", "Silent install"],
-    cover: <TerminalCover />,
+    cover: (
+      <img
+        src="/img/projects/setup-soporte-ti.webp"
+        alt="Captura de pantalla del Instalador EXE Corporativo de Grupo Slots"
+        loading="lazy"
+        className="h-full w-full object-cover object-top"
+      />
+    ),
     enlaces: [],
     nota: "Código en el GitLab interno de la empresa",
   },
@@ -155,12 +141,6 @@ function Proyectos() {
                           <ArrowUpRight className="h-4 w-4" />
                         </a>
                       ),
-                    )}
-                    {proyecto.acceso && (
-                      <span className="inline-flex items-center gap-1.5 text-sm font-medium text-text-subtle">
-                        <Lock className="h-4 w-4" />
-                        {proyecto.acceso}
-                      </span>
                     )}
                     {proyecto.nota && (
                       <span className="text-xs text-text-subtle">
